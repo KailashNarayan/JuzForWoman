@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4A6D14A91AF1390A003A1708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14A81AF1390A003A1708 /* main.m */; };
-		4A6D14AC1AF1390A003A1708 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14AB1AF1390A003A1708 /* AppDelegate.m */; };
-		4A6D14AF1AF1390A003A1708 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14AE1AF1390A003A1708 /* ViewController.m */; };
+		4A6D14AC1AF1390A003A1708 /* JFWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14AB1AF1390A003A1708 /* JFWAppDelegate.m */; };
+		4A6D14AF1AF1390A003A1708 /* JFWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14AE1AF1390A003A1708 /* JFWViewController.m */; };
 		4A6D14B21AF1390A003A1708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D14B01AF1390A003A1708 /* Main.storyboard */; };
 		4A6D14B41AF1390A003A1708 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D14B31AF1390A003A1708 /* Images.xcassets */; };
 		4A6D14B71AF1390A003A1708 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D14B51AF1390A003A1708 /* LaunchScreen.xib */; };
@@ -30,10 +30,10 @@
 		4A6D14A31AF1390A003A1708 /* JUZ4Women.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JUZ4Women.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6D14A71AF1390A003A1708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6D14A81AF1390A003A1708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4A6D14AA1AF1390A003A1708 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4A6D14AB1AF1390A003A1708 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4A6D14AD1AF1390A003A1708 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4A6D14AE1AF1390A003A1708 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4A6D14AA1AF1390A003A1708 /* JFWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFWAppDelegate.h; sourceTree = "<group>"; };
+		4A6D14AB1AF1390A003A1708 /* JFWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFWAppDelegate.m; sourceTree = "<group>"; };
+		4A6D14AD1AF1390A003A1708 /* JFWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFWViewController.h; sourceTree = "<group>"; };
+		4A6D14AE1AF1390A003A1708 /* JFWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFWViewController.m; sourceTree = "<group>"; };
 		4A6D14B11AF1390A003A1708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A6D14B31AF1390A003A1708 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4A6D14B61AF1390A003A1708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -81,10 +81,10 @@
 		4A6D14A51AF1390A003A1708 /* JUZ4Women */ = {
 			isa = PBXGroup;
 			children = (
-				4A6D14AA1AF1390A003A1708 /* AppDelegate.h */,
-				4A6D14AB1AF1390A003A1708 /* AppDelegate.m */,
-				4A6D14AD1AF1390A003A1708 /* ViewController.h */,
-				4A6D14AE1AF1390A003A1708 /* ViewController.m */,
+				4A6D14AA1AF1390A003A1708 /* JFWAppDelegate.h */,
+				4A6D14AB1AF1390A003A1708 /* JFWAppDelegate.m */,
+				4A6D14AD1AF1390A003A1708 /* JFWViewController.h */,
+				4A6D14AE1AF1390A003A1708 /* JFWViewController.m */,
 				4A6D14B01AF1390A003A1708 /* Main.storyboard */,
 				4A6D14B31AF1390A003A1708 /* Images.xcassets */,
 				4A6D14B51AF1390A003A1708 /* LaunchScreen.xib */,
@@ -219,8 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A6D14AF1AF1390A003A1708 /* ViewController.m in Sources */,
-				4A6D14AC1AF1390A003A1708 /* AppDelegate.m in Sources */,
+				4A6D14AF1AF1390A003A1708 /* JFWViewController.m in Sources */,
+				4A6D14AC1AF1390A003A1708 /* JFWAppDelegate.m in Sources */,
 				4A6D14A91AF1390A003A1708 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +416,7 @@
 				4A6D14C81AF1390A003A1708 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A6D14C91AF1390A003A1708 /* Build configuration list for PBXNativeTarget "JUZ4WomenTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				4A6D14CB1AF1390A003A1708 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

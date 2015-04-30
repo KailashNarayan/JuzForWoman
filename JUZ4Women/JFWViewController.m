@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 TTN Digital. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "JFWViewController.h"
 
-@interface ViewController ()
+@interface JFWViewController ()
 
 @end
 
-@implementation ViewController
+@implementation JFWViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

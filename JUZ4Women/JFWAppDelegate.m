@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 TTN Digital. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "JFWAppDelegate.h"
 
-@interface AppDelegate ()
+@interface JFWAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation JFWAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

@@ -11,5 +11,7 @@
 @interface JFWViewController : UIViewController
 
 
+- (IBAction)onButtonTapped:(id)sender;
+
 @end
 

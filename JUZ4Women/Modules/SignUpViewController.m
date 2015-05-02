@@ -9,13 +9,27 @@
 #import "SignUpViewController.h"
 
 @interface SignUpViewController ()
+{
+    __weak IBOutlet UIScrollView *scrollView;
+    __weak IBOutlet UIPageControl *pageControl;
+    __weak IBOutlet UICollectionView *collectionViewObj;
+    __weak IBOutlet UIButton *previousButton;
+    __weak IBOutlet UIButton *nextButton;
+    
+}
+- (IBAction)previousButtonTapped:(id)sender;
+
+- (IBAction)nextButtonTapped:(id)sender;
 
 @end
 
 @implementation SignUpViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    
+    [self initView];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -24,14 +38,40 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Initialiation Methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)initView
+{
+    [self configurePageControl];
+    
+    [self setScrollViewContentSize];
+    
+    [self configureNextButton];
 }
-*/
+
+-(void)configurePageControl
+{
+    
+}
+
+-(void)configureNextButton
+{
+    [nextButton setImageEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
+}
+
+#pragma mark - UI Button Event Methods
+
+- (IBAction)previousButtonTapped:(id)sender {
+}
+
+- (IBAction)nextButtonTapped:(id)sender {
+}
+
+#pragma mark - Helper Mthods
+
+-(void)setScrollViewContentSize
+{
+    [scrollView setContentSize:self.view.bounds.size];
+}
 
 @end

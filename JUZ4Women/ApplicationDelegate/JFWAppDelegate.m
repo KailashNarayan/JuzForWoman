@@ -9,17 +9,121 @@
 #import "JFWAppDelegate.h"
 #import "IGLeftMenuViewController.h"
 #import "IGRightMenuViewController.h"
+#import "IGHomeViewController.h"
+#import "MMDrawerController.h"
+#import "MMExampleCenterTableViewController.h"
+#import "MMExampleLeftSideDrawerViewController.h"
+#import "MMExampleRightSideDrawerViewController.h"
+#import "MMDrawerVisualState.h"
+#import "MMExampleDrawerVisualStateManager.h"
+#import "MMNavigationController.h"
+
+static BOOL OSVersionIsAtLeastiOS7() {
+    return (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1);
+}
+
 
 @interface JFWAppDelegate ()
+
+@property (nonatomic,strong) MMDrawerController * drawerController;
 
 @end
 
 @implementation JFWAppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     // Override point for customization after application launch.
     
+   BOOL isUserLoggedIn = [[NSUserDefaults standardUserDefaults]boolForKey:@"isUserLoggedIn"];
+    
+    
+    UIStoryboard *mainStoryboardObj = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    if(!isUserLoggedIn)
+    {
+        UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:[mainStoryboardObj instantiateViewControllerWithIdentifier:@"JFWViewController"]];
+        self.window.rootViewController = navController;
+    }
+    else
+    {
+        IGHomeViewController *beaconSearchViewControllerObj = [mainStoryboardObj instantiateViewControllerWithIdentifier:@"HomeViewController"];
+        
+        IGLeftMenuViewController *leftSideDrawerViewController = [mainStoryboardObj instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
+        
+        UIViewController * rightSideDrawerViewController = [[MMExampleRightSideDrawerViewController alloc] init];
+        
+        UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:beaconSearchViewControllerObj];
+        [navigationController setRestorationIdentifier:@"MMExampleCenterNavigationControllerRestorationKey"];
+        if(OSVersionIsAtLeastiOS7()){
+            UINavigationController * rightSideNavController = [[MMNavigationController alloc] initWithRootViewController:rightSideDrawerViewController];
+            [rightSideNavController setRestorationIdentifier:@"MMExampleRightNavigationControllerRestorationKey"];
+           
+            self.drawerController = [[MMDrawerController alloc]
+                                     initWithCenterViewController:navigationController
+                                     leftDrawerViewController:leftSideDrawerViewController
+                                     rightDrawerViewController:nil];
+            [self.drawerController setShowsShadow:NO];
+        }
+        else{
+            self.drawerController = [[MMDrawerController alloc]
+                                     initWithCenterViewController:navigationController
+                                     leftDrawerViewController:leftSideDrawerViewController
+                                     rightDrawerViewController:rightSideDrawerViewController];
+        }
+        [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+        [self.drawerController setMaximumRightDrawerWidth:200.0];
+        [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+        [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+        
+        [self.drawerController
+         setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+             MMDrawerControllerDrawerVisualStateBlock block;
+             block = [[MMExampleDrawerVisualStateManager sharedManager]
+                      drawerVisualStateBlockForDrawerSide:drawerSide];
+             if(block){
+                 block(drawerController, drawerSide, percentVisible);
+             }
+         }];
+        
+        //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        
+        if(OSVersionIsAtLeastiOS7()){
+            UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
+                                                  green:173.0/255.0
+                                                   blue:234.0/255.0
+                                                  alpha:1.0];
+            //[self.window setTintColor:tintColor];
+        }
+        [self.window setRootViewController:self.drawerController];
+        
+        
+    }
+    
+    
+    [self.window makeKeyAndVisible];
+    
+    
+    
+    
+    
+    [self configureNavigationDrawer];
+    
+    
+    
+    return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+}
+
+-(void)configureNavigationDrawer
+{
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                              bundle: nil];
     
@@ -55,13 +159,6 @@
         NSLog(@"Revealed %@", menu);
     }];
 
-    
-    return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {

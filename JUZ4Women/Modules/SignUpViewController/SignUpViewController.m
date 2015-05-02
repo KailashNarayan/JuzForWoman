@@ -61,7 +61,7 @@
 
 -(void)configureNextButton
 {
-    [nextButton setImageEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
+    [nextButton setImageEdgeInsets:UIEdgeInsetsMake(2, 52, 0, 0)];
 }
 
 -(void)registerCollectionViewCell

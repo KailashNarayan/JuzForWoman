@@ -101,4 +101,7 @@
  @return void nothing it returns.
  */
 + (void) setExclusiveTouchForAllSubViews:(UIView *)subView;
+
++(BOOL)getBoolFromUserDefaultForkey:(NSString *)key;
+
 @end

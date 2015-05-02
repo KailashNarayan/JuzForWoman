@@ -18,6 +18,8 @@
 #import "MMExampleDrawerVisualStateManager.h"
 #import "MMNavigationController.h"
 
+#import "UserPreference.h"
+
 static BOOL OSVersionIsAtLeastiOS7() {
     return (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1);
 }
@@ -35,15 +37,13 @@ static BOOL OSVersionIsAtLeastiOS7() {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
-   BOOL isUserLoggedIn = [[NSUserDefaults standardUserDefaults]boolForKey:@"isUserLoggedIn"];
-    
+        
     
     UIStoryboard *mainStoryboardObj = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    if(!isUserLoggedIn)
+    if([[UserPreference sharedInstance] isUserLoggedin])
     {
         UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:[mainStoryboardObj instantiateViewControllerWithIdentifier:@"JFWViewController"]];
         self.window.rootViewController = navController;

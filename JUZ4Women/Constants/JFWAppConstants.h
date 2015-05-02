@@ -89,3 +89,6 @@ static NSString *const kNoNetworkMessage = @"Network connectivity is required fo
 static NSString *const kAlertMessage = @"Alert";
 static NSString *const kOKMessage = @"OK";
 
+//User Sign Up
+static NSString *const kUserLoggedInKey = @"isUserLoggedIn";
+

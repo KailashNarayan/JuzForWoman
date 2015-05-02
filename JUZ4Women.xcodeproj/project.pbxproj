@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381C73CF1AF52757003290CF /* UserPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C73CE1AF52757003290CF /* UserPreference.m */; };
+		381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */ = {isa = PBXBuildFile; fileRef = 381C73D01AF52C02003290CF /* JUZ4Women.pch */; };
 		4A6D14A91AF1390A003A1708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14A81AF1390A003A1708 /* main.m */; };
 		4A6D14B41AF1390A003A1708 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D14B31AF1390A003A1708 /* Images.xcassets */; };
 		4A6D14C31AF1390A003A1708 /* JUZ4WomenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14C21AF1390A003A1708 /* JUZ4WomenTests.m */; };
@@ -84,6 +86,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381C73CD1AF52757003290CF /* UserPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPreference.h; sourceTree = "<group>"; };
+		381C73CE1AF52757003290CF /* UserPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPreference.m; sourceTree = "<group>"; };
+		381C73D01AF52C02003290CF /* JUZ4Women.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUZ4Women.pch; sourceTree = "<group>"; };
 		4A6D14A31AF1390A003A1708 /* JUZ4Women.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JUZ4Women.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6D14A71AF1390A003A1708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6D14A81AF1390A003A1708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -228,6 +233,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		381C73CC1AF5272C003290CF /* UserPreference */ = {
+			isa = PBXGroup;
+			children = (
+				381C73CD1AF52757003290CF /* UserPreference.h */,
+				381C73CE1AF52757003290CF /* UserPreference.m */,
+			);
+			path = UserPreference;
+			sourceTree = "<group>";
+		};
 		4A6D149A1AF1390A003A1708 = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +286,7 @@
 			children = (
 				4A6D14A71AF1390A003A1708 /* Info.plist */,
 				4A6D14A81AF1390A003A1708 /* main.m */,
+				381C73D01AF52C02003290CF /* JUZ4Women.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -313,6 +328,7 @@
 		4A6D14CE1AF2796F003A1708 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				381C73CC1AF5272C003290CF /* UserPreference */,
 				4ACFBA391AF3F94300C82325 /* DrawerManager */,
 			);
 			path = Managers;
@@ -552,6 +568,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		381C73D11AF52CC1003290CF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		4A6D14A21AF1390A003A1708 /* JUZ4Women */ = {
 			isa = PBXNativeTarget;
@@ -560,6 +587,7 @@
 				4A6D149F1AF1390A003A1708 /* Sources */,
 				4A6D14A01AF1390A003A1708 /* Frameworks */,
 				4A6D14A11AF1390A003A1708 /* Resources */,
+				381C73D11AF52CC1003290CF /* Headers */,
 			);
 			buildRules = (
 			);
@@ -674,6 +702,7 @@
 				4A6D15091AF27D2C003A1708 /* AFNetworkReachabilityManager.m in Sources */,
 				4A6D150D1AF27D2C003A1708 /* AFURLResponseSerialization.m in Sources */,
 				4ACFBA961AF3FBC600C82325 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				381C73CF1AF52757003290CF /* UserPreference.m in Sources */,
 				4A6D150B1AF27D2C003A1708 /* AFURLConnectionOperation.m in Sources */,
 				4A6D15121AF27D2C003A1708 /* UIButton+AFNetworking.m in Sources */,
 				4A6D15101AF27D2C003A1708 /* UIActivityIndicatorView+AFNetworking.m in Sources */,

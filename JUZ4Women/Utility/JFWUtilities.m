@@ -85,4 +85,15 @@
         }
     }
 }
+
++(BOOL)getBoolFromUserDefaultForkey:(NSString *)key
+{
+    if(!key || key.length == 0)
+        return NO;
+    
+    BOOL result = [[NSUserDefaults standardUserDefaults]boolForKey:key];
+    
+    return result;
+}
+
 @end

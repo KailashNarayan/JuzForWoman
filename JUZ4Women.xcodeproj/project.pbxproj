@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		381C73CF1AF52757003290CF /* UserPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C73CE1AF52757003290CF /* UserPreference.m */; };
 		381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */ = {isa = PBXBuildFile; fileRef = 381C73D01AF52C02003290CF /* JUZ4Women.pch */; };
+		381C73D71AF53137003290CF /* SignUpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 381C73D41AF53137003290CF /* SignUpViewController.h */; };
+		381C73D81AF53137003290CF /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C73D51AF53137003290CF /* SignUpViewController.m */; };
+		381C73D91AF53137003290CF /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381C73D61AF53137003290CF /* SignUpViewController.xib */; };
 		4A6D14A91AF1390A003A1708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14A81AF1390A003A1708 /* main.m */; };
 		4A6D14B41AF1390A003A1708 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D14B31AF1390A003A1708 /* Images.xcassets */; };
 		4A6D14C31AF1390A003A1708 /* JUZ4WomenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14C21AF1390A003A1708 /* JUZ4WomenTests.m */; };
@@ -89,6 +92,9 @@
 		381C73CD1AF52757003290CF /* UserPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPreference.h; sourceTree = "<group>"; };
 		381C73CE1AF52757003290CF /* UserPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPreference.m; sourceTree = "<group>"; };
 		381C73D01AF52C02003290CF /* JUZ4Women.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUZ4Women.pch; sourceTree = "<group>"; };
+		381C73D41AF53137003290CF /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		381C73D51AF53137003290CF /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		381C73D61AF53137003290CF /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		4A6D14A31AF1390A003A1708 /* JUZ4Women.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JUZ4Women.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6D14A71AF1390A003A1708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6D14A81AF1390A003A1708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -242,6 +248,16 @@
 			path = UserPreference;
 			sourceTree = "<group>";
 		};
+		381C73D31AF530AA003290CF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				381C73D41AF53137003290CF /* SignUpViewController.h */,
+				381C73D51AF53137003290CF /* SignUpViewController.m */,
+				381C73D61AF53137003290CF /* SignUpViewController.xib */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		4A6D149A1AF1390A003A1708 = {
 			isa = PBXGroup;
 			children = (
@@ -263,11 +279,12 @@
 		4A6D14A51AF1390A003A1708 /* JUZ4Women */ = {
 			isa = PBXGroup;
 			children = (
+				4A6D14CC1AF2796F003A1708 /* ApplicationDelegate */,
 				4ACFBAAA1AF49CDE00C82325 /* Images */,
 				4ACFBA981AF3FD3600C82325 /* CustomTableViewCells */,
 				4ACFBA7A1AF3F9C600C82325 /* Helper Classes */,
 				4A6D14DA1AF27A61003A1708 /* Models */,
-				4A6D14CC1AF2796F003A1708 /* ApplicationDelegate */,
+				381C73D31AF530AA003290CF /* Modules */,
 				4A6D14CD1AF2796F003A1708 /* Constants */,
 				4A6D14CE1AF2796F003A1708 /* Managers */,
 				4A6D14CF1AF2796F003A1708 /* StoryBoards */,
@@ -574,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
+				381C73D71AF53137003290CF /* SignUpViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +686,7 @@
 				4ACFBAAE1AF49CDE00C82325 /* menu_icon@2x.png in Resources */,
 				4ACFBA651AF3F94400C82325 /* MainViewController.xib in Resources */,
 				4ACFBAA91AF3FDE700C82325 /* IGHomeViewDescriptionCellTableViewCell.xib in Resources */,
+				381C73D91AF53137003290CF /* SignUpViewController.xib in Resources */,
 				4ACFBAA71AF3FDE700C82325 /* IGHomeViewCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,6 +731,7 @@
 				4ACFBAA81AF3FDE700C82325 /* IGHomeViewDescriptionCellTableViewCell.m in Sources */,
 				4ACFBA691AF3F94400C82325 /* MMDrawerVisualState.m in Sources */,
 				4A6D150A1AF27D2C003A1708 /* AFSecurityPolicy.m in Sources */,
+				381C73D81AF53137003290CF /* SignUpViewController.m in Sources */,
 				4ACFBA821AF3F9C600C82325 /* IGLeftMenuViewController.m in Sources */,
 				4ACFBA921AF3FBC600C82325 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				4ACFBA6E1AF3F94400C82325 /* MMExampleSideDrawerViewController.m in Sources */,

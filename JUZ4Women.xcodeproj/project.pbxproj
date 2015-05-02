@@ -978,11 +978,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381C748D1AF55393003290CF /* SignUpViewCell.h in Headers */,
 				4AD2B24F1AF559170089DB7F /* JFWPostViewController.h in Headers */,
 				4AD2B24B1AF559050089DB7F /* JFWPollsViewController.h in Headers */,
 				4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */,
 				4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */,
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
+				381C74841AF55331003290CF /* SignUpViewController.h in Headers */,
 				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
 				381C73D71AF53137003290CF /* SignUpViewController.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,

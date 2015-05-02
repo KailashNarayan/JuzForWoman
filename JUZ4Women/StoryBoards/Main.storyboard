@@ -50,7 +50,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leftMenuCell" textLabel="Dcf-Lf-kn4" style="IBUITableViewCellStyleDefault" id="Pcg-wb-oR8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leftMenuCell" textLabel="Dcf-Lf-kn4" rowHeight="40" style="IBUITableViewCellStyleDefault" id="Pcg-wb-oR8">
                                         <rect key="frame" x="0.0" y="22" width="280" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pcg-wb-oR8" id="jYy-XJ-vvU">
@@ -71,15 +71,54 @@
                                 </prototypes>
                                 <sections/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="568"/>
+                                    <rect key="frame" x="0.0" y="128" width="400" height="672"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="Omq-8R-9ym" id="xR9-WH-B5C"/>
                                     <outlet property="delegate" destination="Omq-8R-9ym" id="Qjv-ps-CQQ"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sarah Green" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ud-wd-d7r">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="106" y="56" width="129" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@sarahgreen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4c8-Dp-BYY">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="110" y="87" width="138" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F4c-Xd-HJQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.24912990099999999" blue="0.2323229232" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="56" width="61" height="55"/>
+                                </variation>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2ud-wd-d7r"/>
+                                <exclude reference="4c8-Dp-BYY"/>
+                                <exclude reference="F4c-Xd-HJQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2ud-wd-d7r"/>
+                                <include reference="4c8-Dp-BYY"/>
+                                <include reference="F4c-Xd-HJQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="4Je-RB-1bs" id="W8u-Yg-52Q"/>
@@ -88,6 +127,125 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fo1-Js-mQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-463.5" y="-315"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="x3u-xG-XD8">
+            <objects>
+                <viewController storyboardIdentifier="JFWAboutUsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="W3B-k4-pYa" customClass="JFWAboutUsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9He-3H-oz7"/>
+                        <viewControllerLayoutGuide type="bottom" id="461-dS-Ris"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7nI-xh-yDF">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnL-Rf-ARU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="-393"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uqz-B9-vg3">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="huG-We-mGb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VUA-BY-ZY8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Til-Lf-60B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YyB-JR-xQq">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sPA-9s-HRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131" y="-450.75"/>
+        </scene>
+        <!--Polls View Controller-->
+        <scene sceneID="phK-pM-WxA">
+            <objects>
+                <viewController storyboardIdentifier="JFWPollsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NLt-gA-Iyx" customClass="JFWPollsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="knk-5V-ZlZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xl4-2h-IlG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OVu-I6-Wtp">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ku-4g-ezv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1867.5" y="-603"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="DT5-C7-fYC">
+            <objects>
+                <viewController storyboardIdentifier="JFWPostViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gIz-Ty-EsY" customClass="JFWPostViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GJJ-ej-Zev"/>
+                        <viewControllerLayoutGuide type="bottom" id="yL3-Tj-rKn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bMe-Sj-Bjm">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4h-0Q-1kE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2535" y="-667.5"/>
+        </scene>
+        <!--Sign Out View Controller-->
+        <scene sceneID="4Dv-5D-s9b">
+            <objects>
+                <viewController storyboardIdentifier="JFWSignOutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5QX-tJ-kdp" customClass="JFWSignOutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fM1-Xu-8Pr"/>
+                        <viewControllerLayoutGuide type="bottom" id="glf-Op-ywk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qZC-pI-DdN">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Fo-3S-3DF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3211.5" y="-731.25"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="S9T-TT-Adl">
+            <objects>
+                <viewController storyboardIdentifier="JFWVideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sjt-A5-oox" customClass="JFWVideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BhY-zs-01k"/>
+                        <viewControllerLayoutGuide type="bottom" id="yar-V8-k3h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gwG-D5-QpZ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0RC-Pj-153" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3867" y="-788.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lHT-hC-FYQ">
+            <objects>
+                <viewController id="ABg-K4-PTO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wQ1-Py-jIH"/>
+                        <viewControllerLayoutGuide type="bottom" id="2AA-Ua-nR6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wlC-wa-myZ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huW-av-WNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4555.5" y="-423.75"/>
         </scene>
         <!--Right Menu View Controller-->
         <scene sceneID="xND-Ws-BbD">
@@ -166,6 +324,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gh-Fl-S55" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1182" y="360"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="1mA-BL-6vE">
+            <objects>
+                <viewController storyboardIdentifier="JFWArticleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jo6-AK-TkF" customClass="JFWArticleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JeJ-IE-O0O"/>
+                        <viewControllerLayoutGuide type="bottom" id="xTL-gS-PMQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OIv-CU-H24">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KfJ-hB-Iku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2163" y="299.25"/>
         </scene>
     </scenes>
 </document>

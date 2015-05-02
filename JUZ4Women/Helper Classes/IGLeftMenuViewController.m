@@ -16,11 +16,23 @@
 #import "MMDrawerController.h"
 #import "MMDrawerVisualState.h"
 #import "LeftMenuCellTableViewCell.h"
-//#import "IGPlayersInfoViewController.h"
 #import "JFWAppDelegate.h"
 #import "UIViewController+MMDrawerController.h"
+#import "JFWMenuItemModel.h"
+#import "JFWAboutUsViewController.h"
+#import "JFWArticleViewController.h"
+#import "JFWPollsViewController.h"
+#import "JFWPostViewController.h"
+#import "JFWSignOutViewController.h"
+#import "JFWVideoViewController.h"
 
 
+@interface IGLeftMenuViewController()
+{
+    NSMutableArray *menuItemArray;
+}
+
+@end
 
 @implementation IGLeftMenuViewController
 
@@ -37,38 +49,45 @@
 {
 	[super viewDidLoad];
     
+      menuItemArray = [self createMenuItemArray];
+    
     self.title = @"Player List";
 	
-	self.tableView.separatorColor = [UIColor lightGrayColor];
+	//self.tableView.separatorColor = [UIColor lightGrayColor];
     
-    UIImageView *imageViewObj = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 280, self.tableView.frame.size.height)];
-    imageViewObj.image = [UIImage imageNamed:@"swipe_menu_bg.png"];
+    UIImageView *imageViewObj = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.tableView.frame.size.height)];
+    imageViewObj.image = [UIImage imageNamed:@"app_back.png"];
+    
+    //self.view = imageViewObj;
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
 	
-//	UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"swipe_menu_bg.png"]];
-	self.tableView.backgroundView = imageViewObj;
+	//self.tableView.backgroundView = imageViewObj;
 	
-	self.view.layer.borderWidth = .6;
-	self.view.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//	self.view.layer.borderWidth = .6;
+//	self.view.layer.borderColor = [UIColor lightGrayColor].CGColor;
 }
 
 #pragma mark - UITableView Delegate & Datasrouce -
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 6;
+    if(!menuItemArray)
+        return 0;
+	return menuItemArray.count;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-	UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 20)];
-	view.backgroundColor = [UIColor clearColor];
-	return view;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//	UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 20)];
+//	view.backgroundColor = [UIColor clearColor];
+//	return view;
+//}
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-	return 20;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//	return 20;
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -86,47 +105,12 @@
         
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         
-//        cell.contentView.backgroundColor = [UIColor colorWithRed:14/255.0 green:63/255.0 blue:109/255.0 alpha:1];
-        
         
     }
     cell.borderImageView.image = [UIImage imageNamed:@"devider.png"];
+    cell.backgroundColor = [UIColor clearColor];
 	
-	switch (indexPath.row)
-	{
-        case 0:
-            cell.descriptionLabel.text = @"Home";
-            cell.cellImageView.image = [UIImage imageNamed:@"icon_home.png"];
-            break;
-            
-		case 1:
-			cell.descriptionLabel.text = @"Players Info";
-            cell.cellImageView.image = [UIImage imageNamed:@"icon_player-_nfo.png"];
-			break;
-			
-		case 2:
-			cell.descriptionLabel.text = @"Team History";
-            cell.cellImageView.image = [UIImage imageNamed:@"icon_team_history.png"];
-			break;
-			
-		case 3:
-			cell.descriptionLabel.text = @"Stadium History";
-            cell.cellImageView.image = [UIImage imageNamed:@"icon_stadium.png"];
-			break;
-			
-		case 4:
-			cell.descriptionLabel.text = @"Ticket Details";
-            cell.cellImageView.image = [UIImage imageNamed:@"icon_ticket.png"];
-			break;
-        case 5:
-            cell.descriptionLabel.text = @"Feedback";
-            cell.cellImageView.image = [UIImage imageNamed:@"icon_feedback.png"];
-            break;
-        
-	}
-	
-	cell.backgroundColor = [UIColor clearColor];
-	
+    [cell configureCellWith:[menuItemArray objectAtIndex:indexPath.row]];
 	return cell;
 }
 
@@ -139,20 +123,24 @@
 	{
         case 0:
         {
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"IGHomeViewController"];
+            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
             break;
         }
 
-					
-		
+        case 1:
+            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWArticleViewController"];
+            break;
+        case 2:
+            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWVideoViewController"];
+            break;
         case 3:
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"IGStadiumHistoryViewController"];
+            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWPollsViewController"];
             break;
         case 4:
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"IGTicketDetailViewController"];
+            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAboutUsViewController"];
             break;
         case 5:
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"IGFeedbackViewController"];
+            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWSignOutViewController"];
             break;
 			
 		
@@ -163,4 +151,24 @@
     [self.mm_drawerController setCenterViewController:navControllerObj withCloseAnimation:YES completion:nil];
 }
 
+
+-(NSMutableArray *)createMenuItemArray
+{
+    JFWMenuItemModel *menuItemModelObj1 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Post" withImageName:@"post_icon"];
+    
+    JFWMenuItemModel *menuItemModelObj2 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Article" withImageName:@"article_icon"];
+    
+    JFWMenuItemModel *menuItemModelObj3 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Videos" withImageName:@"video_icon"];
+    
+    JFWMenuItemModel *menuItemModelObj4 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Polls" withImageName:@"poll_icon"];
+        
+    JFWMenuItemModel *menuItemModelObj5 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"About Us" withImageName:@"about_us_icon"];
+    
+    
+    JFWMenuItemModel *menuItemModelObj6 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Sign Out" withImageName:@"sign_out_icon"];
+    
+NSMutableArray *menuItemArray = [[NSMutableArray alloc]initWithObjects:menuItemModelObj1,menuItemModelObj2,menuItemModelObj3,menuItemModelObj4,menuItemModelObj5,menuItemModelObj6, nil];
+    
+    return menuItemArray;
+}
 @end

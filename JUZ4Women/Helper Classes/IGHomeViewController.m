@@ -10,16 +10,15 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "IGLeftMenuViewController.h"
 #import <CoreLocation/CoreLocation.h>
-//#import "UIImage+animatedGIF.h"
 #import "IGHomeViewCellTableViewCell.h"
 #import "UIViewController+MMDrawerController.h"
 #import "JFWAppDelegate.h"
 
 
+
+
 @interface IGHomeViewController()
 {
-   
-    NSString *databasePath;
     NSMutableArray *cellImageArray;
     UITableView *tableView;
     UIView *notificationView;
@@ -35,27 +34,26 @@
 {
     [super viewDidLoad];
     [self commanInit];
-    self.title = @"Home";
+    self.title = @"Post";
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    //[self configureTableView];
 }
 
 -(void)commanInit
 {
     [self configureNavBarTitile];
-    //[self initilizeManagers];
-    //[self setSearchBeaconImage];
-    //[self startScanningBeacons];
+   
     [self configureLeftNavBar];
     cellImageArray = [[NSMutableArray alloc]init];
 }
 -(void)configureNavBarTitile
 {
-    //self.title = @"Product Details";
-    
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 }
 
@@ -65,7 +63,7 @@
     
     rightButton.frame = CGRectMake(0, 0, 30, 30);
     
-    [rightButton setImage:[UIImage imageNamed:@"menu_icon.png"] forState:UIControlStateNormal];
+    [rightButton setImage:[UIImage imageNamed:@"column_icon"] forState:UIControlStateNormal];
     
      [rightButton addTarget:self action:@selector(onNavBarButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
@@ -93,25 +91,6 @@
 	return NO;
 }
 
-
-//-(void)initilizeManagers
-//{
-//    self.navigationController.navigationBar.translucent = NO;
-//    self.bleManagerObj = [[IGBLEManager alloc]init];
-//    self.bleManagerObj.delegate = self;
-//    
-//    self.dataManagerObj = [[IGDataManager alloc]init];
-//    
-//     NSMutableArray *beaconDataArray = [self.dataManagerObj getBeaconData];
-//    
-//    NSMutableArray *seatInfoArray = [self.dataManagerObj getSeatInfo];
-//    
-//    [self createDatabase];
-//    
-//    [[DatabaseManager getInstance] storeBeaconInfo:beaconDataArray];
-//    [[DatabaseManager getInstance] storeSeatsInfo:seatInfoArray];
-//
-//}
 
 
 

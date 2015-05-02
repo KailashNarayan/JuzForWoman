@@ -158,6 +158,22 @@
 		4ACFBAA91AF3FDE700C82325 /* IGHomeViewDescriptionCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ACFBAA51AF3FDE700C82325 /* IGHomeViewDescriptionCellTableViewCell.xib */; };
 		4ACFBAAD1AF49CDE00C82325 /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ACFBAAB1AF49CDE00C82325 /* menu_icon.png */; };
 		4ACFBAAE1AF49CDE00C82325 /* menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ACFBAAC1AF49CDE00C82325 /* menu_icon@2x.png */; };
+		4AD2B2341AF542D00089DB7F /* devider.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD2B2321AF542D00089DB7F /* devider.png */; };
+		4AD2B2351AF542D00089DB7F /* devider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD2B2331AF542D00089DB7F /* devider@2x.png */; };
+		4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2371AF54FB00089DB7F /* JFWMenuItemModel.h */; };
+		4AD2B23A1AF54FB00089DB7F /* JFWMenuItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2381AF54FB00089DB7F /* JFWMenuItemModel.m */; };
+		4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2411AF558E10089DB7F /* JFWAboutUsViewController.h */; };
+		4AD2B2441AF558E10089DB7F /* JFWAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2421AF558E10089DB7F /* JFWAboutUsViewController.m */; };
+		4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2451AF558F30089DB7F /* JFWArticleViewController.h */; };
+		4AD2B2481AF558F30089DB7F /* JFWArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2461AF558F30089DB7F /* JFWArticleViewController.m */; };
+		4AD2B24B1AF559050089DB7F /* JFWPollsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2491AF559050089DB7F /* JFWPollsViewController.h */; };
+		4AD2B24C1AF559050089DB7F /* JFWPollsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B24A1AF559050089DB7F /* JFWPollsViewController.m */; };
+		4AD2B24F1AF559170089DB7F /* JFWPostViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B24D1AF559170089DB7F /* JFWPostViewController.h */; };
+		4AD2B2501AF559170089DB7F /* JFWPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B24E1AF559170089DB7F /* JFWPostViewController.m */; };
+		4AD2B2531AF559290089DB7F /* JFWSignOutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2511AF559290089DB7F /* JFWSignOutViewController.h */; };
+		4AD2B2541AF559290089DB7F /* JFWSignOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2521AF559290089DB7F /* JFWSignOutViewController.m */; };
+		4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD2B2551AF559380089DB7F /* JFWVideoViewController.h */; };
+		4AD2B2581AF559380089DB7F /* JFWVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2B2561AF559380089DB7F /* JFWVideoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -383,6 +399,22 @@
 		4ACFBAA51AF3FDE700C82325 /* IGHomeViewDescriptionCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IGHomeViewDescriptionCellTableViewCell.xib; sourceTree = "<group>"; };
 		4ACFBAAB1AF49CDE00C82325 /* menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon.png; sourceTree = "<group>"; };
 		4ACFBAAC1AF49CDE00C82325 /* menu_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_icon@2x.png"; sourceTree = "<group>"; };
+		4AD2B2321AF542D00089DB7F /* devider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devider.png; sourceTree = "<group>"; };
+		4AD2B2331AF542D00089DB7F /* devider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devider@2x.png"; sourceTree = "<group>"; };
+		4AD2B2371AF54FB00089DB7F /* JFWMenuItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWMenuItemModel.h; sourceTree = "<group>"; };
+		4AD2B2381AF54FB00089DB7F /* JFWMenuItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWMenuItemModel.m; sourceTree = "<group>"; };
+		4AD2B2411AF558E10089DB7F /* JFWAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWAboutUsViewController.h; sourceTree = "<group>"; };
+		4AD2B2421AF558E10089DB7F /* JFWAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWAboutUsViewController.m; sourceTree = "<group>"; };
+		4AD2B2451AF558F30089DB7F /* JFWArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWArticleViewController.h; sourceTree = "<group>"; };
+		4AD2B2461AF558F30089DB7F /* JFWArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWArticleViewController.m; sourceTree = "<group>"; };
+		4AD2B2491AF559050089DB7F /* JFWPollsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWPollsViewController.h; sourceTree = "<group>"; };
+		4AD2B24A1AF559050089DB7F /* JFWPollsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWPollsViewController.m; sourceTree = "<group>"; };
+		4AD2B24D1AF559170089DB7F /* JFWPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWPostViewController.h; sourceTree = "<group>"; };
+		4AD2B24E1AF559170089DB7F /* JFWPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWPostViewController.m; sourceTree = "<group>"; };
+		4AD2B2511AF559290089DB7F /* JFWSignOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWSignOutViewController.h; sourceTree = "<group>"; };
+		4AD2B2521AF559290089DB7F /* JFWSignOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWSignOutViewController.m; sourceTree = "<group>"; };
+		4AD2B2551AF559380089DB7F /* JFWVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWVideoViewController.h; sourceTree = "<group>"; };
+		4AD2B2561AF559380089DB7F /* JFWVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWVideoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +465,8 @@
 		381C73DB1AF53C82003290CF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4AD2B2321AF542D00089DB7F /* devider.png */,
+				4AD2B2331AF542D00089DB7F /* devider@2x.png */,
 				381C73DC1AF53C82003290CF /* about_us_icon@2x.png */,
 				381C73DD1AF53C82003290CF /* add_post_icon@2x.png */,
 				381C73DE1AF53C82003290CF /* add_videos_icon@2x.png */,
@@ -642,6 +676,12 @@
 		4A6D14D21AF2796F003A1708 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AD2B23B1AF558C70089DB7F /* JFWAboutUsViewController */,
+				4AD2B23C1AF558C70089DB7F /* JFWArticleViewController */,
+				4AD2B23D1AF558C70089DB7F /* JFWPollsViewController */,
+				4AD2B23E1AF558C70089DB7F /* JFWPostViewController */,
+				4AD2B23F1AF558C70089DB7F /* JFWSignOutViewController */,
+				4AD2B2401AF558C70089DB7F /* JFWVideoViewController */,
 				4A6D14D71AF27A21003A1708 /* JFWViewController.h */,
 				4A6D14D81AF27A21003A1708 /* JFWViewController.m */,
 			);
@@ -658,6 +698,7 @@
 		4A6D14DA1AF27A61003A1708 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4AD2B2361AF54F790089DB7F /* MenuItemModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -845,6 +886,69 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		4AD2B2361AF54F790089DB7F /* MenuItemModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AD2B2371AF54FB00089DB7F /* JFWMenuItemModel.h */,
+				4AD2B2381AF54FB00089DB7F /* JFWMenuItemModel.m */,
+			);
+			path = MenuItemModel;
+			sourceTree = "<group>";
+		};
+		4AD2B23B1AF558C70089DB7F /* JFWAboutUsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AD2B2411AF558E10089DB7F /* JFWAboutUsViewController.h */,
+				4AD2B2421AF558E10089DB7F /* JFWAboutUsViewController.m */,
+			);
+			path = JFWAboutUsViewController;
+			sourceTree = "<group>";
+		};
+		4AD2B23C1AF558C70089DB7F /* JFWArticleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AD2B2451AF558F30089DB7F /* JFWArticleViewController.h */,
+				4AD2B2461AF558F30089DB7F /* JFWArticleViewController.m */,
+			);
+			path = JFWArticleViewController;
+			sourceTree = "<group>";
+		};
+		4AD2B23D1AF558C70089DB7F /* JFWPollsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AD2B2491AF559050089DB7F /* JFWPollsViewController.h */,
+				4AD2B24A1AF559050089DB7F /* JFWPollsViewController.m */,
+			);
+			path = JFWPollsViewController;
+			sourceTree = "<group>";
+		};
+		4AD2B23E1AF558C70089DB7F /* JFWPostViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AD2B24D1AF559170089DB7F /* JFWPostViewController.h */,
+				4AD2B24E1AF559170089DB7F /* JFWPostViewController.m */,
+			);
+			path = JFWPostViewController;
+			sourceTree = "<group>";
+		};
+		4AD2B23F1AF558C70089DB7F /* JFWSignOutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AD2B2511AF559290089DB7F /* JFWSignOutViewController.h */,
+				4AD2B2521AF559290089DB7F /* JFWSignOutViewController.m */,
+			);
+			path = JFWSignOutViewController;
+			sourceTree = "<group>";
+		};
+		4AD2B2401AF558C70089DB7F /* JFWVideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AD2B2551AF559380089DB7F /* JFWVideoViewController.h */,
+				4AD2B2561AF559380089DB7F /* JFWVideoViewController.m */,
+			);
+			path = JFWVideoViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -852,8 +956,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD2B24F1AF559170089DB7F /* JFWPostViewController.h in Headers */,
+				4AD2B24B1AF559050089DB7F /* JFWPollsViewController.h in Headers */,
+				4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */,
+				4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */,
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
+				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
 				381C73D71AF53137003290CF /* SignUpViewController.h in Headers */,
+				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
+				4AD2B2531AF559290089DB7F /* JFWSignOutViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1016,7 +1127,9 @@
 				4ACFBAA91AF3FDE700C82325 /* IGHomeViewDescriptionCellTableViewCell.xib in Resources */,
 				381C73D91AF53137003290CF /* SignUpViewController.xib in Resources */,
 				381C743D1AF53C82003290CF /* column_icon@2x.png in Resources */,
+				4AD2B2351AF542D00089DB7F /* devider@2x.png in Resources */,
 				381C74711AF53C82003290CF /* sign_up_mobile_back@2x.png in Resources */,
+				4AD2B2341AF542D00089DB7F /* devider.png in Resources */,
 				381C74401AF53C82003290CF /* comment_small_icon@2x.png in Resources */,
 				381C74381AF53C82003290CF /* articles_icon@2x.png in Resources */,
 				381C746D1AF53C82003290CF /* sign_up_city_county_back@2x.png in Resources */,
@@ -1055,10 +1168,12 @@
 				4ACFBA941AF3FBC600C82325 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				4ACFBA791AF3F94400C82325 /* UIViewController+MMDrawerController.m in Sources */,
 				4A6D14D91AF27A21003A1708 /* JFWViewController.m in Sources */,
+				4AD2B2441AF558E10089DB7F /* JFWAboutUsViewController.m in Sources */,
 				4ACFBA831AF3F9C600C82325 /* IGRightMenuViewController.m in Sources */,
 				4A6D151A1AF27E91003A1708 /* JFWUtilities.m in Sources */,
 				4A6D15071AF27D2C003A1708 /* AFHTTPRequestOperationManager.m in Sources */,
 				4ACFBA701AF3F94400C82325 /* MMLogoView.m in Sources */,
+				4AD2B2581AF559380089DB7F /* JFWVideoViewController.m in Sources */,
 				4ACFBA661AF3F94400C82325 /* MMCenterTableViewCell.m in Sources */,
 				4A6D15141AF27D2C003A1708 /* UIProgressView+AFNetworking.m in Sources */,
 				4ACFBAA61AF3FDE700C82325 /* IGHomeViewCellTableViewCell.m in Sources */,
@@ -1069,6 +1184,7 @@
 				4A6D150B1AF27D2C003A1708 /* AFURLConnectionOperation.m in Sources */,
 				4A6D15121AF27D2C003A1708 /* UIButton+AFNetworking.m in Sources */,
 				4A6D15101AF27D2C003A1708 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				4AD2B2481AF558F30089DB7F /* JFWArticleViewController.m in Sources */,
 				4ACFBA721AF3F94400C82325 /* MMSideDrawerSectionHeaderView.m in Sources */,
 				4ACFBA641AF3F94400C82325 /* MainViewController.m in Sources */,
 				4ACFBA6A1AF3F94400C82325 /* MMExampleCenterTableViewController.m in Sources */,
@@ -1080,12 +1196,14 @@
 				4ACFBA921AF3FBC600C82325 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				4ACFBA6E1AF3F94400C82325 /* MMExampleSideDrawerViewController.m in Sources */,
 				4ACFBA811AF3F9C600C82325 /* IGHomeViewController.m in Sources */,
+				4AD2B23A1AF54FB00089DB7F /* JFWMenuItemModel.m in Sources */,
 				4ACFBA971AF3FBC600C82325 /* SlideNavigationController.m in Sources */,
 				4A6D15151AF27D2C003A1708 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4ACFBA731AF3F94400C82325 /* MMSideDrawerTableViewCell.m in Sources */,
 				4ACFBA681AF3F94400C82325 /* MMDrawerController.m in Sources */,
 				4A6D15161AF27D2C003A1708 /* UIWebView+AFNetworking.m in Sources */,
 				4A6D15081AF27D2C003A1708 /* AFHTTPSessionManager.m in Sources */,
+				4AD2B2541AF559290089DB7F /* JFWSignOutViewController.m in Sources */,
 				4ACFBA751AF3F94400C82325 /* NewControllerViewController.m in Sources */,
 				4ACFBA6B1AF3F94400C82325 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				4ACFBA771AF3F94400C82325 /* SecondViewController.m in Sources */,
@@ -1094,7 +1212,9 @@
 				4A6D15111AF27D2C003A1708 /* UIAlertView+AFNetworking.m in Sources */,
 				4ACFBA6F1AF3F94400C82325 /* MMExampleViewController.m in Sources */,
 				4ACFBA711AF3F94400C82325 /* MMNavigationController.m in Sources */,
+				4AD2B2501AF559170089DB7F /* JFWPostViewController.m in Sources */,
 				4ACFBA951AF3FBC600C82325 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
+				4AD2B24C1AF559050089DB7F /* JFWPollsViewController.m in Sources */,
 				4ACFBA741AF3F94400C82325 /* MMTableViewCell.m in Sources */,
 				4A6D150C1AF27D2C003A1708 /* AFURLRequestSerialization.m in Sources */,
 				4A6D150F1AF27D2C003A1708 /* AFNetworkActivityIndicatorManager.m in Sources */,

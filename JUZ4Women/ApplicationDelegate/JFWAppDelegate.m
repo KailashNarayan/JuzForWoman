@@ -138,7 +138,7 @@ static BOOL OSVersionIsAtLeastiOS7() {
     
     // Creating a custom bar button for right menu
     UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [button setImage:[UIImage imageNamed:@"menu_icon"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"column_icon"] forState:UIControlStateNormal];
     [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     [SlideNavigationController sharedInstance].rightBarButtonItem = rightBarButtonItem;

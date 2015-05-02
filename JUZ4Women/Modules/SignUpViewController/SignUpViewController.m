@@ -7,8 +7,9 @@
 //
 
 #import "SignUpViewController.h"
+#import "SignUpViewCell.h"
 
-@interface SignUpViewController ()
+@interface SignUpViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 {
     __weak IBOutlet UIScrollView *scrollView;
     __weak IBOutlet UIPageControl *pageControl;
@@ -16,7 +17,9 @@
     __weak IBOutlet UIButton *previousButton;
     __weak IBOutlet UIButton *nextButton;
     
+    SignUpViewCell *signUpViewCellObj;
 }
+
 - (IBAction)previousButtonTapped:(id)sender;
 
 - (IBAction)nextButtonTapped:(id)sender;
@@ -47,6 +50,8 @@
     [self setScrollViewContentSize];
     
     [self configureNextButton];
+    
+    [self registerCollectionViewCell];
 }
 
 -(void)configurePageControl
@@ -59,12 +64,39 @@
     [nextButton setImageEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
 }
 
-#pragma mark - UI Button Event Methods
-
-- (IBAction)previousButtonTapped:(id)sender {
+-(void)registerCollectionViewCell
+{
+    [collectionViewObj registerClass:[SignUpViewCell class] forCellWithReuseIdentifier:@"SignUpViewCellIdentifier"];
+    
+    [collectionViewObj registerNib:[UINib nibWithNibName:@"SignUpViewCell" bundle:nil] forCellWithReuseIdentifier:@"SignUpViewCellIdentifier"];
 }
 
-- (IBAction)nextButtonTapped:(id)sender {
+#pragma mark - Collection View DataSource Methods
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    signUpViewCellObj = [collectionView dequeueReusableCellWithReuseIdentifier:@"SignUpViewCellIdentifier" forIndexPath:indexPath];
+
+    return signUpViewCellObj;
+}
+
+#pragma mark - CollectionView Delegate methods
+
+#pragma mark - UI Button Event Methods
+
+- (IBAction)previousButtonTapped:(id)sender
+{
+    
+}
+
+- (IBAction)nextButtonTapped:(id)sender
+{
+    
 }
 
 #pragma mark - Helper Mthods

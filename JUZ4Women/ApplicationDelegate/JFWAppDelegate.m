@@ -19,6 +19,7 @@
 #import "MMNavigationController.h"
 
 #import "UserPreference.h"
+#import "JFWAppConstants.h"
 
 static BOOL OSVersionIsAtLeastiOS7() {
     return (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1);
@@ -38,15 +39,15 @@ static BOOL OSVersionIsAtLeastiOS7() {
 {
     // Override point for customization after application launch.
         
-    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserLoggedInKey];
     UIStoryboard *mainStoryboardObj = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     if([[UserPreference sharedInstance] isUserLoggedin])
     {
-        UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:[mainStoryboardObj instantiateViewControllerWithIdentifier:@"JFWViewController"]];
-        self.window.rootViewController = navController;
+        UIViewController *viewController = [mainStoryboardObj instantiateViewControllerWithIdentifier:@"SignUpViewControllerIdentifier"];
+        self.window.rootViewController = viewController;
     }
     else
     {
@@ -100,19 +101,11 @@ static BOOL OSVersionIsAtLeastiOS7() {
         }
         [self.window setRootViewController:self.drawerController];
         
-        
     }
-    
     
     [self.window makeKeyAndVisible];
     
-    
-    
-    
-    
     [self configureNavigationDrawer];
-    
-    
     
     return YES;
 }

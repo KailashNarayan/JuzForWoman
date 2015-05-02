@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		381C73CF1AF52757003290CF /* UserPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C73CE1AF52757003290CF /* UserPreference.m */; };
 		381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */ = {isa = PBXBuildFile; fileRef = 381C73D01AF52C02003290CF /* JUZ4Women.pch */; };
-		381C73D71AF53137003290CF /* SignUpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 381C73D41AF53137003290CF /* SignUpViewController.h */; };
-		381C73D81AF53137003290CF /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C73D51AF53137003290CF /* SignUpViewController.m */; };
-		381C73D91AF53137003290CF /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381C73D61AF53137003290CF /* SignUpViewController.xib */; };
 		381C742E1AF53C82003290CF /* about_us_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 381C73DC1AF53C82003290CF /* about_us_icon@2x.png */; };
 		381C742F1AF53C82003290CF /* add_post_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 381C73DD1AF53C82003290CF /* add_post_icon@2x.png */; };
 		381C74301AF53C82003290CF /* add_videos_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 381C73DE1AF53C82003290CF /* add_videos_icon@2x.png */; };
@@ -94,6 +91,11 @@
 		381C747D1AF53C82003290CF /* video_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 381C742B1AF53C82003290CF /* video_icon@2x.png */; };
 		381C747E1AF53C82003290CF /* videos_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 381C742C1AF53C82003290CF /* videos_icon@2x.png */; };
 		381C747F1AF53C82003290CF /* white_poll_dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 381C742D1AF53C82003290CF /* white_poll_dot@2x.png */; };
+		381C74841AF55331003290CF /* SignUpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 381C74811AF55331003290CF /* SignUpViewController.h */; };
+		381C74851AF55331003290CF /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C74821AF55331003290CF /* SignUpViewController.m */; };
+		381C748D1AF55393003290CF /* SignUpViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 381C748A1AF55393003290CF /* SignUpViewCell.h */; };
+		381C748E1AF55393003290CF /* SignUpViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C748B1AF55393003290CF /* SignUpViewCell.m */; };
+		381C748F1AF55393003290CF /* SignUpViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381C748C1AF55393003290CF /* SignUpViewCell.xib */; };
 		4A6D14A91AF1390A003A1708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14A81AF1390A003A1708 /* main.m */; };
 		4A6D14B41AF1390A003A1708 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D14B31AF1390A003A1708 /* Images.xcassets */; };
 		4A6D14C31AF1390A003A1708 /* JUZ4WomenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14C21AF1390A003A1708 /* JUZ4WomenTests.m */; };
@@ -174,9 +176,6 @@
 		381C73CD1AF52757003290CF /* UserPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPreference.h; sourceTree = "<group>"; };
 		381C73CE1AF52757003290CF /* UserPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPreference.m; sourceTree = "<group>"; };
 		381C73D01AF52C02003290CF /* JUZ4Women.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUZ4Women.pch; sourceTree = "<group>"; };
-		381C73D41AF53137003290CF /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
-		381C73D51AF53137003290CF /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		381C73D61AF53137003290CF /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		381C73DC1AF53C82003290CF /* about_us_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_us_icon@2x.png"; sourceTree = "<group>"; };
 		381C73DD1AF53C82003290CF /* add_post_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_post_icon@2x.png"; sourceTree = "<group>"; };
 		381C73DE1AF53C82003290CF /* add_videos_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_videos_icon@2x.png"; sourceTree = "<group>"; };
@@ -259,6 +258,11 @@
 		381C742B1AF53C82003290CF /* video_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_icon@2x.png"; sourceTree = "<group>"; };
 		381C742C1AF53C82003290CF /* videos_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videos_icon@2x.png"; sourceTree = "<group>"; };
 		381C742D1AF53C82003290CF /* white_poll_dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_poll_dot@2x.png"; sourceTree = "<group>"; };
+		381C74811AF55331003290CF /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		381C74821AF55331003290CF /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		381C748A1AF55393003290CF /* SignUpViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewCell.h; sourceTree = "<group>"; };
+		381C748B1AF55393003290CF /* SignUpViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewCell.m; sourceTree = "<group>"; };
+		381C748C1AF55393003290CF /* SignUpViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewCell.xib; sourceTree = "<group>"; };
 		4A6D14A31AF1390A003A1708 /* JUZ4Women.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JUZ4Women.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6D14A71AF1390A003A1708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6D14A81AF1390A003A1708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -415,9 +419,7 @@
 		381C73D31AF530AA003290CF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				381C73D41AF53137003290CF /* SignUpViewController.h */,
-				381C73D51AF53137003290CF /* SignUpViewController.m */,
-				381C73D61AF53137003290CF /* SignUpViewController.xib */,
+				381C74801AF55331003290CF /* SignUpViewController */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -517,6 +519,26 @@
 				381C742D1AF53C82003290CF /* white_poll_dot@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		381C74801AF55331003290CF /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				381C74891AF55363003290CF /* SignUpViewCell */,
+				381C74811AF55331003290CF /* SignUpViewController.h */,
+				381C74821AF55331003290CF /* SignUpViewController.m */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		381C74891AF55363003290CF /* SignUpViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				381C748A1AF55393003290CF /* SignUpViewCell.h */,
+				381C748B1AF55393003290CF /* SignUpViewCell.m */,
+				381C748C1AF55393003290CF /* SignUpViewCell.xib */,
+			);
+			path = SignUpViewCell;
 			sourceTree = "<group>";
 		};
 		4A6D149A1AF1390A003A1708 = {
@@ -852,8 +874,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381C748D1AF55393003290CF /* SignUpViewCell.h in Headers */,
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
-				381C73D71AF53137003290CF /* SignUpViewController.h in Headers */,
+				381C74841AF55331003290CF /* SignUpViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -975,6 +998,7 @@
 				4ACFBA9E1AF3FD3600C82325 /* LeftMenuCellTableViewCell.xib in Resources */,
 				381C74691AF53C82003290CF /* report_spam_icon_dark_red@2x.png in Resources */,
 				381C74701AF53C82003290CF /* sign_up_mail_back@2x.png in Resources */,
+				381C748F1AF55393003290CF /* SignUpViewCell.xib in Resources */,
 				381C74481AF53C82003290CF /* dislike_small_icon_selected@2x.png in Resources */,
 				381C74731AF53C82003290CF /* splash_screen@2x.jpg in Resources */,
 				381C74441AF53C82003290CF /* dislike_icon_dark_red@2x.png in Resources */,
@@ -1014,7 +1038,6 @@
 				381C747F1AF53C82003290CF /* white_poll_dot@2x.png in Resources */,
 				381C74531AF53C82003290CF /* inspried_medium_icon@2x.png in Resources */,
 				4ACFBAA91AF3FDE700C82325 /* IGHomeViewDescriptionCellTableViewCell.xib in Resources */,
-				381C73D91AF53137003290CF /* SignUpViewController.xib in Resources */,
 				381C743D1AF53C82003290CF /* column_icon@2x.png in Resources */,
 				381C74711AF53C82003290CF /* sign_up_mobile_back@2x.png in Resources */,
 				381C74401AF53C82003290CF /* comment_small_icon@2x.png in Resources */,
@@ -1065,6 +1088,7 @@
 				4A6D15091AF27D2C003A1708 /* AFNetworkReachabilityManager.m in Sources */,
 				4A6D150D1AF27D2C003A1708 /* AFURLResponseSerialization.m in Sources */,
 				4ACFBA961AF3FBC600C82325 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				381C748E1AF55393003290CF /* SignUpViewCell.m in Sources */,
 				381C73CF1AF52757003290CF /* UserPreference.m in Sources */,
 				4A6D150B1AF27D2C003A1708 /* AFURLConnectionOperation.m in Sources */,
 				4A6D15121AF27D2C003A1708 /* UIButton+AFNetworking.m in Sources */,
@@ -1075,7 +1099,7 @@
 				4ACFBAA81AF3FDE700C82325 /* IGHomeViewDescriptionCellTableViewCell.m in Sources */,
 				4ACFBA691AF3F94400C82325 /* MMDrawerVisualState.m in Sources */,
 				4A6D150A1AF27D2C003A1708 /* AFSecurityPolicy.m in Sources */,
-				381C73D81AF53137003290CF /* SignUpViewController.m in Sources */,
+				381C74851AF55331003290CF /* SignUpViewController.m in Sources */,
 				4ACFBA821AF3F9C600C82325 /* IGLeftMenuViewController.m in Sources */,
 				4ACFBA921AF3FBC600C82325 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				4ACFBA6E1AF3F94400C82325 /* MMExampleSideDrawerViewController.m in Sources */,

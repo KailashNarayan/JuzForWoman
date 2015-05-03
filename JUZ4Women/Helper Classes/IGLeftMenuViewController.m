@@ -52,16 +52,10 @@
       menuItemArray = [self createMenuItemArray];
     
     self.title = @"Player List";
-	    
-    UIImageView *imageViewObj = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.tableView.frame.size.height)];
-    imageViewObj.image = [UIImage imageNamed:@"app_back.png"];
-    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
     
     self.profileImageView.layer.cornerRadius = 25;
     self.profileImageView.layer.masksToBounds = YES;
-    
-
 }
 
 #pragma mark - UITableView Delegate & Datasrouce -

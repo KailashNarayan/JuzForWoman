@@ -10,10 +10,10 @@
 
 @interface IGHomeViewCellTableViewCell : UITableViewCell
 
-@property (nonatomic) UILabel *cellLabel;
-@property (weak, nonatomic) IBOutlet UILabel *offerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *postTitleLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *offerImageView;
+@property (weak, nonatomic) IBOutlet UILabel *postTitleDescriptionLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *borderImageView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @end

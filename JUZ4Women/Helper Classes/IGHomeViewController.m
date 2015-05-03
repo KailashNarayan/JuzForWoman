@@ -13,7 +13,7 @@
 #import "IGHomeViewCellTableViewCell.h"
 #import "UIViewController+MMDrawerController.h"
 #import "JFWAppDelegate.h"
-
+#import "JFWSearchViewController.h"
 
 
 
@@ -36,9 +36,14 @@
     [self commanInit];
     self.title = @"Post";
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
+
+    
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    self.postTopViewObj.backgroundColor = [UIColor colorWithRed:26.0/255.0 green:67.0/255.0 blue:96.0/255.0 alpha:1];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -48,7 +53,7 @@
 -(void)commanInit
 {
     [self configureNavBarTitile];
-   
+    [self configureRightNavBar];
     [self configureLeftNavBar];
     cellImageArray = [[NSMutableArray alloc]init];
 }
@@ -73,6 +78,32 @@
 
 }
 
+-(void)configureRightNavBar
+{
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    rightButton.frame = CGRectMake(0, 0, 30, 30);
+    
+    [rightButton setImage:[UIImage imageNamed:@"column_icon"] forState:UIControlStateNormal];
+    
+    [rightButton addTarget:self action:@selector(onNavBarButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemSearch target:self action:@selector(onSearchButtonTapped)];
+    
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    
+}
+
+
+-(void)onSearchButtonTapped
+{
+    JFWSearchViewController *searchViewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWSearchViewController"];
+    
+    UINavigationController *navControllerObj = [[UINavigationController alloc] initWithRootViewController:searchViewControllerObj];
+    
+    [self presentViewController:navControllerObj animated:YES completion:nil];
+}
+
 -(void)onNavBarButtonTapped
 {
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
@@ -95,46 +126,17 @@
 
 
 #pragma mark - TableView delegate methods
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    //Returning height of row
-//    if(indexPath.row == 3 || indexPath.row == 1)
-//    {
-//        return 70;
-//    }
-    return 250;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView
-estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-//    if(indexPath.row == 3 || indexPath.row == 1)
-//    {
-//        return 70;
-//    }
-    return 250;
-}
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    //Returning no of section in tableview
     return 1;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    //Intilizing footerview for table and returning it
-    UIView *footerView = [UIView new];
-    
-    return footerView;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //Returing number of rows in section of tableview
 
-    return cellImageArray.count ;
+    return 10;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView1 cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -154,42 +156,8 @@ estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
         cell =  (IGHomeViewCellTableViewCell *)[topLevelObjects objectAtIndex:0];
         
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        
-        cell.contentView.backgroundColor = [UIColor colorWithRed:219/255.0 green:219/255.0 blue:219/255.0 alpha:1];
-        cell.borderImageView.image = [UIImage imageNamed:@"devider_gray.png"];
     }
-    
-//    static NSString* descriptionCellIdentifier = @"DescriptionCell";
-//    
-//    IGHomeViewDescriptionCellTableViewCell *descriptionCell = (IGHomeViewDescriptionCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:descriptionCellIdentifier];
-    
-//    if (descriptionCell == nil)
-//    {
-//        descriptionCell = [[IGHomeViewDescriptionCellTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:descriptionCellIdentifier];
-//        
-//        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"IGHomeViewDescriptionCellTableViewCell" owner:self options:nil];
-//        descriptionCell =  (IGHomeViewDescriptionCellTableViewCell *)[topLevelObjects objectAtIndex:0];
-//        
-//        [descriptionCell setSelectionStyle:UITableViewCellSelectionStyleNone];
-//        
-//        descriptionCell.contentView.backgroundColor = [UIColor colorWithRed:219/255.0 green:219/255.0 blue:219/255.0 alpha:1];
-//        
-//        descriptionCell.borderImageView.image = [UIImage imageNamed:@"devider_gray.png"];
-//
-//    }
-   // 26 ,54, 118
-    
-    //descriptionCell.descriptionLabel.text = @"Hello cell";
-
-    
-    //Setting the label text on cell
-    
-        //cell.offerLabel.text = @"Sprots Title";
-    
-    
-        
-    //Setting the background color of cell
-    cell.backgroundColor = [UIColor colorWithRed:219.0/255 green:219.0/255 blue:219.0/255 alpha:1];
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
     

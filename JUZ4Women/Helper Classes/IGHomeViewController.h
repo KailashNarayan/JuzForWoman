@@ -17,5 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 
+@property (weak, nonatomic) IBOutlet UIView *postTopViewObj;
+
+
 
 @end

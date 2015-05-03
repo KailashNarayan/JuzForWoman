@@ -128,6 +128,14 @@
         case 5:
             viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWSignOutViewController"];
             break;
+            
+        case 6:
+            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewControllerIdentifier"];
+            
+            JFWAppDelegate *delegateObj = [UIApplication sharedApplication].delegate;
+            
+            
+            break;
 			
 		
 			

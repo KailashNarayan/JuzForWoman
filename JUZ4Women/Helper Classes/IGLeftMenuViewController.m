@@ -104,45 +104,43 @@
 {
 	
 	UIViewController *viewControllerObj ;
-	
-	switch (indexPath.row)
-	{
-        case 0:
+    
+    if(indexPath.row !=5)
+    {
+        switch (indexPath.row)
         {
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-            break;
+            case 0:
+            {
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+                break;
+            }
+                
+            case 1:
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWArticleViewController"];
+                break;
+            case 2:
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWVideoViewController"];
+                break;
+            case 3:
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWPollsViewController"];
+                break;
+            case 4:
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAboutUsViewController"];
+                break;
         }
+        UINavigationController *navControllerObj = [[UINavigationController alloc]initWithRootViewController:viewControllerObj];
+        [self.mm_drawerController setCenterViewController:navControllerObj withCloseAnimation:YES completion:nil];
 
-        case 1:
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWArticleViewController"];
-            break;
-        case 2:
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWVideoViewController"];
-            break;
-        case 3:
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWPollsViewController"];
-            break;
-        case 4:
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAboutUsViewController"];
-            break;
-        case 5:
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWSignOutViewController"];
-            break;
-            
-        case 6:
-            viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewControllerIdentifier"];
-            
-            JFWAppDelegate *delegateObj = [UIApplication sharedApplication].delegate;
-            
-            
-            break;
-			
-		
-			
+        
+    }
+    else
+    {
+        viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewControllerIdentifier"];
+        JFWAppDelegate *delegateObj = [UIApplication sharedApplication].delegate;
+        
+        [delegateObj.window setRootViewController:viewControllerObj];
+    }
 	
-}
-    UINavigationController *navControllerObj = [[UINavigationController alloc]initWithRootViewController:viewControllerObj];
-    [self.mm_drawerController setCenterViewController:navControllerObj withCloseAnimation:YES completion:nil];
 }
 
 

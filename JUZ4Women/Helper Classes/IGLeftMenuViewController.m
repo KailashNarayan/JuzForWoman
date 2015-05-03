@@ -52,20 +52,16 @@
       menuItemArray = [self createMenuItemArray];
     
     self.title = @"Player List";
-	
-	//self.tableView.separatorColor = [UIColor lightGrayColor];
-    
+	    
     UIImageView *imageViewObj = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.tableView.frame.size.height)];
     imageViewObj.image = [UIImage imageNamed:@"app_back.png"];
     
-    //self.view = imageViewObj;
-    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
-	
-	//self.tableView.backgroundView = imageViewObj;
-	
-//	self.view.layer.borderWidth = .6;
-//	self.view.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
+    self.profileImageView.layer.cornerRadius = 25;
+    self.profileImageView.layer.masksToBounds = YES;
+    
+
 }
 
 #pragma mark - UITableView Delegate & Datasrouce -
@@ -77,17 +73,7 @@
 	return menuItemArray.count;
 }
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//	UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 20)];
-//	view.backgroundColor = [UIColor clearColor];
-//	return view;
-//}
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//	return 20;
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -167,8 +153,8 @@
     
     JFWMenuItemModel *menuItemModelObj6 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Sign Out" withImageName:@"sign_out_icon"];
     
-NSMutableArray *menuItemArray = [[NSMutableArray alloc]initWithObjects:menuItemModelObj1,menuItemModelObj2,menuItemModelObj3,menuItemModelObj4,menuItemModelObj5,menuItemModelObj6, nil];
+NSMutableArray *menuItemsArray = [[NSMutableArray alloc]initWithObjects:menuItemModelObj1,menuItemModelObj2,menuItemModelObj3,menuItemModelObj4,menuItemModelObj5,menuItemModelObj6, nil];
     
-    return menuItemArray;
+    return menuItemsArray;
 }
 @end

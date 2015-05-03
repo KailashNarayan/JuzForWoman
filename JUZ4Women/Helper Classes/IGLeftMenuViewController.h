@@ -17,4 +17,12 @@
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, assign) BOOL slideOutAnimationEnabled;
 
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLableObj;
+
+@property (weak, nonatomic) IBOutlet UILabel *emailLabelObj;
+
+
+
 @end

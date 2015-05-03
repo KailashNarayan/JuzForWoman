@@ -19,6 +19,11 @@
 
 @property (weak, nonatomic) IBOutlet UIView *postTopViewObj;
 
+- (IBAction)onAddPostButtonTapped:(id)sender;
+
+- (IBAction)onEditPostButtonTapped:(id)sender;
+
+- (IBAction)onFilterButtonTapped:(id)sender;
 
 
 @end

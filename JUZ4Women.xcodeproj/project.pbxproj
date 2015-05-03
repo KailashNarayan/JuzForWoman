@@ -179,6 +179,11 @@
 		4AD926EB1AF5E5E800F8CF2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD926E91AF5E5DB00F8CF2A /* QuartzCore.framework */; };
 		4AE310711AF6376100D1E343 /* JFWSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE3106F1AF6376100D1E343 /* JFWSearchViewController.h */; };
 		4AE310721AF6376100D1E343 /* JFWSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE310701AF6376100D1E343 /* JFWSearchViewController.m */; };
+		4AE310761AF642BD00D1E343 /* JFWAddPostViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE310741AF642BD00D1E343 /* JFWAddPostViewController.h */; };
+		4AE310771AF642BD00D1E343 /* JFWAddPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE310751AF642BD00D1E343 /* JFWAddPostViewController.m */; };
+		4AE3107F1AF6464900D1E343 /* JFWFilterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE3107D1AF6464900D1E343 /* JFWFilterView.h */; };
+		4AE310801AF6464900D1E343 /* JFWFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3107E1AF6464900D1E343 /* JFWFilterView.m */; };
+		4AE310821AF6466000D1E343 /* JFWFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE310811AF6466000D1E343 /* JFWFilterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -425,6 +430,11 @@
 		4AD926E91AF5E5DB00F8CF2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4AE3106F1AF6376100D1E343 /* JFWSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWSearchViewController.h; sourceTree = "<group>"; };
 		4AE310701AF6376100D1E343 /* JFWSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWSearchViewController.m; sourceTree = "<group>"; };
+		4AE310741AF642BD00D1E343 /* JFWAddPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWAddPostViewController.h; sourceTree = "<group>"; };
+		4AE310751AF642BD00D1E343 /* JFWAddPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWAddPostViewController.m; sourceTree = "<group>"; };
+		4AE3107D1AF6464900D1E343 /* JFWFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JFWFilterView.h; path = ../../../../JFWFilterView.h; sourceTree = "<group>"; };
+		4AE3107E1AF6464900D1E343 /* JFWFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JFWFilterView.m; path = ../../../../JFWFilterView.m; sourceTree = "<group>"; };
+		4AE310811AF6466000D1E343 /* JFWFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JFWFilterView.xib; path = ../../../../JFWFilterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -706,6 +716,7 @@
 		4A6D14D21AF2796F003A1708 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AE310731AF642AC00D1E343 /* JFWAddPostViewController */,
 				4AE3106E1AF6373C00D1E343 /* JFWSearchViewController */,
 				4AD2B23B1AF558C70089DB7F /* JFWAboutUsViewController */,
 				4AD2B23C1AF558C70089DB7F /* JFWArticleViewController */,
@@ -722,6 +733,7 @@
 		4A6D14D31AF2796F003A1708 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4AE310781AF6460600D1E343 /* FilterView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -997,6 +1009,25 @@
 			path = JFWSearchViewController;
 			sourceTree = "<group>";
 		};
+		4AE310731AF642AC00D1E343 /* JFWAddPostViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AE310741AF642BD00D1E343 /* JFWAddPostViewController.h */,
+				4AE310751AF642BD00D1E343 /* JFWAddPostViewController.m */,
+			);
+			path = JFWAddPostViewController;
+			sourceTree = "<group>";
+		};
+		4AE310781AF6460600D1E343 /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+				4AE3107D1AF6464900D1E343 /* JFWFilterView.h */,
+				4AE3107E1AF6464900D1E343 /* JFWFilterView.m */,
+				4AE310811AF6466000D1E343 /* JFWFilterView.xib */,
+			);
+			path = FilterView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1009,10 +1040,12 @@
 				4AD2B24B1AF559050089DB7F /* JFWPollsViewController.h in Headers */,
 				4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */,
 				4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */,
+				4AE3107F1AF6464900D1E343 /* JFWFilterView.h in Headers */,
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
 				381C74841AF55331003290CF /* SignUpViewController.h in Headers */,
 				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
+				4AE310761AF642BD00D1E343 /* JFWAddPostViewController.h in Headers */,
 				4AE310711AF6376100D1E343 /* JFWSearchViewController.h in Headers */,
 				4AD2B2531AF559290089DB7F /* JFWSignOutViewController.h in Headers */,
 			);
@@ -1165,6 +1198,7 @@
 				381C745F1AF53C82003290CF /* mobile_icon@2x.png in Resources */,
 				381C74491AF53C82003290CF /* donate_us_icon@2x.png in Resources */,
 				4ACFBAAE1AF49CDE00C82325 /* menu_icon@2x.png in Resources */,
+				4AE310821AF6466000D1E343 /* JFWFilterView.xib in Resources */,
 				4ACFBA651AF3F94400C82325 /* MainViewController.xib in Resources */,
 				381C74611AF53C82003290CF /* poll_icon@2x.png in Resources */,
 				381C74661AF53C82003290CF /* profile_camera_icon@2x.png in Resources */,
@@ -1222,6 +1256,7 @@
 				4ACFBA831AF3F9C600C82325 /* IGRightMenuViewController.m in Sources */,
 				4A6D151A1AF27E91003A1708 /* JFWUtilities.m in Sources */,
 				4A6D15071AF27D2C003A1708 /* AFHTTPRequestOperationManager.m in Sources */,
+				4AE310771AF642BD00D1E343 /* JFWAddPostViewController.m in Sources */,
 				4ACFBA701AF3F94400C82325 /* MMLogoView.m in Sources */,
 				4AD2B2581AF559380089DB7F /* JFWVideoViewController.m in Sources */,
 				4ACFBA661AF3F94400C82325 /* MMCenterTableViewCell.m in Sources */,
@@ -1274,6 +1309,7 @@
 				4A6D14D61AF279BB003A1708 /* JFWAppDelegate.m in Sources */,
 				4ACFBA6C1AF3F94400C82325 /* MMExampleLeftSideDrawerViewController.m in Sources */,
 				4A6D14A91AF1390A003A1708 /* main.m in Sources */,
+				4AE310801AF6464900D1E343 /* JFWFilterView.m in Sources */,
 				4AE310721AF6376100D1E343 /* JFWSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

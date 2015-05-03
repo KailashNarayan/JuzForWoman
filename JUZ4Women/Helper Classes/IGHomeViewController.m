@@ -14,7 +14,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "JFWAppDelegate.h"
 #import "JFWSearchViewController.h"
-
+#import "JFWAddPostViewController.h"
 
 
 @interface IGHomeViewController()
@@ -97,6 +97,11 @@
 
 -(void)onSearchButtonTapped
 {
+    [self presentSearchViewController];
+}
+
+-(void)presentSearchViewController
+{
     JFWSearchViewController *searchViewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWSearchViewController"];
     
     UINavigationController *navControllerObj = [[UINavigationController alloc] initWithRootViewController:searchViewControllerObj];
@@ -159,6 +164,9 @@
     }
     cell.backgroundColor = [UIColor clearColor];
     
+    cell.userImageView.layer.cornerRadius = 25;
+    cell.userImageView.layer.masksToBounds = YES;
+    
     return cell;
     
 }
@@ -168,4 +176,23 @@
 }
 
 
+- (IBAction)onAddPostButtonTapped:(id)sender
+{
+    JFWAddPostViewController *addPostViewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAddPostViewController"];
+    
+    UINavigationController *navControllerObj = [[UINavigationController alloc] initWithRootViewController:addPostViewControllerObj];
+    
+    [self presentViewController:navControllerObj animated:YES completion:nil];
+}
+
+- (IBAction)onEditPostButtonTapped:(id)sender
+{
+    [self presentSearchViewController];
+
+}
+
+- (IBAction)onFilterButtonTapped:(id)sender
+{
+    
+}
 @end

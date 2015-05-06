@@ -44,7 +44,7 @@ static BOOL OSVersionIsAtLeastiOS7() {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    if(![[UserPreference sharedInstance] isUserLoggedin])
+    if([[UserPreference sharedInstance] isUserLoggedin])
     {
         UIViewController *viewController = [mainStoryboardObj instantiateViewControllerWithIdentifier:@"SignUpViewControllerIdentifier"];
         self.window.rootViewController = viewController;

@@ -9,7 +9,9 @@
 #import "SignUpViewController.h"
 #import "SignUpViewCell.h"
 
-@interface SignUpViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+#import "JFWAppConstants.h"
+
+@interface SignUpViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SignUpViewCellDelegate>
 {
     __weak IBOutlet UIScrollView *scrollView;
     __weak IBOutlet UIPageControl *pageControl;
@@ -18,6 +20,8 @@
     __weak IBOutlet UIButton *nextButton;
     
     SignUpViewCell *signUpViewCellObj;
+    
+    SignUpOption signUpOption;
 }
 
 - (IBAction)previousButtonTapped:(id)sender;
@@ -52,6 +56,8 @@
     [self configureNextButton];
     
     [self registerCollectionViewCell];
+    
+    signUpOption = NONE;
 }
 
 -(void)configurePageControl
@@ -81,22 +87,69 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     signUpViewCellObj = [collectionView dequeueReusableCellWithReuseIdentifier:@"SignUpViewCellIdentifier" forIndexPath:indexPath];
+    
+    [signUpViewCellObj setSignUpScreenType:indexPath.row];
+    [signUpViewCellObj setSignUpOption:signUpOption];
+    
+    [signUpViewCellObj setDataOnCell];
 
+    if (indexPath.row == DATE_OF_BIRTH_SCREEN)
+        [self showPreviousButon:NO];
+    
+    else
+        [self showPreviousButon:YES];
+    
     return signUpViewCellObj;
 }
 
 #pragma mark - CollectionView Delegate methods
 
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSIndexPath *indexPath = [self getCurrentVisibleIndexPath];
+    
+    if (indexPath && indexPath.row < 4)
+    {
+        [self setPageControl:indexPath.row];
+    }
+}
+
 #pragma mark - UI Button Event Methods
 
 - (IBAction)previousButtonTapped:(id)sender
 {
+    NSIndexPath *indexPath = [self getCurrentVisibleIndexPath];
     
+    if (!indexPath)
+        return;
+    
+    if (indexPath.row ==  0)
+    {
+        [self showPreviousButon:NO];
+        return;
+    }
+    
+    indexPath = [NSIndexPath indexPathForRow:indexPath.row-1 inSection:indexPath.section];
+    
+     [collectionViewObj scrollToItemAtIndexPath:indexPath atScrollPosition:
+      UICollectionViewScrollPositionCenteredVertically animated:YES];
 }
 
 - (IBAction)nextButtonTapped:(id)sender
 {
+    NSIndexPath *indexPath = [self getCurrentVisibleIndexPath];
     
+    if (!indexPath)
+        return;
+    
+    if (indexPath.row ==  3)
+    {
+        return;
+    }
+    
+    indexPath = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:indexPath.section];
+    
+    [collectionViewObj scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
 }
 
 #pragma mark - Helper Mthods
@@ -105,5 +158,39 @@
 {
     [scrollView setContentSize:self.view.bounds.size];
 }
- 
+
+-(void)showPreviousButon:(BOOL)mode
+{
+    [previousButton setHidden:!mode];
+}
+
+-(void)showNextButon:(BOOL)mode
+{
+    [nextButton setHidden:!mode];
+}
+
+-(void)setPageControl:(NSInteger)page
+{
+    [pageControl setCurrentPage:page];
+}
+
+-(NSIndexPath *)getCurrentVisibleIndexPath
+{
+    NSIndexPath *indexPath = [collectionViewObj indexPathForCell:[[collectionViewObj visibleCells] firstObject]];
+    
+    return indexPath;
+}
+
+#pragma mark - SignUpViewCell Delegate Methods
+
+-(void)disableNextButton:(BOOL)mode
+{
+    [nextButton setEnabled:mode];
+}
+
+-(void)signUpOptionSelected:(SignUpOption)option
+{
+    signUpOption = option;
+}
+
 @end

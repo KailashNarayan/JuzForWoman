@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -23,10 +24,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paH-Ow-YMr">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="iHm-Dn-2Jg">
-                                        <rect key="frame" x="58" y="8" width="205" height="37"/>
-                                    </pageControl>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="U2d-6X-5vo">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="U2d-6X-5vo">
                                         <rect key="frame" x="8" y="113" width="304" height="392"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="eV4-Fc-rSQ">
@@ -35,6 +33,10 @@
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
+                                        <connections>
+                                            <outlet property="dataSource" destination="vXZ-lx-hvc" id="D8r-yq-Q25"/>
+                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="4tS-ub-PjZ"/>
+                                        </connections>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDC-1K-XwH">
                                         <rect key="frame" x="58" y="47" width="205" height="58"/>
@@ -85,7 +87,6 @@
                     <connections>
                         <outlet property="collectionViewObj" destination="U2d-6X-5vo" id="Xzo-xu-qDL"/>
                         <outlet property="nextButton" destination="2iR-0A-sSv" id="XyM-90-8Px"/>
-                        <outlet property="pageControl" destination="iHm-Dn-2Jg" id="LME-rn-gSt"/>
                         <outlet property="previousButton" destination="UAD-op-Wb9" id="eJt-d4-MaR"/>
                         <outlet property="scrollView" destination="paH-Ow-YMr" id="sZ7-6c-hYO"/>
                     </connections>
@@ -476,7 +477,7 @@
                         <viewControllerLayoutGuide type="bottom" id="oZI-yI-YuR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ur7-S0-ppU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9c-ke-34u">
@@ -658,6 +659,11 @@
                                         <exclude reference="Q1K-qt-hs1"/>
                                         <exclude reference="dkW-0L-aQZ"/>
                                         <exclude reference="kRd-ti-Qr2"/>
+                                        <exclude reference="2w8-Rt-sct"/>
+                                        <exclude reference="AeU-Aa-8hy"/>
+                                        <exclude reference="gV4-2X-fMv"/>
+                                        <exclude reference="hpv-Ds-EZZ"/>
+                                        <exclude reference="wSz-oQ-Tq0"/>
                                         <exclude reference="5yR-8r-khm"/>
                                         <exclude reference="BKT-wC-r6R"/>
                                         <exclude reference="ERO-uQ-Ly6"/>
@@ -667,11 +673,6 @@
                                         <exclude reference="mWa-kO-0Tj"/>
                                         <exclude reference="saN-GD-ih5"/>
                                         <exclude reference="siF-DX-tPG"/>
-                                        <exclude reference="2w8-Rt-sct"/>
-                                        <exclude reference="AeU-Aa-8hy"/>
-                                        <exclude reference="gV4-2X-fMv"/>
-                                        <exclude reference="hpv-Ds-EZZ"/>
-                                        <exclude reference="wSz-oQ-Tq0"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -695,6 +696,11 @@
                                         <exclude reference="Q1K-qt-hs1"/>
                                         <exclude reference="dkW-0L-aQZ"/>
                                         <include reference="kRd-ti-Qr2"/>
+                                        <include reference="2w8-Rt-sct"/>
+                                        <include reference="AeU-Aa-8hy"/>
+                                        <include reference="gV4-2X-fMv"/>
+                                        <include reference="hpv-Ds-EZZ"/>
+                                        <include reference="wSz-oQ-Tq0"/>
                                         <include reference="5yR-8r-khm"/>
                                         <exclude reference="BKT-wC-r6R"/>
                                         <exclude reference="ERO-uQ-Ly6"/>
@@ -704,11 +710,6 @@
                                         <exclude reference="mWa-kO-0Tj"/>
                                         <exclude reference="saN-GD-ih5"/>
                                         <include reference="siF-DX-tPG"/>
-                                        <include reference="2w8-Rt-sct"/>
-                                        <include reference="AeU-Aa-8hy"/>
-                                        <include reference="gV4-2X-fMv"/>
-                                        <include reference="hpv-Ds-EZZ"/>
-                                        <include reference="wSz-oQ-Tq0"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -765,6 +766,9 @@
                                 <exclude reference="vpF-89-MIQ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Aj5-Pz-zqN"/>
+                                <exclude reference="NyI-h3-NI5"/>
+                                <exclude reference="PkV-YZ-iab"/>
                                 <exclude reference="9SV-ny-sX7"/>
                                 <exclude reference="Vhq-dR-kgS"/>
                                 <exclude reference="XNE-1a-uso"/>
@@ -778,9 +782,6 @@
                                 <exclude reference="fUm-dq-vpq"/>
                                 <exclude reference="onn-mz-ymk"/>
                                 <exclude reference="pEf-t1-3vb"/>
-                                <exclude reference="Aj5-Pz-zqN"/>
-                                <exclude reference="NyI-h3-NI5"/>
-                                <exclude reference="PkV-YZ-iab"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -789,6 +790,9 @@
                                 <include reference="vpF-89-MIQ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Aj5-Pz-zqN"/>
+                                <exclude reference="NyI-h3-NI5"/>
+                                <include reference="PkV-YZ-iab"/>
                                 <exclude reference="9SV-ny-sX7"/>
                                 <include reference="Vhq-dR-kgS"/>
                                 <exclude reference="XNE-1a-uso"/>
@@ -802,9 +806,6 @@
                                 <include reference="fUm-dq-vpq"/>
                                 <include reference="onn-mz-ymk"/>
                                 <include reference="pEf-t1-3vb"/>
-                                <exclude reference="Aj5-Pz-zqN"/>
-                                <exclude reference="NyI-h3-NI5"/>
-                                <include reference="PkV-YZ-iab"/>
                             </mask>
                         </variation>
                     </view>
@@ -847,6 +848,7 @@
                         <viewControllerLayoutGuide type="bottom" id="J8p-uk-ArH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JDd-nh-FYD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -866,6 +868,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0nt-A7-xIM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DFE-my-WEs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

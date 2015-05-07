@@ -133,17 +133,20 @@
     {
         case EMAIL:
             message = NSLocalizedString(@"EMAIL_TEXT", nil);
+            
+            [emailTextField setKeyboardType:UIKeyboardTypeDefault];
             break;
             
         case MOBILE:
             message = NSLocalizedString(@"MOBILE_NUMBER", nil);
+            [emailTextField setKeyboardType:UIKeyboardTypeNamePhonePad];
             break;
             
         default:
             break;
     }
     
-    [securityCodeTextField setPlaceholder:message];
+    [emailTextField setPlaceholder:message];
 }
 
 -(BOOL)checkAllMandatoryFieldsFilled
@@ -191,6 +194,11 @@
     
     return mode;
 
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self endEditing:YES];
 }
 
 #pragma mark - UITextField Delegate methods

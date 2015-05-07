@@ -40,6 +40,16 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self addObservers];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [self removeObservers];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -77,6 +87,19 @@
     [collectionViewObj registerNib:[UINib nibWithNibName:@"SignUpViewCell" bundle:nil] forCellWithReuseIdentifier:@"SignUpViewCellIdentifier"];
 }
 
+-(void)addObservers
+{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+-(void)removeObservers
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+}
 #pragma mark - Collection View DataSource Methods
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -132,7 +155,7 @@
     indexPath = [NSIndexPath indexPathForRow:indexPath.row-1 inSection:indexPath.section];
     
      [collectionViewObj scrollToItemAtIndexPath:indexPath atScrollPosition:
-      UICollectionViewScrollPositionCenteredVertically animated:YES];
+      UICollectionViewScrollPositionRight animated:YES];
 }
 
 - (IBAction)nextButtonTapped:(id)sender
@@ -149,8 +172,27 @@
     
     indexPath = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:indexPath.section];
     
-    [collectionViewObj scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
+    [collectionViewObj scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
 }
+
+#pragma mark - Observer Methods
+
+-(void)keyboardWillShow:(NSNotification *)notify
+{
+    CGRect frame = self.view.frame;
+    frame.origin.y = -160;
+    
+    [self animateViewWithFrame:frame];
+}
+
+-(void)keyBoardWillHide:(NSNotification *)notify
+{
+    CGRect frame = self.view.frame;
+    frame.origin.y = 0;
+    
+    [self animateViewWithFrame:frame];
+}
+
 
 #pragma mark - Helper Mthods
 
@@ -179,6 +221,15 @@
     NSIndexPath *indexPath = [collectionViewObj indexPathForCell:[[collectionViewObj visibleCells] firstObject]];
     
     return indexPath;
+}
+
+-(void)animateViewWithFrame:(CGRect)frame
+{
+    [UIView animateWithDuration:0.35 animations:^{
+    
+        [self.view setFrame:frame];
+    
+    }];
 }
 
 #pragma mark - SignUpViewCell Delegate Methods

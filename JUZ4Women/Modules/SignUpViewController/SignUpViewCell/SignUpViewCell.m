@@ -11,8 +11,18 @@
 
 @implementation SignUpViewCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     // Initialization code
+    
+    [dateTextField setDelegate:self];
+    [monthTextField setDelegate:self];
+    [yearTextField setDelegate:self];
+    [countryTextField setDelegate:self];
+    [securityCodeTextField setDelegate:self];
+    [cityTextField setDelegate:self];
+    [emailTextField setDelegate:self];
+    [passwordTextField setDelegate:self];
 }
 
 
@@ -155,6 +165,13 @@
     return YES;
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
 #pragma mark - UIButton event methods
 
 - (IBAction)emailButtonTapped:(id)sender
@@ -174,4 +191,6 @@
         [self.delegate signUpOptionSelected:option];
     }
 }
+
+
 @end

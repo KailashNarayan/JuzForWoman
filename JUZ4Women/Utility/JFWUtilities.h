@@ -104,4 +104,6 @@
 
 +(BOOL)getBoolFromUserDefaultForkey:(NSString *)key;
 
++(BOOL)isOSVersionIsAtLeastiOS7;
+
 @end

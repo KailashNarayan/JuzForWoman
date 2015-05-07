@@ -7,6 +7,20 @@
 //
 
 #import "SignUpViewController.h"
+
+#import "IGLeftMenuViewController.h"
+#import "IGHomeViewController.h"
+#import "MMDrawerController.h"
+#import "MMExampleCenterTableViewController.h"
+#import "MMExampleLeftSideDrawerViewController.h"
+#import "MMExampleRightSideDrawerViewController.h"
+#import "MMDrawerVisualState.h"
+#import "MMExampleDrawerVisualStateManager.h"
+#import "MMNavigationController.h"
+#import "JFWAppDelegate.h"
+
+#import "JFWUtilities.h"
+
 #import "SignUpViewCell.h"
 
 #import "JFWAppConstants.h"
@@ -23,6 +37,8 @@
     
     SignUpOption signUpOption;
 }
+
+@property (nonatomic,strong) MMDrawerController * drawerController;
 
 - (IBAction)previousButtonTapped:(id)sender;
 
@@ -67,6 +83,8 @@
     
     [self registerCollectionViewCell];
     
+    [self disableNextButton:YES];
+    
     signUpOption = NONE;
 }
 
@@ -110,6 +128,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     signUpViewCellObj = [collectionView dequeueReusableCellWithReuseIdentifier:@"SignUpViewCellIdentifier" forIndexPath:indexPath];
+    
+    [signUpViewCellObj setDelegate:self];
     
     [signUpViewCellObj setSignUpScreenType:indexPath.row];
     [signUpViewCellObj setSignUpOption:signUpOption];
@@ -165,14 +185,39 @@
     if (!indexPath)
         return;
     
+    SignUpViewCell *cellObj = (SignUpViewCell *)[collectionViewObj cellForItemAtIndexPath:indexPath];
+    
+    BOOL mode = [cellObj checkAllMandatoryFieldsFilled];
+    
+    // if user not filled all the mandatory text
+    if (!mode)
+        return;
+    
     if (indexPath.row ==  3)
     {
+        [self loadHomeViewController];
         return;
     }
     
     indexPath = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:indexPath.section];
     
     [collectionViewObj scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
+    
+    [self setNextButtonStateForIndexPath:indexPath];
+    
+}
+
+-(void)setNextButtonStateForIndexPath:(NSIndexPath *)indexPath
+{
+    if (!indexPath) {
+        return;
+    }
+    
+    SignUpViewCell *cellObj = (SignUpViewCell *)[collectionViewObj cellForItemAtIndexPath:indexPath];
+    
+    BOOL mode = [cellObj checkAllMandatoryFieldsFilled];
+    
+    [self disableNextButton:!mode];
 }
 
 #pragma mark - Observer Methods
@@ -236,12 +281,66 @@
 
 -(void)disableNextButton:(BOOL)mode
 {
-    [nextButton setEnabled:mode];
+    [nextButton setEnabled:!mode];
 }
 
 -(void)signUpOptionSelected:(SignUpOption)option
 {
     signUpOption = option;
+    
+    NSIndexPath *indexPath = [self getCurrentVisibleIndexPath];
+    
+    if (!indexPath)
+        return;
+    indexPath = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:indexPath.section];
+    
+    [collectionViewObj scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
 }
 
+-(void)loadHomeViewController
+{
+    IGHomeViewController *beaconSearchViewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    
+    IGLeftMenuViewController *leftSideDrawerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
+    
+    UIViewController * rightSideDrawerViewController = [[MMExampleRightSideDrawerViewController alloc] init];
+    
+    UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:beaconSearchViewControllerObj];
+    [navigationController setRestorationIdentifier:@"MMExampleCenterNavigationControllerRestorationKey"];
+    if([JFWUtilities isOSVersionIsAtLeastiOS7]){
+        UINavigationController * rightSideNavController = [[MMNavigationController alloc] initWithRootViewController:rightSideDrawerViewController];
+        [rightSideNavController setRestorationIdentifier:@"MMExampleRightNavigationControllerRestorationKey"];
+        //        UINavigationController * leftSideNavController = [[MMNavigationController alloc] initWithRootViewController:leftSideDrawerViewController];
+        //        [leftSideNavController setRestorationIdentifier:@"MMExampleLeftNavigationControllerRestorationKey"];
+        self.drawerController = [[MMDrawerController alloc]
+                                 initWithCenterViewController:navigationController
+                                 leftDrawerViewController:leftSideDrawerViewController
+                                 rightDrawerViewController:nil];
+        [self.drawerController setShowsShadow:NO];
+    }
+    else{
+        self.drawerController = [[MMDrawerController alloc]
+                                 initWithCenterViewController:navigationController
+                                 leftDrawerViewController:leftSideDrawerViewController
+                                 rightDrawerViewController:rightSideDrawerViewController];
+    }
+    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+    [self.drawerController setMaximumRightDrawerWidth:200.0];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    [self.drawerController
+     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+         MMDrawerControllerDrawerVisualStateBlock block;
+         block = [[MMExampleDrawerVisualStateManager sharedManager]
+                  drawerVisualStateBlockForDrawerSide:drawerSide];
+         if(block){
+             block(drawerController, drawerSide, percentVisible);
+         }
+     }];
+    
+    JFWAppDelegate *delegate = [[UIApplication sharedApplication]delegate];
+    
+    [delegate.window setRootViewController:self.drawerController];
+}
 @end

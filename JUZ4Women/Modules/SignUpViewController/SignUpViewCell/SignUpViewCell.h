@@ -64,4 +64,6 @@
 
 
 -(void)setDataOnCell;
+-(BOOL)checkAllMandatoryFieldsFilled;
+
 @end

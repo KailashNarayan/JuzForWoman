@@ -9,6 +9,10 @@
 #import "JFWUtilities.h"
 #import <CoreText/CoreText.h>
 
+static BOOL OSVersionIsAtLeastiOS7() {
+    return (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1);
+}
+
 @implementation JFWUtilities
 
 + (void)displayAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitle:(NSString *)otherButtonTitle delegate:(id)delegate withTag:(NSInteger)tag
@@ -96,4 +100,8 @@
     return result;
 }
 
++(BOOL)isOSVersionIsAtLeastiOS7
+{
+    return OSVersionIsAtLeastiOS7();
+}
 @end

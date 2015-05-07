@@ -146,20 +146,67 @@
     [securityCodeTextField setPlaceholder:message];
 }
 
+-(BOOL)checkAllMandatoryFieldsFilled
+{
+    BOOL mode = YES;
+    
+    switch (self.signUpScreenType)
+    {
+        case DATE_OF_BIRTH_SCREEN:
+            
+            if (dateTextField.text.length == 0 || monthTextField.text.length == 0 || yearTextField.text.length == 0)
+                mode = NO;
+            
+            break;
+            
+        case SIGNUP_OPTION_TYPE_SCREEN:
+            
+            mode = NO;
+            
+            break;
+            
+        case USERNAME_PASSWORD_SCREEN:
+            
+            if (emailTextField.text.length == 0 || passwordTextField.text.length == 0)
+                mode = NO;
+            
+            break;
+            
+        case SECURITY_CODE_SCREEN:
+            
+            if (securityCodeTextField.text.length == 0)
+                mode = NO;
+            
+            break;
+            
+        case LOCATION_SCREEN:
+         
+         if (countryTextField.text.length == 0 || cityTextField.text.length == 0)
+             mode = NO;
+            break;
+            
+        default:
+            break;
+    }
+    
+    return mode;
+
+}
+
 #pragma mark - UITextField Delegate methods
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     BOOL mode = YES;
     
-    if (textField.text.length == 0 || ([string isEqualToString:@""] && textField.text.length == 1))
+    if (textField.text.length + string.length == 0 || ([string isEqualToString:@""] && textField.text.length == 1))
     {
         mode = NO;
     }
-    
+  
     if ([self.delegate respondsToSelector:@selector(disableNextButton:)])
     {
-        [self.delegate disableNextButton:mode];
+        [self.delegate disableNextButton:!mode];
     }
     
     return YES;

@@ -104,4 +104,21 @@ static BOOL OSVersionIsAtLeastiOS7() {
 {
     return OSVersionIsAtLeastiOS7();
 }
+
++(BOOL)validateEmailWithString:(NSString*)email
+{
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
+}
+
++(BOOL)validatePhoneNumberString:(NSString*)numberString
+{
+    NSString *phoneRegex = @"^((\\+)|(00))[0-9]{6,14}$";
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
+    return [phoneTest evaluateWithObject:numberString];
+}
+
+
+
 @end

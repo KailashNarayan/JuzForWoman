@@ -8,7 +8,7 @@
 
 #import "SignUpViewCell.h"
 
-
+#import "JFWUtilities.h"
 @implementation SignUpViewCell
 
 - (void)awakeFromNib
@@ -171,6 +171,10 @@
         case USERNAME_PASSWORD_SCREEN:
             
             if (emailTextField.text.length == 0 || passwordTextField.text.length == 0)
+                mode = NO;
+            else if (self.signUpOption == EMAIL && ![JFWUtilities validateEmailWithString:emailTextField.text])
+                mode = NO;
+            else if (self.signUpOption == MOBILE && ![JFWUtilities validatePhoneNumberString:emailTextField.text])
                 mode = NO;
             
             break;

@@ -10,7 +10,8 @@
 
 @implementation IGHomeViewDescriptionCellTableViewCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     // Initialization code
 }
 

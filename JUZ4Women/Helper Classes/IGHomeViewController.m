@@ -15,6 +15,7 @@
 #import "JFWAppDelegate.h"
 #import "JFWSearchViewController.h"
 #import "JFWAddPostViewController.h"
+#import "JFWFilterView.h"
 
 
 @interface IGHomeViewController()
@@ -23,9 +24,10 @@
     UITableView *tableView;
     UIView *notificationView;
     UILabel *messageLabel;
+    JFWFilterView *filterViewObj;
+    BOOL isTableOpened;
+
 }
-
-
 @end
 
 @implementation IGHomeViewController
@@ -38,6 +40,7 @@
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
 
+    [self configureDropDownMenu];
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
     
@@ -193,6 +196,38 @@
 
 - (IBAction)onFilterButtonTapped:(id)sender
 {
-    
+
+    [UIView animateWithDuration:0.4f animations:^{
+        if (isTableOpened)
+        {
+            isTableOpened = NO;
+            
+            [filterViewObj setFrame:CGRectMake(180, 110,150 , 0)];
+            
+            
+        }
+        else
+        {
+            isTableOpened = YES;
+            
+            [filterViewObj setFrame:CGRectMake(180, 110,150 , 150)];
+        
+    }
+    }];
+
 }
+
+-(void)configureDropDownMenu
+{
+    isTableOpened = NO;
+    
+    //Initilizing View
+    filterViewObj = [[JFWFilterView alloc] initWithFrame:CGRectMake(180, 110,150 , 0)];
+    
+    filterViewObj.backgroundColor = [UIColor grayColor];
+    
+ [[UIApplication sharedApplication].keyWindow.rootViewController.view insertSubview:filterViewObj atIndex:2];
+    //Initlizing tableview and setting its properties
+   }
+
 @end

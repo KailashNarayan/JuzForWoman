@@ -19,4 +19,13 @@
     [super setSelected:selected animated:animated];
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.postTitleDescriptionLabel.preferredMaxLayoutWidth = 50;
+    
+    [super layoutSubviews];
+}
+
 @end

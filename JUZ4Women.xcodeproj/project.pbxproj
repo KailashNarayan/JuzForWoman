@@ -96,6 +96,7 @@
 		381C748D1AF55393003290CF /* SignUpViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 381C748A1AF55393003290CF /* SignUpViewCell.h */; };
 		381C748E1AF55393003290CF /* SignUpViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C748B1AF55393003290CF /* SignUpViewCell.m */; };
 		381C748F1AF55393003290CF /* SignUpViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381C748C1AF55393003290CF /* SignUpViewCell.xib */; };
+		38424F511AFA9C4000FCECA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38424F501AFA9C4000FCECA3 /* Localizable.strings */; };
 		4A6D14A91AF1390A003A1708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14A81AF1390A003A1708 /* main.m */; };
 		4A6D14B41AF1390A003A1708 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D14B31AF1390A003A1708 /* Images.xcassets */; };
 		4A6D14C31AF1390A003A1708 /* JUZ4WomenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14C21AF1390A003A1708 /* JUZ4WomenTests.m */; };
@@ -289,6 +290,7 @@
 		381C748A1AF55393003290CF /* SignUpViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewCell.h; sourceTree = "<group>"; };
 		381C748B1AF55393003290CF /* SignUpViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewCell.m; sourceTree = "<group>"; };
 		381C748C1AF55393003290CF /* SignUpViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewCell.xib; sourceTree = "<group>"; };
+		38424F501AFA9C4000FCECA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		4A6D14A31AF1390A003A1708 /* JUZ4Women.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JUZ4Women.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6D14A71AF1390A003A1708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6D14A81AF1390A003A1708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -644,6 +646,7 @@
 				4A6D14A71AF1390A003A1708 /* Info.plist */,
 				4A6D14A81AF1390A003A1708 /* main.m */,
 				381C73D01AF52C02003290CF /* JUZ4Women.pch */,
+				38424F501AFA9C4000FCECA3 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1206,6 +1209,7 @@
 				381C74751AF53C82003290CF /* stop_medium_icon@2x.png in Resources */,
 				381C743A1AF53C82003290CF /* blue_poll_icon@2x.png in Resources */,
 				381C74451AF53C82003290CF /* dislike_medium_icon@2x.png in Resources */,
+				38424F511AFA9C4000FCECA3 /* Localizable.strings in Resources */,
 				381C744A1AF53C82003290CF /* dot_icon@2x.png in Resources */,
 				381C74521AF53C82003290CF /* google_plus_icon@2x.png in Resources */,
 				381C742E1AF53C82003290CF /* about_us_icon@2x.png in Resources */,

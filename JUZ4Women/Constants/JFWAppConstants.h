@@ -6,6 +6,23 @@
 //  Copyright (c) 2014 Hostworks. All rights reserved.
 //
 
+// ENUMS
+
+typedef NS_ENUM(NSInteger, SignUpScreenType)
+{
+    DATE_OF_BIRTH_SCREEN,
+    SIGNUP_OPTION_TYPE_SCREEN,
+    USERNAME_PASSWORD_SCREEN,
+    SECURITY_CODE_SCREEN,
+    LOCATION_SCREEN,
+};
+
+typedef NS_ENUM(NSInteger, SignUpOption)
+{
+    NONE,
+    EMAIL,
+    MOBILE
+};
 
 //iPhone View Controller Id
 static NSString * const kMFSignInViewControllerId = @"MFSignInViewControllerId";

@@ -94,68 +94,68 @@
     }
 }
 
--(void)setCellBackgroundImage
-{
-    UIImage image = nil;
-    
-    switch (self.signUpScreenType)
-    {
-        case DATE_OF_BIRTH_SCREEN:
-            
-            image = [UIImage imageNamed:];
-            
-            break;
-            
-        case SIGNUP_OPTION_TYPE_SCREEN:
-            
-            [self showView:dateOfBirthContainerView mode:NO];
-            [self showView:signupOptionContainerView mode:YES];
-            [self showView:usernamePasswordContainerView mode:NO];
-            [self showView:securityCodeContainerView mode:NO];
-            [self showView:selectCountryContainerView mode:NO];
-            
-            break;
-            
-        case USERNAME_PASSWORD_SCREEN:
-            
-            [self showView:dateOfBirthContainerView mode:NO];
-            [self showView:signupOptionContainerView mode:NO];
-            [self showView:usernamePasswordContainerView mode:YES];
-            [self showView:securityCodeContainerView mode:NO];
-            [self showView:selectCountryContainerView mode:NO];
-            
-            [self setSignInPlaceHolderText];
-            
-            break;
-            
-        case SECURITY_CODE_SCREEN:
-            
-            [self showView:dateOfBirthContainerView mode:NO];
-            [self showView:signupOptionContainerView mode:NO];
-            [self showView:usernamePasswordContainerView mode:NO];
-            [self showView:securityCodeContainerView mode:YES];
-            [self showView:selectCountryContainerView mode:NO];
-            
-            [self setSecurityCodeMessage];
-            
-            break;
-            
-        case LOCATION_SCREEN:
-            
-            [self showView:dateOfBirthContainerView mode:NO];
-            [self showView:signupOptionContainerView mode:NO];
-            [self showView:usernamePasswordContainerView mode:NO];
-            [self showView:securityCodeContainerView mode:NO];
-            [self showView:selectCountryContainerView mode:YES];
-            
-            break;
-            
-        default:
-            break;
-    }
-    
-    backgroundImage setImage:<#(UIImage *)#>
-}
+//-(void)setCellBackgroundImage
+//{
+//    UIImage image = nil;
+//    
+//    switch (self.signUpScreenType)
+//    {
+//        case DATE_OF_BIRTH_SCREEN:
+//            
+//            image = [UIImage imageNamed:];
+//            
+//            break;
+//            
+//        case SIGNUP_OPTION_TYPE_SCREEN:
+//            
+//            [self showView:dateOfBirthContainerView mode:NO];
+//            [self showView:signupOptionContainerView mode:YES];
+//            [self showView:usernamePasswordContainerView mode:NO];
+//            [self showView:securityCodeContainerView mode:NO];
+//            [self showView:selectCountryContainerView mode:NO];
+//            
+//            break;
+//            
+//        case USERNAME_PASSWORD_SCREEN:
+//            
+//            [self showView:dateOfBirthContainerView mode:NO];
+//            [self showView:signupOptionContainerView mode:NO];
+//            [self showView:usernamePasswordContainerView mode:YES];
+//            [self showView:securityCodeContainerView mode:NO];
+//            [self showView:selectCountryContainerView mode:NO];
+//            
+//            [self setSignInPlaceHolderText];
+//            
+//            break;
+//            
+//        case SECURITY_CODE_SCREEN:
+//            
+//            [self showView:dateOfBirthContainerView mode:NO];
+//            [self showView:signupOptionContainerView mode:NO];
+//            [self showView:usernamePasswordContainerView mode:NO];
+//            [self showView:securityCodeContainerView mode:YES];
+//            [self showView:selectCountryContainerView mode:NO];
+//            
+//            [self setSecurityCodeMessage];
+//            
+//            break;
+//            
+//        case LOCATION_SCREEN:
+//            
+//            [self showView:dateOfBirthContainerView mode:NO];
+//            [self showView:signupOptionContainerView mode:NO];
+//            [self showView:usernamePasswordContainerView mode:NO];
+//            [self showView:securityCodeContainerView mode:NO];
+//            [self showView:selectCountryContainerView mode:YES];
+//            
+//            break;
+//            
+//        default:
+//            break;
+//    }
+//    
+//    backgroundImage setImage:<#(UIImage *)#>
+//}
 
 -(void)showView:(UIView *)view mode:(BOOL)mode
 {

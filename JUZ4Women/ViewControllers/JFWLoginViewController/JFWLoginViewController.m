@@ -33,14 +33,21 @@
     self.scrollViewObj.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
     
     [self configureStatusBar];
+    [self configureTextField];
 }
 
 -(void)configureStatusBar
-
 {
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
+
+-(void)configureTextField
+{
+    [JFWUtilities setPlaceHolderTextColor:self.usernameTextField color:[JFWUtilities placeHolderTextColor]];
+    [JFWUtilities setPlaceHolderTextColor:self.passwordTextField color:[JFWUtilities placeHolderTextColor]];
+
+}
 -(void)viewWillDisappear:(BOOL)animated
 {
     [[UIApplication sharedApplication] setStatusBarHidden:NO];

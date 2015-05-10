@@ -31,8 +31,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.scrollViewObj.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
+    
+    [self configureStatusBar];
 }
 
+-(void)configureStatusBar
+
+{
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -107,5 +119,11 @@
      UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewControllerIdentifier"];
     
     [self presentViewController:viewController animated:YES completion:nil];
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 @end

@@ -483,32 +483,24 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAG-04-DjN">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mi6-j8-ucH">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="passwordBackground@2x.png.png" translatesAutoresizingMaskIntoConstraints="NO" id="SiR-ei-8nW">
                                         <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="38" y="143" width="268" height="30"/>
+                                            <rect key="frame" x="32" y="199" width="256" height="42"/>
                                         </variation>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SiR-ei-8nW">
-                                        <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="38" y="199" width="268" height="30"/>
-                                        </variation>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9E-Yw-Zd3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9E-Yw-Zd3">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <color key="backgroundColor" red="0.85490196078431369" green="0.27058823529411763" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
-                                        <state key="normal" title="Sign In">
+                                        <state key="normal" image="signIn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="101" y="269" width="118" height="45"/>
+                                            <rect key="frame" x="101" y="269" width="104" height="36"/>
                                         </variation>
                                         <connections>
                                             <action selector="onSignInButtonTapped:" destination="apZ-VH-cV7" eventType="touchUpInside" id="PR2-Rk-DRS"/>
@@ -573,16 +565,23 @@
                                             <action selector="onSignUpButtonTapped:" destination="apZ-VH-cV7" eventType="touchUpInside" id="DHw-e1-3ht"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="P5m-Lg-LsY">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="P5m-Lg-LsY">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="120" y="24" width="80" height="72"/>
+                                            <rect key="frame" x="90" y="-4" width="145" height="147"/>
                                         </variation>
                                     </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="usernameBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="mi6-j8-ucH">
+                                        <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="32" y="143" width="256" height="42"/>
+                                        </variation>
+                                    </textField>
                                 </subviews>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="mi6-j8-ucH"/>
                                         <exclude reference="SiR-ei-8nW"/>
                                         <exclude reference="w9E-Yw-Zd3"/>
                                         <exclude reference="Sbl-c4-rgg"/>
@@ -591,12 +590,12 @@
                                         <exclude reference="3ug-ff-KHu"/>
                                         <exclude reference="71o-1c-2GJ"/>
                                         <exclude reference="P5m-Lg-LsY"/>
+                                        <exclude reference="mi6-j8-ucH"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     <mask key="subviews">
-                                        <include reference="mi6-j8-ucH"/>
                                         <include reference="SiR-ei-8nW"/>
                                         <include reference="w9E-Yw-Zd3"/>
                                         <include reference="Sbl-c4-rgg"/>
@@ -605,6 +604,7 @@
                                         <include reference="3ug-ff-KHu"/>
                                         <include reference="71o-1c-2GJ"/>
                                         <include reference="P5m-Lg-LsY"/>
+                                        <include reference="mi6-j8-ucH"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -1067,13 +1067,16 @@
     </scenes>
     <resources>
         <image name="app_back.png" width="320" height="568"/>
-        <image name="app_icon.png" width="49" height="49"/>
         <image name="arrow_left_icon.png" width="12" height="15"/>
         <image name="arrow_right_icon.png" width="12" height="15"/>
         <image name="edit_icon.png" width="30" height="30"/>
         <image name="facebook_icon.png" width="41" height="37"/>
         <image name="filter_icon.png" width="30" height="30"/>
         <image name="google_plus_icon.png" width="38" height="37"/>
+        <image name="logoIcon.png" width="145" height="147"/>
+        <image name="passwordBackground@2x.png.png" width="513" height="84"/>
         <image name="post_add_icon.png" width="30" height="30"/>
+        <image name="signIn.png" width="104" height="36"/>
+        <image name="usernameBackground.png" width="256" height="42"/>
     </resources>
 </document>

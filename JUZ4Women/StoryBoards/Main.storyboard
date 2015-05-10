@@ -1395,6 +1395,7 @@
                             <constraint firstAttribute="trailing" secondItem="d9c-ke-34u" secondAttribute="trailing" id="djG-CK-gri"/>
                             <constraint firstAttribute="bottom" secondItem="vpF-89-MIQ" secondAttribute="bottom" constant="1" id="fUm-dq-vpq"/>
                             <constraint firstAttribute="trailing" secondItem="d9c-ke-34u" secondAttribute="trailing" id="jk7-Kp-RvE"/>
+                            <constraint firstItem="vpF-89-MIQ" firstAttribute="top" secondItem="R0w-JS-hT1" secondAttribute="bottom" constant="45" id="lYA-4u-00t"/>
                             <constraint firstItem="d9c-ke-34u" firstAttribute="top" secondItem="R0w-JS-hT1" secondAttribute="bottom" constant="44" id="oOv-qx-k8n"/>
                             <constraint firstItem="vpF-89-MIQ" firstAttribute="leading" secondItem="Ur7-S0-ppU" secondAttribute="leading" id="onn-mz-ymk"/>
                             <constraint firstAttribute="trailing" secondItem="vpF-89-MIQ" secondAttribute="trailing" id="pEf-t1-3vb"/>
@@ -1407,9 +1408,6 @@
                                 <exclude reference="vpF-89-MIQ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Aj5-Pz-zqN"/>
-                                <exclude reference="NyI-h3-NI5"/>
-                                <exclude reference="PkV-YZ-iab"/>
                                 <exclude reference="9SV-ny-sX7"/>
                                 <exclude reference="Vhq-dR-kgS"/>
                                 <exclude reference="XNE-1a-uso"/>
@@ -1421,8 +1419,12 @@
                                 <exclude reference="y4Z-o2-8TN"/>
                                 <exclude reference="5yY-Uo-ynq"/>
                                 <exclude reference="fUm-dq-vpq"/>
+                                <exclude reference="lYA-4u-00t"/>
                                 <exclude reference="onn-mz-ymk"/>
                                 <exclude reference="pEf-t1-3vb"/>
+                                <exclude reference="Aj5-Pz-zqN"/>
+                                <exclude reference="NyI-h3-NI5"/>
+                                <exclude reference="PkV-YZ-iab"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1431,9 +1433,6 @@
                                 <include reference="vpF-89-MIQ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Aj5-Pz-zqN"/>
-                                <exclude reference="NyI-h3-NI5"/>
-                                <include reference="PkV-YZ-iab"/>
                                 <exclude reference="9SV-ny-sX7"/>
                                 <include reference="Vhq-dR-kgS"/>
                                 <exclude reference="XNE-1a-uso"/>
@@ -1445,8 +1444,12 @@
                                 <exclude reference="y4Z-o2-8TN"/>
                                 <exclude reference="5yY-Uo-ynq"/>
                                 <include reference="fUm-dq-vpq"/>
+                                <include reference="lYA-4u-00t"/>
                                 <include reference="onn-mz-ymk"/>
                                 <include reference="pEf-t1-3vb"/>
+                                <exclude reference="Aj5-Pz-zqN"/>
+                                <exclude reference="NyI-h3-NI5"/>
+                                <include reference="PkV-YZ-iab"/>
                             </mask>
                         </variation>
                     </view>

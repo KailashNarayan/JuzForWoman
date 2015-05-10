@@ -220,6 +220,7 @@
     }
     
     [emailTextField setPlaceholder:message];
+    [JFWUtilities setPlaceHolderTextColor:emailTextField color:[SignUpViewCell placeHolderTextColor]];
 }
 
 -(BOOL)checkAllMandatoryFieldsFilled
@@ -247,7 +248,7 @@
                 mode = NO;
             else if (self.signUpOption == EMAIL && ![JFWUtilities validateEmailWithString:emailTextField.text])
                 mode = NO;
-            else if (self.signUpOption == MOBILE && ![JFWUtilities validatePhoneNumberString:emailTextField.text])
+            else if (self.signUpOption == MOBILE && emailTextField.text.length !=10)
                 mode = NO;
             
             break;
@@ -282,21 +283,24 @@
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    BOOL mode = YES;
-    
-    if (textField.text.length + string.length == 0 || ([string isEqualToString:@""] && textField.text.length == 1))
-    {
-        mode = NO;
-    }
-  
-    if ([self.delegate respondsToSelector:@selector(disableNextButton:)])
-    {
-        [self.delegate disableNextButton:!mode];
-    }
     
     return YES;
 }
 
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    BOOL mode = [self checkAllMandatoryFieldsFilled];
+    
+//    if (textField.text.length + string.length == 0 || ([string isEqualToString:@""] && textField.text.length == 1))
+//    {
+//        mode = NO;
+//    }
+
+    if ([self.delegate respondsToSelector:@selector(disableNextButton:)])
+    {
+        [self.delegate disableNextButton:!mode];
+    }
+}
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];

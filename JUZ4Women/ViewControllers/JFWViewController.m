@@ -18,9 +18,7 @@
 #import "MMExampleDrawerVisualStateManager.h"
 #import "MMNavigationController.h"
 
-static BOOL OSVersionIsAtLeastiOS7() {
-    return (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1);
-}
+#import "JFWUtilities.h"
 
 @interface JFWViewController ()
 
@@ -50,7 +48,7 @@ static BOOL OSVersionIsAtLeastiOS7() {
     
     UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:beaconSearchViewControllerObj];
     [navigationController setRestorationIdentifier:@"MMExampleCenterNavigationControllerRestorationKey"];
-    if(OSVersionIsAtLeastiOS7()){
+    if([JFWUtilities isOSVersionIsAtLeastiOS7]){
         UINavigationController * rightSideNavController = [[MMNavigationController alloc] initWithRootViewController:rightSideDrawerViewController];
         [rightSideNavController setRestorationIdentifier:@"MMExampleRightNavigationControllerRestorationKey"];
         //        UINavigationController * leftSideNavController = [[MMNavigationController alloc] initWithRootViewController:leftSideDrawerViewController];
@@ -84,9 +82,6 @@ static BOOL OSVersionIsAtLeastiOS7() {
     
     JFWAppDelegate *delegate = [[UIApplication sharedApplication]delegate];
     
-    if(OSVersionIsAtLeastiOS7()){
-        
-    }
     [delegate.window setRootViewController:self.drawerController];
 
 }

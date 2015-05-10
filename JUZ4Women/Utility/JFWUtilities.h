@@ -104,4 +104,10 @@
 
 +(BOOL)getBoolFromUserDefaultForkey:(NSString *)key;
 
++(BOOL)isOSVersionIsAtLeastiOS7;
+
++(BOOL)validateEmailWithString:(NSString*)email;
+
++(BOOL)validatePhoneNumberString:(NSString*)numberString;
+
 @end

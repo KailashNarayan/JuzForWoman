@@ -8,11 +8,21 @@
 
 #import "SignUpViewCell.h"
 
-
+#import "JFWUtilities.h"
 @implementation SignUpViewCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     // Initialization code
+    
+    [dateTextField setDelegate:self];
+    [monthTextField setDelegate:self];
+    [yearTextField setDelegate:self];
+    [countryTextField setDelegate:self];
+    [securityCodeTextField setDelegate:self];
+    [cityTextField setDelegate:self];
+    [emailTextField setDelegate:self];
+    [passwordTextField setDelegate:self];
 }
 
 
@@ -123,17 +133,76 @@
     {
         case EMAIL:
             message = NSLocalizedString(@"EMAIL_TEXT", nil);
+            
+            [emailTextField setKeyboardType:UIKeyboardTypeDefault];
             break;
             
         case MOBILE:
             message = NSLocalizedString(@"MOBILE_NUMBER", nil);
+            [emailTextField setKeyboardType:UIKeyboardTypeNamePhonePad];
             break;
             
         default:
             break;
     }
     
-    [securityCodeTextField setPlaceholder:message];
+    [emailTextField setPlaceholder:message];
+}
+
+-(BOOL)checkAllMandatoryFieldsFilled
+{
+    BOOL mode = YES;
+    
+    switch (self.signUpScreenType)
+    {
+        case DATE_OF_BIRTH_SCREEN:
+            
+            if (dateTextField.text.length == 0 || monthTextField.text.length == 0 || yearTextField.text.length == 0)
+                mode = NO;
+            
+            break;
+            
+        case SIGNUP_OPTION_TYPE_SCREEN:
+            
+            mode = NO;
+            
+            break;
+            
+        case USERNAME_PASSWORD_SCREEN:
+            
+            if (emailTextField.text.length == 0 || passwordTextField.text.length == 0)
+                mode = NO;
+            else if (self.signUpOption == EMAIL && ![JFWUtilities validateEmailWithString:emailTextField.text])
+                mode = NO;
+            else if (self.signUpOption == MOBILE && ![JFWUtilities validatePhoneNumberString:emailTextField.text])
+                mode = NO;
+            
+            break;
+            
+        case SECURITY_CODE_SCREEN:
+            
+            if (securityCodeTextField.text.length == 0)
+                mode = NO;
+            
+            break;
+            
+        case LOCATION_SCREEN:
+         
+         if (countryTextField.text.length == 0 || cityTextField.text.length == 0)
+             mode = NO;
+            break;
+            
+        default:
+            break;
+    }
+    
+    return mode;
+
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self endEditing:YES];
 }
 
 #pragma mark - UITextField Delegate methods
@@ -142,15 +211,22 @@
 {
     BOOL mode = YES;
     
-    if (textField.text.length == 0 || ([string isEqualToString:@""] && textField.text.length == 1))
+    if (textField.text.length + string.length == 0 || ([string isEqualToString:@""] && textField.text.length == 1))
     {
         mode = NO;
     }
-    
+  
     if ([self.delegate respondsToSelector:@selector(disableNextButton:)])
     {
-        [self.delegate disableNextButton:mode];
+        [self.delegate disableNextButton:!mode];
     }
+    
+    return YES;
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
     
     return YES;
 }
@@ -174,4 +250,6 @@
         [self.delegate signUpOptionSelected:option];
     }
 }
+
+
 @end

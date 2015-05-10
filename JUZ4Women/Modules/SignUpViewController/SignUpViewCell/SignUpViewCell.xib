@@ -76,7 +76,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hAo-5u-Eq9">
-                        <rect key="frame" x="0.0" y="245" width="320" height="114"/>
+                        <rect key="frame" x="0.0" y="250" width="320" height="114"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" background="emailBox.png" translatesAutoresizingMaskIntoConstraints="NO" id="XfY-Rv-hBY">
                                 <rect key="frame" x="49" y="8" width="221" height="38"/>
@@ -88,13 +88,13 @@
                                 <rect key="frame" x="49" y="68" width="221" height="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIC-zN-JgI">
-                        <rect key="frame" x="0.0" y="245" width="320" height="114"/>
+                        <rect key="frame" x="0.0" y="250" width="320" height="114"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="center" minimumFontSize="17" background="mobileNumberBox.png" translatesAutoresizingMaskIntoConstraints="NO" id="1vT-VI-Bys">
                                 <rect key="frame" x="49" y="8" width="221" height="38"/>
@@ -112,7 +112,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDq-lA-mHK">
-                        <rect key="frame" x="0.0" y="245" width="320" height="114"/>
+                        <rect key="frame" x="0.0" y="250" width="320" height="114"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter the verification code sent on your mobile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzn-FA-qJo">
                                 <rect key="frame" x="37" y="8" width="248" height="50"/>

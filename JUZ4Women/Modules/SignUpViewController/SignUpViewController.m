@@ -177,6 +177,8 @@
     
      [collectionViewObj scrollToItemAtIndexPath:indexPath atScrollPosition:
       UICollectionViewScrollPositionRight animated:YES];
+    
+    [self disableNextButton:NO];
 }
 
 - (IBAction)nextButtonTapped:(id)sender

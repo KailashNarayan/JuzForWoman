@@ -141,6 +141,17 @@
 		4A76DA2F1AFF47E200BCFFEE /* mail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA2C1AFF47E200BCFFEE /* mail@2x.png */; };
 		4A76DA301AFF47E200BCFFEE /* mobile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA2D1AFF47E200BCFFEE /* mobile@2x.png */; };
 		4A76DA311AFF47E200BCFFEE /* signupOptionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA2E1AFF47E200BCFFEE /* signupOptionBackground@2x.png */; };
+		4A76DA351AFF49EF00BCFFEE /* emailBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA321AFF49EF00BCFFEE /* emailBox@2x.png */; };
+		4A76DA361AFF49EF00BCFFEE /* mailBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA331AFF49EF00BCFFEE /* mailBackground@2x.png */; };
+		4A76DA371AFF49EF00BCFFEE /* passwordBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA341AFF49EF00BCFFEE /* passwordBox@2x.png */; };
+		4A76DA3A1AFF4BD000BCFFEE /* mobileNumberBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA381AFF4BD000BCFFEE /* mobileNumberBox@2x.png */; };
+		4A76DA3B1AFF4BD000BCFFEE /* mobilePasswordBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA391AFF4BD000BCFFEE /* mobilePasswordBackground@2x.png */; };
+		4A76DA3E1AFF4C5D00BCFFEE /* emailBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA3C1AFF4C5D00BCFFEE /* emailBackground@2x.png */; };
+		4A76DA3F1AFF4C5D00BCFFEE /* emailVarficationBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA3D1AFF4C5D00BCFFEE /* emailVarficationBackground@2x.png */; };
+		4A76DA411AFF4C9100BCFFEE /* phoneBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA401AFF4C9100BCFFEE /* phoneBackground@2x.png */; };
+		4A76DA441AFF4CDE00BCFFEE /* cityBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA421AFF4CDE00BCFFEE /* cityBackground@2x.png */; };
+		4A76DA451AFF4CDE00BCFFEE /* cityBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA431AFF4CDE00BCFFEE /* cityBox@2x.png */; };
+		4A76DA471AFF4D3400BCFFEE /* countryBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA461AFF4D3400BCFFEE /* countryBox@2x.png */; };
 		4ACFBA641AF3F94400C82325 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3B1AF3F94300C82325 /* MainViewController.m */; };
 		4ACFBA651AF3F94400C82325 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3C1AF3F94300C82325 /* MainViewController.xib */; };
 		4ACFBA661AF3F94400C82325 /* MMCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3E1AF3F94300C82325 /* MMCenterTableViewCell.m */; };
@@ -381,6 +392,17 @@
 		4A76DA2C1AFF47E200BCFFEE /* mail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail@2x.png"; sourceTree = "<group>"; };
 		4A76DA2D1AFF47E200BCFFEE /* mobile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mobile@2x.png"; sourceTree = "<group>"; };
 		4A76DA2E1AFF47E200BCFFEE /* signupOptionBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signupOptionBackground@2x.png"; sourceTree = "<group>"; };
+		4A76DA321AFF49EF00BCFFEE /* emailBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emailBox@2x.png"; sourceTree = "<group>"; };
+		4A76DA331AFF49EF00BCFFEE /* mailBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mailBackground@2x.png"; sourceTree = "<group>"; };
+		4A76DA341AFF49EF00BCFFEE /* passwordBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "passwordBox@2x.png"; sourceTree = "<group>"; };
+		4A76DA381AFF4BD000BCFFEE /* mobileNumberBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mobileNumberBox@2x.png"; sourceTree = "<group>"; };
+		4A76DA391AFF4BD000BCFFEE /* mobilePasswordBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mobilePasswordBackground@2x.png"; sourceTree = "<group>"; };
+		4A76DA3C1AFF4C5D00BCFFEE /* emailBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emailBackground@2x.png"; sourceTree = "<group>"; };
+		4A76DA3D1AFF4C5D00BCFFEE /* emailVarficationBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emailVarficationBackground@2x.png"; sourceTree = "<group>"; };
+		4A76DA401AFF4C9100BCFFEE /* phoneBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phoneBackground@2x.png"; sourceTree = "<group>"; };
+		4A76DA421AFF4CDE00BCFFEE /* cityBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cityBackground@2x.png"; sourceTree = "<group>"; };
+		4A76DA431AFF4CDE00BCFFEE /* cityBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cityBox@2x.png"; sourceTree = "<group>"; };
+		4A76DA461AFF4D3400BCFFEE /* countryBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "countryBox@2x.png"; sourceTree = "<group>"; };
 		4ACFBA3A1AF3F94300C82325 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4ACFBA3B1AF3F94300C82325 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4ACFBA3C1AF3F94300C82325 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -528,6 +550,17 @@
 		381C73DB1AF53C82003290CF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4A76DA461AFF4D3400BCFFEE /* countryBox@2x.png */,
+				4A76DA421AFF4CDE00BCFFEE /* cityBackground@2x.png */,
+				4A76DA431AFF4CDE00BCFFEE /* cityBox@2x.png */,
+				4A76DA401AFF4C9100BCFFEE /* phoneBackground@2x.png */,
+				4A76DA3C1AFF4C5D00BCFFEE /* emailBackground@2x.png */,
+				4A76DA3D1AFF4C5D00BCFFEE /* emailVarficationBackground@2x.png */,
+				4A76DA381AFF4BD000BCFFEE /* mobileNumberBox@2x.png */,
+				4A76DA391AFF4BD000BCFFEE /* mobilePasswordBackground@2x.png */,
+				4A76DA321AFF49EF00BCFFEE /* emailBox@2x.png */,
+				4A76DA331AFF49EF00BCFFEE /* mailBackground@2x.png */,
+				4A76DA341AFF49EF00BCFFEE /* passwordBox@2x.png */,
 				4A76DA2C1AFF47E200BCFFEE /* mail@2x.png */,
 				4A76DA2D1AFF47E200BCFFEE /* mobile@2x.png */,
 				4A76DA2E1AFF47E200BCFFEE /* signupOptionBackground@2x.png */,
@@ -1228,6 +1261,7 @@
 				381C74771AF53C82003290CF /* suggest_us_icon@2x.png in Resources */,
 				4A6D14DD1AF27B82003A1708 /* LaunchScreen.xib in Resources */,
 				381C74631AF53C82003290CF /* post_icon@2x.png in Resources */,
+				4A76DA471AFF4D3400BCFFEE /* countryBox@2x.png in Resources */,
 				381C74761AF53C82003290CF /* stop_small_icon@2x.png in Resources */,
 				381C74361AF53C82003290CF /* arrow_right_icon@2x.png in Resources */,
 				381C746B1AF53C82003290CF /* share_icon_dark_red@2x.png in Resources */,
@@ -1236,14 +1270,18 @@
 				381C74371AF53C82003290CF /* article_icon@2x.png in Resources */,
 				381C74781AF53C82003290CF /* upload_medium_icon@2x.png in Resources */,
 				381C74421AF53C82003290CF /* contact_us_icon@2x.png in Resources */,
+				4A76DA3B1AFF4BD000BCFFEE /* mobilePasswordBackground@2x.png in Resources */,
 				381C74331AF53C82003290CF /* app_icon@2x.png in Resources */,
 				381C744B1AF53C82003290CF /* drop_arrow_icon@2x.png in Resources */,
+				4A76DA411AFF4C9100BCFFEE /* phoneBackground@2x.png in Resources */,
 				381C74341AF53C82003290CF /* arrow_down_icon@2x.png in Resources */,
 				381C746C1AF53C82003290CF /* sign_out_icon@2x.png in Resources */,
+				4A76DA3A1AFF4BD000BCFFEE /* mobileNumberBox@2x.png in Resources */,
 				4A6D14DE1AF27B82003A1708 /* Main.storyboard in Resources */,
 				4A76DA1C1AFF441600BCFFEE /* googlePlusIcon@2x.png in Resources */,
 				381C743C1AF53C82003290CF /* close_icon_dark_red@2x.png in Resources */,
 				4A76DA301AFF47E200BCFFEE /* mobile@2x.png in Resources */,
+				4A76DA371AFF49EF00BCFFEE /* passwordBox@2x.png in Resources */,
 				381C745D1AF53C82003290CF /* lock_icon@2x.png in Resources */,
 				4ACFBA781AF3F94400C82325 /* SecondViewController.xib in Resources */,
 				381C743B1AF53C82003290CF /* camera_gray_icon@2x.png in Resources */,
@@ -1258,6 +1296,7 @@
 				381C744F1AF53C82003290CF /* facebook_icon@2x.png in Resources */,
 				4A76DA281AFF45E300BCFFEE /* dobBackground@2x.png in Resources */,
 				381C74641AF53C82003290CF /* products_icon@2x.png in Resources */,
+				4A76DA361AFF49EF00BCFFEE /* mailBackground@2x.png in Resources */,
 				381C746F1AF53C82003290CF /* sign_up_mail_and_mob_option@2x.png in Resources */,
 				381C74721AF53C82003290CF /* splash_app_icon@2x.png in Resources */,
 				381C74321AF53C82003290CF /* app_back@2x.png in Resources */,
@@ -1273,11 +1312,13 @@
 				381C74441AF53C82003290CF /* dislike_icon_dark_red@2x.png in Resources */,
 				381C745E1AF53C82003290CF /* mobile_gray_icon@2x.png in Resources */,
 				381C74671AF53C82003290CF /* profile_icon@2x.png in Resources */,
+				4A76DA3E1AFF4C5D00BCFFEE /* emailBackground@2x.png in Resources */,
 				381C74571AF53C82003290CF /* light_pink_poll_dot@2x.png in Resources */,
 				4ACFBAAD1AF49CDE00C82325 /* menu_icon.png in Resources */,
 				381C743E1AF53C82003290CF /* comment_medium_icon@2x.png in Resources */,
 				381C74601AF53C82003290CF /* poll_default_icon@2x.png in Resources */,
 				4ACFBA761AF3F94400C82325 /* NewControllerViewController.xib in Resources */,
+				4A76DA351AFF49EF00BCFFEE /* emailBox@2x.png in Resources */,
 				381C742F1AF53C82003290CF /* add_post_icon@2x.png in Resources */,
 				381C74431AF53C82003290CF /* dark_pink_poll_dot@2x.png in Resources */,
 				4A76DA311AFF47E200BCFFEE /* signupOptionBackground@2x.png in Resources */,
@@ -1287,6 +1328,7 @@
 				4A76DA291AFF45E300BCFFEE /* mm@2x.png in Resources */,
 				381C74351AF53C82003290CF /* arrow_left_icon@2x.png in Resources */,
 				381C74471AF53C82003290CF /* dislike_small_icon@2x.png in Resources */,
+				4A76DA451AFF4CDE00BCFFEE /* cityBox@2x.png in Resources */,
 				4A76DA2B1AFF45E300BCFFEE /* yy@2x.png in Resources */,
 				381C744C1AF53C82003290CF /* edit_icon@2x.png in Resources */,
 				381C74751AF53C82003290CF /* stop_medium_icon@2x.png in Resources */,
@@ -1319,7 +1361,9 @@
 				381C743D1AF53C82003290CF /* column_icon@2x.png in Resources */,
 				4AD2B2351AF542D00089DB7F /* devider@2x.png in Resources */,
 				381C74711AF53C82003290CF /* sign_up_mobile_back@2x.png in Resources */,
+				4A76DA3F1AFF4C5D00BCFFEE /* emailVarficationBackground@2x.png in Resources */,
 				4AD2B2341AF542D00089DB7F /* devider.png in Resources */,
+				4A76DA441AFF4CDE00BCFFEE /* cityBackground@2x.png in Resources */,
 				4A76DA201AFF441600BCFFEE /* submit@2x.png in Resources */,
 				381C74401AF53C82003290CF /* comment_small_icon@2x.png in Resources */,
 				381C74381AF53C82003290CF /* articles_icon@2x.png in Resources */,

@@ -122,6 +122,25 @@
 		4A6D15151AF27D2C003A1708 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D15031AF27D2C003A1708 /* UIRefreshControl+AFNetworking.m */; };
 		4A6D15161AF27D2C003A1708 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D15051AF27D2C003A1708 /* UIWebView+AFNetworking.m */; };
 		4A6D151A1AF27E91003A1708 /* JFWUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D15191AF27E91003A1708 /* JFWUtilities.m */; };
+		4A76DA0D1AFF0FB200BCFFEE /* JFWLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A76DA0B1AFF0FB200BCFFEE /* JFWLoginViewController.h */; };
+		4A76DA0E1AFF0FB200BCFFEE /* JFWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A76DA0C1AFF0FB200BCFFEE /* JFWLoginViewController.m */; };
+		4A76DA121AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A76DA101AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.h */; };
+		4A76DA131AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A76DA111AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.m */; };
+		4A76DA1B1AFF441600BCFFEE /* facebookIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA141AFF441600BCFFEE /* facebookIcon@2x.png */; };
+		4A76DA1C1AFF441600BCFFEE /* googlePlusIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA151AFF441600BCFFEE /* googlePlusIcon@2x.png */; };
+		4A76DA1D1AFF441600BCFFEE /* logoIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA161AFF441600BCFFEE /* logoIcon@2x.png */; };
+		4A76DA1E1AFF441600BCFFEE /* passwordBackground@2x.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA171AFF441600BCFFEE /* passwordBackground@2x.png.png */; };
+		4A76DA1F1AFF441600BCFFEE /* signIn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA181AFF441600BCFFEE /* signIn@2x.png */; };
+		4A76DA201AFF441600BCFFEE /* submit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA191AFF441600BCFFEE /* submit@2x.png */; };
+		4A76DA211AFF441600BCFFEE /* usernameBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA1A1AFF441600BCFFEE /* usernameBackground@2x.png */; };
+		4A76DA271AFF45E300BCFFEE /* dd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA221AFF45E300BCFFEE /* dd@2x.png */; };
+		4A76DA281AFF45E300BCFFEE /* dobBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA231AFF45E300BCFFEE /* dobBackground@2x.png */; };
+		4A76DA291AFF45E300BCFFEE /* mm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA241AFF45E300BCFFEE /* mm@2x.png */; };
+		4A76DA2A1AFF45E300BCFFEE /* separator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA251AFF45E300BCFFEE /* separator@2x.png */; };
+		4A76DA2B1AFF45E300BCFFEE /* yy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA261AFF45E300BCFFEE /* yy@2x.png */; };
+		4A76DA2F1AFF47E200BCFFEE /* mail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA2C1AFF47E200BCFFEE /* mail@2x.png */; };
+		4A76DA301AFF47E200BCFFEE /* mobile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA2D1AFF47E200BCFFEE /* mobile@2x.png */; };
+		4A76DA311AFF47E200BCFFEE /* signupOptionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA2E1AFF47E200BCFFEE /* signupOptionBackground@2x.png */; };
 		4ACFBA641AF3F94400C82325 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3B1AF3F94300C82325 /* MainViewController.m */; };
 		4ACFBA651AF3F94400C82325 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3C1AF3F94300C82325 /* MainViewController.xib */; };
 		4ACFBA661AF3F94400C82325 /* MMCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3E1AF3F94300C82325 /* MMCenterTableViewCell.m */; };
@@ -343,6 +362,25 @@
 		4A6D15171AF27D5F003A1708 /* JFWAppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFWAppConstants.h; sourceTree = "<group>"; };
 		4A6D15181AF27E91003A1708 /* JFWUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWUtilities.h; sourceTree = "<group>"; };
 		4A6D15191AF27E91003A1708 /* JFWUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWUtilities.m; sourceTree = "<group>"; };
+		4A76DA0B1AFF0FB200BCFFEE /* JFWLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWLoginViewController.h; sourceTree = "<group>"; };
+		4A76DA0C1AFF0FB200BCFFEE /* JFWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWLoginViewController.m; sourceTree = "<group>"; };
+		4A76DA101AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWForgotPasswordViewController.h; sourceTree = "<group>"; };
+		4A76DA111AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWForgotPasswordViewController.m; sourceTree = "<group>"; };
+		4A76DA141AFF441600BCFFEE /* facebookIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebookIcon@2x.png"; sourceTree = "<group>"; };
+		4A76DA151AFF441600BCFFEE /* googlePlusIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "googlePlusIcon@2x.png"; sourceTree = "<group>"; };
+		4A76DA161AFF441600BCFFEE /* logoIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoIcon@2x.png"; sourceTree = "<group>"; };
+		4A76DA171AFF441600BCFFEE /* passwordBackground@2x.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "passwordBackground@2x.png.png"; sourceTree = "<group>"; };
+		4A76DA181AFF441600BCFFEE /* signIn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signIn@2x.png"; sourceTree = "<group>"; };
+		4A76DA191AFF441600BCFFEE /* submit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submit@2x.png"; sourceTree = "<group>"; };
+		4A76DA1A1AFF441600BCFFEE /* usernameBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "usernameBackground@2x.png"; sourceTree = "<group>"; };
+		4A76DA221AFF45E300BCFFEE /* dd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dd@2x.png"; sourceTree = "<group>"; };
+		4A76DA231AFF45E300BCFFEE /* dobBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dobBackground@2x.png"; sourceTree = "<group>"; };
+		4A76DA241AFF45E300BCFFEE /* mm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mm@2x.png"; sourceTree = "<group>"; };
+		4A76DA251AFF45E300BCFFEE /* separator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "separator@2x.png"; sourceTree = "<group>"; };
+		4A76DA261AFF45E300BCFFEE /* yy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yy@2x.png"; sourceTree = "<group>"; };
+		4A76DA2C1AFF47E200BCFFEE /* mail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail@2x.png"; sourceTree = "<group>"; };
+		4A76DA2D1AFF47E200BCFFEE /* mobile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mobile@2x.png"; sourceTree = "<group>"; };
+		4A76DA2E1AFF47E200BCFFEE /* signupOptionBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signupOptionBackground@2x.png"; sourceTree = "<group>"; };
 		4ACFBA3A1AF3F94300C82325 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4ACFBA3B1AF3F94300C82325 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4ACFBA3C1AF3F94300C82325 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -490,6 +528,21 @@
 		381C73DB1AF53C82003290CF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4A76DA2C1AFF47E200BCFFEE /* mail@2x.png */,
+				4A76DA2D1AFF47E200BCFFEE /* mobile@2x.png */,
+				4A76DA2E1AFF47E200BCFFEE /* signupOptionBackground@2x.png */,
+				4A76DA221AFF45E300BCFFEE /* dd@2x.png */,
+				4A76DA231AFF45E300BCFFEE /* dobBackground@2x.png */,
+				4A76DA241AFF45E300BCFFEE /* mm@2x.png */,
+				4A76DA251AFF45E300BCFFEE /* separator@2x.png */,
+				4A76DA261AFF45E300BCFFEE /* yy@2x.png */,
+				4A76DA141AFF441600BCFFEE /* facebookIcon@2x.png */,
+				4A76DA151AFF441600BCFFEE /* googlePlusIcon@2x.png */,
+				4A76DA161AFF441600BCFFEE /* logoIcon@2x.png */,
+				4A76DA171AFF441600BCFFEE /* passwordBackground@2x.png.png */,
+				4A76DA181AFF441600BCFFEE /* signIn@2x.png */,
+				4A76DA191AFF441600BCFFEE /* submit@2x.png */,
+				4A76DA1A1AFF441600BCFFEE /* usernameBackground@2x.png */,
 				4AD2B2321AF542D00089DB7F /* devider.png */,
 				4AD2B2331AF542D00089DB7F /* devider@2x.png */,
 				381C73DC1AF53C82003290CF /* about_us_icon@2x.png */,
@@ -723,6 +776,8 @@
 		4A6D14D21AF2796F003A1708 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4A76DA0F1AFF3A0D00BCFFEE /* JFWForgotPasswordViewController */,
+				4A76DA0A1AFF0F9100BCFFEE /* JFWLoginViewController */,
 				4AE310731AF642AC00D1E343 /* JFWAddPostViewController */,
 				4AE3106E1AF6373C00D1E343 /* JFWSearchViewController */,
 				4AD2B23B1AF558C70089DB7F /* JFWAboutUsViewController */,
@@ -810,6 +865,24 @@
 				4A6D15051AF27D2C003A1708 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		4A76DA0A1AFF0F9100BCFFEE /* JFWLoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A76DA0B1AFF0FB200BCFFEE /* JFWLoginViewController.h */,
+				4A76DA0C1AFF0FB200BCFFEE /* JFWLoginViewController.m */,
+			);
+			path = JFWLoginViewController;
+			sourceTree = "<group>";
+		};
+		4A76DA0F1AFF3A0D00BCFFEE /* JFWForgotPasswordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A76DA101AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.h */,
+				4A76DA111AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.m */,
+			);
+			path = JFWForgotPasswordViewController;
 			sourceTree = "<group>";
 		};
 		4ACFBA391AF3F94300C82325 /* DrawerManager */ = {
@@ -1055,12 +1128,14 @@
 				381C748D1AF55393003290CF /* SignUpViewCell.h in Headers */,
 				4AD2B24F1AF559170089DB7F /* JFWPostViewController.h in Headers */,
 				4AD2B24B1AF559050089DB7F /* JFWPollsViewController.h in Headers */,
+				4A76DA121AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.h in Headers */,
 				4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */,
 				4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */,
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
 				381C74841AF55331003290CF /* SignUpViewController.h in Headers */,
 				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
+				4A76DA0D1AFF0FB200BCFFEE /* JFWLoginViewController.h in Headers */,
 				4AF66E641AF864B900115840 /* JFWFilterView.h in Headers */,
 				4AE310871AF67C4B00D1E343 /* JFWFilterTableViewCell.h in Headers */,
 				4AE310761AF642BD00D1E343 /* JFWAddPostViewController.h in Headers */,
@@ -1166,17 +1241,22 @@
 				381C74341AF53C82003290CF /* arrow_down_icon@2x.png in Resources */,
 				381C746C1AF53C82003290CF /* sign_out_icon@2x.png in Resources */,
 				4A6D14DE1AF27B82003A1708 /* Main.storyboard in Resources */,
+				4A76DA1C1AFF441600BCFFEE /* googlePlusIcon@2x.png in Resources */,
 				381C743C1AF53C82003290CF /* close_icon_dark_red@2x.png in Resources */,
+				4A76DA301AFF47E200BCFFEE /* mobile@2x.png in Resources */,
 				381C745D1AF53C82003290CF /* lock_icon@2x.png in Resources */,
 				4ACFBA781AF3F94400C82325 /* SecondViewController.xib in Resources */,
 				381C743B1AF53C82003290CF /* camera_gray_icon@2x.png in Resources */,
 				381C746A1AF53C82003290CF /* sample_video_icon@2x.png in Resources */,
 				4A6D14B41AF1390A003A1708 /* Images.xcassets in Resources */,
+				4A76DA2A1AFF45E300BCFFEE /* separator@2x.png in Resources */,
 				381C74551AF53C82003290CF /* inspried_small_icon@2x.png in Resources */,
 				381C74561AF53C82003290CF /* inspried_small_icon_selected@2x.png in Resources */,
 				381C74651AF53C82003290CF /* profile_back@2x.png in Resources */,
 				381C747B1AF53C82003290CF /* upload_small_icon_selected@2x.png in Resources */,
+				4A76DA211AFF441600BCFFEE /* usernameBackground@2x.png in Resources */,
 				381C744F1AF53C82003290CF /* facebook_icon@2x.png in Resources */,
+				4A76DA281AFF45E300BCFFEE /* dobBackground@2x.png in Resources */,
 				381C74641AF53C82003290CF /* products_icon@2x.png in Resources */,
 				381C746F1AF53C82003290CF /* sign_up_mail_and_mob_option@2x.png in Resources */,
 				381C74721AF53C82003290CF /* splash_app_icon@2x.png in Resources */,
@@ -1200,30 +1280,38 @@
 				4ACFBA761AF3F94400C82325 /* NewControllerViewController.xib in Resources */,
 				381C742F1AF53C82003290CF /* add_post_icon@2x.png in Resources */,
 				381C74431AF53C82003290CF /* dark_pink_poll_dot@2x.png in Resources */,
+				4A76DA311AFF47E200BCFFEE /* signupOptionBackground@2x.png in Resources */,
 				381C74681AF53C82003290CF /* report_spam_back@2x.png in Resources */,
 				381C74391AF53C82003290CF /* back_icon@2x.png in Resources */,
 				381C747A1AF53C82003290CF /* upload_small_icon@2x.png in Resources */,
+				4A76DA291AFF45E300BCFFEE /* mm@2x.png in Resources */,
 				381C74351AF53C82003290CF /* arrow_left_icon@2x.png in Resources */,
 				381C74471AF53C82003290CF /* dislike_small_icon@2x.png in Resources */,
+				4A76DA2B1AFF45E300BCFFEE /* yy@2x.png in Resources */,
 				381C744C1AF53C82003290CF /* edit_icon@2x.png in Resources */,
 				381C74751AF53C82003290CF /* stop_medium_icon@2x.png in Resources */,
 				381C743A1AF53C82003290CF /* blue_poll_icon@2x.png in Resources */,
 				381C74451AF53C82003290CF /* dislike_medium_icon@2x.png in Resources */,
 				38424F511AFA9C4000FCECA3 /* Localizable.strings in Resources */,
 				381C744A1AF53C82003290CF /* dot_icon@2x.png in Resources */,
+				4A76DA1D1AFF441600BCFFEE /* logoIcon@2x.png in Resources */,
 				381C74521AF53C82003290CF /* google_plus_icon@2x.png in Resources */,
 				381C742E1AF53C82003290CF /* about_us_icon@2x.png in Resources */,
+				4A76DA1F1AFF441600BCFFEE /* signIn@2x.png in Resources */,
 				381C747D1AF53C82003290CF /* video_icon@2x.png in Resources */,
 				381C745F1AF53C82003290CF /* mobile_icon@2x.png in Resources */,
 				381C74491AF53C82003290CF /* donate_us_icon@2x.png in Resources */,
+				4A76DA271AFF45E300BCFFEE /* dd@2x.png in Resources */,
 				4ACFBAAE1AF49CDE00C82325 /* menu_icon@2x.png in Resources */,
 				4ACFBA651AF3F94400C82325 /* MainViewController.xib in Resources */,
 				381C74611AF53C82003290CF /* poll_icon@2x.png in Resources */,
 				381C74661AF53C82003290CF /* profile_camera_icon@2x.png in Resources */,
 				381C743F1AF53C82003290CF /* comment_medium_icon_selected@2x.png in Resources */,
 				381C74591AF53C82003290CF /* like_medium_icon@2x.png in Resources */,
+				4A76DA2F1AFF47E200BCFFEE /* mail@2x.png in Resources */,
 				381C74311AF53C82003290CF /* all_set_icon@2x.png in Resources */,
 				381C74501AF53C82003290CF /* filter_icon@2x.png in Resources */,
+				4A76DA1E1AFF441600BCFFEE /* passwordBackground@2x.png.png in Resources */,
 				381C74581AF53C82003290CF /* like_icon_dark_read@2x.png in Resources */,
 				381C747F1AF53C82003290CF /* white_poll_dot@2x.png in Resources */,
 				381C74531AF53C82003290CF /* inspried_medium_icon@2x.png in Resources */,
@@ -1232,6 +1320,7 @@
 				4AD2B2351AF542D00089DB7F /* devider@2x.png in Resources */,
 				381C74711AF53C82003290CF /* sign_up_mobile_back@2x.png in Resources */,
 				4AD2B2341AF542D00089DB7F /* devider.png in Resources */,
+				4A76DA201AFF441600BCFFEE /* submit@2x.png in Resources */,
 				381C74401AF53C82003290CF /* comment_small_icon@2x.png in Resources */,
 				381C74381AF53C82003290CF /* articles_icon@2x.png in Resources */,
 				381C746D1AF53C82003290CF /* sign_up_city_county_back@2x.png in Resources */,
@@ -1243,6 +1332,7 @@
 				381C745A1AF53C82003290CF /* like_medium_icon_selected@2x.png in Resources */,
 				381C744D1AF53C82003290CF /* email_gray_icon@2x.png in Resources */,
 				381C745B1AF53C82003290CF /* like_small_icon@2x.png in Resources */,
+				4A76DA1B1AFF441600BCFFEE /* facebookIcon@2x.png in Resources */,
 				381C74791AF53C82003290CF /* upload_medium_icon_selected@2x.png in Resources */,
 				4ACFBAA71AF3FDE700C82325 /* IGHomeViewCellTableViewCell.xib in Resources */,
 				381C74541AF53C82003290CF /* inspried_medium_icon_selected@2x.png in Resources */,
@@ -1275,6 +1365,7 @@
 				4ACFBA831AF3F9C600C82325 /* IGRightMenuViewController.m in Sources */,
 				4A6D151A1AF27E91003A1708 /* JFWUtilities.m in Sources */,
 				4A6D15071AF27D2C003A1708 /* AFHTTPRequestOperationManager.m in Sources */,
+				4A76DA0E1AFF0FB200BCFFEE /* JFWLoginViewController.m in Sources */,
 				4AE310771AF642BD00D1E343 /* JFWAddPostViewController.m in Sources */,
 				4ACFBA701AF3F94400C82325 /* MMLogoView.m in Sources */,
 				4AF66E651AF864B900115840 /* JFWFilterView.m in Sources */,
@@ -1282,6 +1373,7 @@
 				4ACFBA661AF3F94400C82325 /* MMCenterTableViewCell.m in Sources */,
 				4A6D15141AF27D2C003A1708 /* UIProgressView+AFNetworking.m in Sources */,
 				4ACFBAA61AF3FDE700C82325 /* IGHomeViewCellTableViewCell.m in Sources */,
+				4A76DA131AFF3A1F00BCFFEE /* JFWForgotPasswordViewController.m in Sources */,
 				4A6D15091AF27D2C003A1708 /* AFNetworkReachabilityManager.m in Sources */,
 				4A6D150D1AF27D2C003A1708 /* AFURLResponseSerialization.m in Sources */,
 				4ACFBA961AF3FBC600C82325 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,

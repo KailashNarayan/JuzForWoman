@@ -24,7 +24,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paH-Ow-YMr">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="U2d-6X-5vo">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="U2d-6X-5vo">
                                         <rect key="frame" x="8" y="113" width="304" height="392"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="eV4-Fc-rSQ">
@@ -468,6 +468,172 @@
             </objects>
             <point key="canvasLocation" x="-458" y="371"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="sa2-sW-nqe">
+            <objects>
+                <viewController storyboardIdentifier="JFWLoginViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="apZ-VH-cV7" customClass="JFWLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vAJ-Q0-ykW"/>
+                        <viewControllerLayoutGuide type="bottom" id="DGA-wo-cR1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QeM-M4-oAl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAG-04-DjN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mi6-j8-ucH">
+                                        <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="38" y="143" width="268" height="30"/>
+                                        </variation>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SiR-ei-8nW">
+                                        <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="38" y="199" width="268" height="30"/>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9E-Yw-Zd3">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.85490196078431369" green="0.27058823529411763" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="101" y="269" width="118" height="45"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onSignInButtonTapped:" destination="apZ-VH-cV7" eventType="touchUpInside" id="PR2-Rk-DRS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbl-c4-rgg">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Forgot Password? ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="87" y="333" width="147" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onForgotPasswordButtonTapped:" destination="apZ-VH-cV7" eventType="touchUpInside" id="Kp4-ua-k4R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ave-HD-hL0">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" image="google_plus_icon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="152" y="457" width="93" height="37"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onGooglePlusButtonTapped:" destination="apZ-VH-cV7" eventType="touchUpInside" id="LFU-bC-znC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwK-oE-Gyh">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="139" y="389" width="42" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ug-ff-KHu">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" image="facebook_icon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="64" y="457" width="96" height="37"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onFacebookButtonTapped:" destination="apZ-VH-cV7" eventType="touchUpInside" id="k0K-m3-NYj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71o-1c-2GJ">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="New here ? Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="53" y="530" width="215" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onSignUpButtonTapped:" destination="apZ-VH-cV7" eventType="touchUpInside" id="DHw-e1-3ht"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="P5m-Lg-LsY">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="120" y="24" width="80" height="72"/>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="mi6-j8-ucH"/>
+                                        <exclude reference="SiR-ei-8nW"/>
+                                        <exclude reference="w9E-Yw-Zd3"/>
+                                        <exclude reference="Sbl-c4-rgg"/>
+                                        <exclude reference="ave-HD-hL0"/>
+                                        <exclude reference="YwK-oE-Gyh"/>
+                                        <exclude reference="3ug-ff-KHu"/>
+                                        <exclude reference="71o-1c-2GJ"/>
+                                        <exclude reference="P5m-Lg-LsY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <mask key="subviews">
+                                        <include reference="mi6-j8-ucH"/>
+                                        <include reference="SiR-ei-8nW"/>
+                                        <include reference="w9E-Yw-Zd3"/>
+                                        <include reference="Sbl-c4-rgg"/>
+                                        <include reference="ave-HD-hL0"/>
+                                        <include reference="YwK-oE-Gyh"/>
+                                        <include reference="3ug-ff-KHu"/>
+                                        <include reference="71o-1c-2GJ"/>
+                                        <include reference="P5m-Lg-LsY"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LAG-04-DjN"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="LAG-04-DjN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="logoImageView" destination="P5m-Lg-LsY" id="sAd-iu-wBL"/>
+                        <outlet property="passwordTextField" destination="SiR-ei-8nW" id="dh5-Qc-MZL"/>
+                        <outlet property="scrollViewObj" destination="LAG-04-DjN" id="The-ai-oaM"/>
+                        <outlet property="usernameTextField" destination="mi6-j8-ucH" id="Jww-EY-Fkb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyZ-YS-3vp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="299.25"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="gAL-Fb-sov">
             <objects>
@@ -819,7 +985,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gh-Fl-S55" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1254" y="347.25"/>
+            <point key="canvasLocation" x="1603.5" y="311.25"/>
         </scene>
         <!--Article View Controller-->
         <scene sceneID="1mA-BL-6vE">
@@ -859,6 +1025,25 @@
             </objects>
             <point key="canvasLocation" x="2901" y="288"/>
         </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="09R-hQ-ow9">
+            <objects>
+                <viewController storyboardIdentifier="JFWForgotPasswordViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eLb-Mn-DG1" customClass="JFWForgotPasswordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IJT-Es-Uc9"/>
+                        <viewControllerLayoutGuide type="bottom" id="ohi-c8-jro"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zbI-91-bFw">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Isj-Wr-qVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3720" y="258"/>
+        </scene>
         <!--Add Post View Controller-->
         <scene sceneID="IvZ-Ms-iME">
             <objects>
@@ -882,10 +1067,13 @@
     </scenes>
     <resources>
         <image name="app_back.png" width="320" height="568"/>
+        <image name="app_icon.png" width="49" height="49"/>
         <image name="arrow_left_icon.png" width="12" height="15"/>
         <image name="arrow_right_icon.png" width="12" height="15"/>
         <image name="edit_icon.png" width="30" height="30"/>
+        <image name="facebook_icon.png" width="41" height="37"/>
         <image name="filter_icon.png" width="30" height="30"/>
+        <image name="google_plus_icon.png" width="38" height="37"/>
         <image name="post_add_icon.png" width="30" height="30"/>
     </resources>
 </document>

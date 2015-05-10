@@ -17,7 +17,7 @@
 #import "MMDrawerVisualState.h"
 #import "MMExampleDrawerVisualStateManager.h"
 #import "MMNavigationController.h"
-
+#import "JFWLoginViewController.h"
 #import "UserPreference.h"
 #import "JFWAppConstants.h"
 
@@ -46,7 +46,7 @@ static BOOL OSVersionIsAtLeastiOS7() {
     
     if([[UserPreference sharedInstance] isUserLoggedin])
     {
-        UIViewController *viewController = [mainStoryboardObj instantiateViewControllerWithIdentifier:@"SignUpViewControllerIdentifier"];
+        UIViewController *viewController = [mainStoryboardObj instantiateViewControllerWithIdentifier:@"JFWLoginViewControllerId"];
         self.window.rootViewController = viewController;
     }
     else

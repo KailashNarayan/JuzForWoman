@@ -9,26 +9,50 @@
 #import "SignUpViewCell.h"
 
 #import "JFWUtilities.h"
+#import "ImageContstants.h"
+
+
 @implementation SignUpViewCell
+
++(UIColor *)placeHolderTextColor
+{
+    return [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:.6];
+}
 
 - (void)awakeFromNib
 {
     // Initialization code
-    
     [dateTextField setDelegate:self];
+    [JFWUtilities setPlaceHolderTextColor:dateTextField color:[SignUpViewCell placeHolderTextColor]];
+    
     [monthTextField setDelegate:self];
+    [JFWUtilities setPlaceHolderTextColor:monthTextField color:[SignUpViewCell placeHolderTextColor]];
+    
     [yearTextField setDelegate:self];
+    [JFWUtilities setPlaceHolderTextColor:yearTextField color:[SignUpViewCell placeHolderTextColor]];
+    
     [countryTextField setDelegate:self];
+    [JFWUtilities setPlaceHolderTextColor:countryTextField color:[SignUpViewCell placeHolderTextColor]];
+    
     [securityCodeTextField setDelegate:self];
+    
     [cityTextField setDelegate:self];
+    [JFWUtilities setPlaceHolderTextColor:cityTextField color:[SignUpViewCell placeHolderTextColor]];
+    
     [emailTextField setDelegate:self];
+    [JFWUtilities setPlaceHolderTextColor:emailTextField color:[SignUpViewCell placeHolderTextColor]];
+    
     [passwordTextField setDelegate:self];
+    [JFWUtilities setPlaceHolderTextColor:passwordTextField color:[SignUpViewCell placeHolderTextColor]];
+    
 }
 
 
 -(void)setDataOnCell
 {
     [self showSignUpView];
+    
+    [self setCellBackgroundImage];
 }
 
 -(void)showSignUpView
@@ -94,68 +118,54 @@
     }
 }
 
-//-(void)setCellBackgroundImage
-//{
-//    UIImage image = nil;
-//    
-//    switch (self.signUpScreenType)
-//    {
-//        case DATE_OF_BIRTH_SCREEN:
-//            
-//            image = [UIImage imageNamed:];
-//            
-//            break;
-//            
-//        case SIGNUP_OPTION_TYPE_SCREEN:
-//            
-//            [self showView:dateOfBirthContainerView mode:NO];
-//            [self showView:signupOptionContainerView mode:YES];
-//            [self showView:usernamePasswordContainerView mode:NO];
-//            [self showView:securityCodeContainerView mode:NO];
-//            [self showView:selectCountryContainerView mode:NO];
-//            
-//            break;
-//            
-//        case USERNAME_PASSWORD_SCREEN:
-//            
-//            [self showView:dateOfBirthContainerView mode:NO];
-//            [self showView:signupOptionContainerView mode:NO];
-//            [self showView:usernamePasswordContainerView mode:YES];
-//            [self showView:securityCodeContainerView mode:NO];
-//            [self showView:selectCountryContainerView mode:NO];
-//            
-//            [self setSignInPlaceHolderText];
-//            
-//            break;
-//            
-//        case SECURITY_CODE_SCREEN:
-//            
-//            [self showView:dateOfBirthContainerView mode:NO];
-//            [self showView:signupOptionContainerView mode:NO];
-//            [self showView:usernamePasswordContainerView mode:NO];
-//            [self showView:securityCodeContainerView mode:YES];
-//            [self showView:selectCountryContainerView mode:NO];
-//            
-//            [self setSecurityCodeMessage];
-//            
-//            break;
-//            
-//        case LOCATION_SCREEN:
-//            
-//            [self showView:dateOfBirthContainerView mode:NO];
-//            [self showView:signupOptionContainerView mode:NO];
-//            [self showView:usernamePasswordContainerView mode:NO];
-//            [self showView:securityCodeContainerView mode:NO];
-//            [self showView:selectCountryContainerView mode:YES];
-//            
-//            break;
-//            
-//        default:
-//            break;
-//    }
-//    
-//    backgroundImage setImage:<#(UIImage *)#>
-//}
+-(void)setCellBackgroundImage
+{
+    UIImage *image = nil;
+    
+    switch (self.signUpScreenType)
+    {
+        case DATE_OF_BIRTH_SCREEN:
+            
+            image = [UIImage imageNamed:DATE_OF_BIRTH_CELL_BACKGROUND_IMAGE];
+            
+            break;
+            
+        case SIGNUP_OPTION_TYPE_SCREEN:
+            
+            image = [UIImage imageNamed:SIGNUP_OPTION_CELL_BACKGROUND_IMAGE];
+            
+            break;
+            
+        case USERNAME_PASSWORD_SCREEN:
+            
+            if (self.signUpOption == EMAIL)
+                image = [UIImage imageNamed:MAIL_CELL_BACKGROUND_IMAGE];
+            else
+                image = [UIImage imageNamed:MOBILE_PASSWORD_CELL_BACKGROUND_IMAGE];
+            
+            break;
+            
+        case SECURITY_CODE_SCREEN:
+            
+            if (self.signUpOption == EMAIL)
+                image = [UIImage imageNamed:EMAIL_VERIFICATION_CELL_BACKGROUND_IMAGE];
+            else
+                image = [UIImage imageNamed:PHONE_BACKGROUND_IMAGE];
+            
+            break;
+            
+        case LOCATION_SCREEN:
+            
+            image = [UIImage imageNamed:CITY_CELL_BACKGROUND_IMAGE];
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+    [backgroundImage setImage:image];
+}
 
 -(void)showView:(UIView *)view mode:(BOOL)mode
 {
@@ -294,6 +304,7 @@
     return YES;
 }
 
+
 #pragma mark - UIButton event methods
 
 - (IBAction)emailButtonTapped:(id)sender
@@ -314,5 +325,19 @@
     }
 }
 
+
+@end
+
+@implementation UITextField (CUSTOM_BOUNDS)
+
+- (CGRect)textRectForBounds:(CGRect)bounds
+{
+    return CGRectInset( bounds , 10 , 10 );
+}
+
+// text position
+- (CGRect)editingRectForBounds:(CGRect)bounds {
+    return CGRectInset( bounds , 10 , 10 );
+}
 
 @end

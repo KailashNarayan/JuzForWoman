@@ -119,6 +119,17 @@ static BOOL OSVersionIsAtLeastiOS7() {
     return [phoneTest evaluateWithObject:numberString];
 }
 
-
++(void)setPlaceHolderTextColor:(UITextField *)textField color:(UIColor *)color
+{
+    if (!textField.placeholder)
+        return;
+    
+    if ([textField respondsToSelector:@selector(setAttributedPlaceholder:)]) {
+        textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:textField.placeholder attributes:@{NSForegroundColorAttributeName: color}];
+    } else {
+        NSLog(@"Cannot set placeholder text's color, because deployment target is earlier than iOS 6.0");
+        // TODO: Add fall-back code to set placeholder color.
+    }
+}
 
 @end

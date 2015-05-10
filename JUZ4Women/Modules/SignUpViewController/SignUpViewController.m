@@ -157,6 +157,7 @@
     }
 }
 
+
 #pragma mark - UI Button Event Methods
 
 - (IBAction)previousButtonTapped:(id)sender
@@ -282,6 +283,14 @@
 -(void)disableNextButton:(BOOL)mode
 {
     [nextButton setEnabled:!mode];
+    
+    CGFloat alpha = 0.5;
+    if (!mode)
+        alpha = 1.0;
+    
+    [nextButton setAlpha:alpha];
+    
+    [collectionViewObj setScrollEnabled:!mode];
 }
 
 -(void)signUpOptionSelected:(SignUpOption)option

@@ -97,6 +97,8 @@
 		381C748E1AF55393003290CF /* SignUpViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C748B1AF55393003290CF /* SignUpViewCell.m */; };
 		381C748F1AF55393003290CF /* SignUpViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381C748C1AF55393003290CF /* SignUpViewCell.xib */; };
 		38424F511AFA9C4000FCECA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38424F501AFA9C4000FCECA3 /* Localizable.strings */; };
+		3873FF0F1AFF4E2700E5E680 /* ImageContstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3873FF0D1AFF4E2700E5E680 /* ImageContstants.h */; };
+		3873FF101AFF4E2700E5E680 /* ImageContstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873FF0E1AFF4E2700E5E680 /* ImageContstants.m */; };
 		4A6D14A91AF1390A003A1708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14A81AF1390A003A1708 /* main.m */; };
 		4A6D14B41AF1390A003A1708 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D14B31AF1390A003A1708 /* Images.xcassets */; };
 		4A6D14C31AF1390A003A1708 /* JUZ4WomenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14C21AF1390A003A1708 /* JUZ4WomenTests.m */; };
@@ -310,6 +312,8 @@
 		381C748B1AF55393003290CF /* SignUpViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewCell.m; sourceTree = "<group>"; };
 		381C748C1AF55393003290CF /* SignUpViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewCell.xib; sourceTree = "<group>"; };
 		38424F501AFA9C4000FCECA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		3873FF0D1AFF4E2700E5E680 /* ImageContstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageContstants.h; sourceTree = "<group>"; };
+		3873FF0E1AFF4E2700E5E680 /* ImageContstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageContstants.m; sourceTree = "<group>"; };
 		4A6D14A31AF1390A003A1708 /* JUZ4Women.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JUZ4Women.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6D14A71AF1390A003A1708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6D14A81AF1390A003A1708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -734,6 +738,8 @@
 			isa = PBXGroup;
 			children = (
 				4A6D15171AF27D5F003A1708 /* JFWAppConstants.h */,
+				3873FF0D1AFF4E2700E5E680 /* ImageContstants.h */,
+				3873FF0E1AFF4E2700E5E680 /* ImageContstants.m */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1132,6 +1138,7 @@
 				4AD2B2391AF54FB00089DB7F /* JFWMenuItemModel.h in Headers */,
 				4AD2B2431AF558E10089DB7F /* JFWAboutUsViewController.h in Headers */,
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
+				3873FF0F1AFF4E2700E5E680 /* ImageContstants.h in Headers */,
 				381C74841AF55331003290CF /* SignUpViewController.h in Headers */,
 				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
@@ -1406,6 +1413,7 @@
 				4ACFBA6B1AF3F94400C82325 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				4ACFBA771AF3F94400C82325 /* SecondViewController.m in Sources */,
 				4ACFBA6D1AF3F94400C82325 /* MMExampleRightSideDrawerViewController.m in Sources */,
+				3873FF101AFF4E2700E5E680 /* ImageContstants.m in Sources */,
 				4ACFBA9D1AF3FD3600C82325 /* LeftMenuCellTableViewCell.m in Sources */,
 				4A6D15111AF27D2C003A1708 /* UIAlertView+AFNetworking.m in Sources */,
 				4ACFBA6F1AF3F94400C82325 /* MMExampleViewController.m in Sources */,
@@ -1529,6 +1537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JUZ4Women.pch";
 				INFOPLIST_FILE = JUZ4Women/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1539,6 +1548,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JUZ4Women.pch";
 				INFOPLIST_FILE = JUZ4Women/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -111,6 +111,8 @@
 +(BOOL)validatePhoneNumberString:(NSString*)numberString;
 
 +(void)setPlaceHolderTextColor:(UITextField *)textField color:(UIColor *)color;
++(UIColor *)placeHolderTextColor;
+
 
 
 @end

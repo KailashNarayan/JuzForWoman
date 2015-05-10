@@ -7,6 +7,7 @@
 //
 
 #import "JFWAddPostViewController.h"
+#import "JFWUtilities.h"
 
 @interface JFWAddPostViewController ()
 
@@ -14,13 +15,34 @@
 
 @implementation JFWAddPostViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     [self configureLeftNavBar];
     [self configureNavBarTitile];
+    [self configureScrollView];
+    [self configureView];
+}
+
+-(void)configureView
+{
+    //[self.view bringSubviewToFront:self.textViewObj];
+    [self.view sendSubviewToBack:self.textViewBackgroundImageView];
     
+    [JFWUtilities setPlaceHolderTextColor:self.tag1TextFieldObj color:[UIColor whiteColor]];
+    [JFWUtilities setPlaceHolderTextColor:self.tag2TextFieldObj color:[UIColor whiteColor]];
+    [JFWUtilities setPlaceHolderTextColor:self.tag3TextFieldObj color:[UIColor whiteColor]];
+    [JFWUtilities setPlaceHolderTextColor:self.titleTextFieldObj color:[UIColor whiteColor]];
+
+    
+    
+}
+
+-(void)configureScrollView
+{
+    self.scrollViewObj.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,9 +54,12 @@
 {
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
-    self.title = @"Write your mind";
+    //self.title = @"Write your mind";
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
     
+    UIImage *image = [UIImage imageNamed:@"writeyourmind.png"];
+    
+    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"writeyourmind.png"]];
 }
 
 -(void)configureLeftNavBar
@@ -56,5 +81,11 @@
 -(void)onNavBarBackButtonTapped
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 @end

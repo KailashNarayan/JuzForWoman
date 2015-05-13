@@ -155,6 +155,10 @@
 		4A76DA451AFF4CDE00BCFFEE /* cityBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA431AFF4CDE00BCFFEE /* cityBox@2x.png */; };
 		4A76DA471AFF4D3400BCFFEE /* countryBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA461AFF4D3400BCFFEE /* countryBox@2x.png */; };
 		4A76DA491AFF549000BCFFEE /* logoTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA481AFF549000BCFFEE /* logoTitle@2x.png */; };
+		4A76DA4E1AFF9E1F00BCFFEE /* postBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4A1AFF9E1E00BCFFEE /* postBox@2x.png */; };
+		4A76DA4F1AFF9E1F00BCFFEE /* suggestAdminPost@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4B1AFF9E1E00BCFFEE /* suggestAdminPost@2x.png */; };
+		4A76DA501AFF9E1F00BCFFEE /* titleBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4C1AFF9E1E00BCFFEE /* titleBox@2x.png */; };
+		4A76DA511AFF9E1F00BCFFEE /* writeyourmind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */; };
 		4ACFBA641AF3F94400C82325 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3B1AF3F94300C82325 /* MainViewController.m */; };
 		4ACFBA651AF3F94400C82325 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3C1AF3F94300C82325 /* MainViewController.xib */; };
 		4ACFBA661AF3F94400C82325 /* MMCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFBA3E1AF3F94300C82325 /* MMCenterTableViewCell.m */; };
@@ -409,6 +413,10 @@
 		4A76DA431AFF4CDE00BCFFEE /* cityBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cityBox@2x.png"; sourceTree = "<group>"; };
 		4A76DA461AFF4D3400BCFFEE /* countryBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "countryBox@2x.png"; sourceTree = "<group>"; };
 		4A76DA481AFF549000BCFFEE /* logoTitle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoTitle@2x.png"; sourceTree = "<group>"; };
+		4A76DA4A1AFF9E1E00BCFFEE /* postBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "postBox@2x.png"; sourceTree = "<group>"; };
+		4A76DA4B1AFF9E1E00BCFFEE /* suggestAdminPost@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestAdminPost@2x.png"; sourceTree = "<group>"; };
+		4A76DA4C1AFF9E1E00BCFFEE /* titleBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titleBox@2x.png"; sourceTree = "<group>"; };
+		4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "writeyourmind@2x.png"; sourceTree = "<group>"; };
 		4ACFBA3A1AF3F94300C82325 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4ACFBA3B1AF3F94300C82325 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4ACFBA3C1AF3F94300C82325 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -556,6 +564,10 @@
 		381C73DB1AF53C82003290CF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4A76DA4A1AFF9E1E00BCFFEE /* postBox@2x.png */,
+				4A76DA4B1AFF9E1E00BCFFEE /* suggestAdminPost@2x.png */,
+				4A76DA4C1AFF9E1E00BCFFEE /* titleBox@2x.png */,
+				4A76DA4D1AFF9E1E00BCFFEE /* writeyourmind@2x.png */,
 				4A76DA481AFF549000BCFFEE /* logoTitle@2x.png */,
 				4A76DA461AFF4D3400BCFFEE /* countryBox@2x.png */,
 				4A76DA421AFF4CDE00BCFFEE /* cityBackground@2x.png */,
@@ -1268,6 +1280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A76DA511AFF9E1F00BCFFEE /* writeyourmind@2x.png in Resources */,
 				381C74771AF53C82003290CF /* suggest_us_icon@2x.png in Resources */,
 				4A6D14DD1AF27B82003A1708 /* LaunchScreen.xib in Resources */,
 				381C74631AF53C82003290CF /* post_icon@2x.png in Resources */,
@@ -1298,6 +1311,7 @@
 				381C743B1AF53C82003290CF /* camera_gray_icon@2x.png in Resources */,
 				381C746A1AF53C82003290CF /* sample_video_icon@2x.png in Resources */,
 				4A6D14B41AF1390A003A1708 /* Images.xcassets in Resources */,
+				4A76DA4E1AFF9E1F00BCFFEE /* postBox@2x.png in Resources */,
 				4A76DA2A1AFF45E300BCFFEE /* separator@2x.png in Resources */,
 				381C74551AF53C82003290CF /* inspried_small_icon@2x.png in Resources */,
 				381C74561AF53C82003290CF /* inspried_small_icon_selected@2x.png in Resources */,
@@ -1317,10 +1331,12 @@
 				4ACFBA9E1AF3FD3600C82325 /* LeftMenuCellTableViewCell.xib in Resources */,
 				381C74691AF53C82003290CF /* report_spam_icon_dark_red@2x.png in Resources */,
 				381C74701AF53C82003290CF /* sign_up_mail_back@2x.png in Resources */,
+				4A76DA4F1AFF9E1F00BCFFEE /* suggestAdminPost@2x.png in Resources */,
 				381C748F1AF55393003290CF /* SignUpViewCell.xib in Resources */,
 				381C74481AF53C82003290CF /* dislike_small_icon_selected@2x.png in Resources */,
 				381C74731AF53C82003290CF /* splash_screen@2x.jpg in Resources */,
 				381C74441AF53C82003290CF /* dislike_icon_dark_red@2x.png in Resources */,
+				4A76DA501AFF9E1F00BCFFEE /* titleBox@2x.png in Resources */,
 				381C745E1AF53C82003290CF /* mobile_gray_icon@2x.png in Resources */,
 				381C74671AF53C82003290CF /* profile_icon@2x.png in Resources */,
 				4A76DA3E1AFF4C5D00BCFFEE /* emailBackground@2x.png in Resources */,

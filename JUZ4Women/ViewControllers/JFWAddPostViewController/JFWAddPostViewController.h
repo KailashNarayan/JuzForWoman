@@ -10,4 +10,19 @@
 
 @interface JFWAddPostViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewObj;
+
+@property (weak, nonatomic) IBOutlet UITextView *textViewObj;
+
+@property (weak, nonatomic) IBOutlet UIImageView *textViewBackgroundImageView;
+
+@property (weak, nonatomic) IBOutlet UITextField *titleTextFieldObj;
+
+@property (weak, nonatomic) IBOutlet UITextField *tag1TextFieldObj;
+
+@property (weak, nonatomic) IBOutlet UITextField *tag2TextFieldObj;
+
+@property (weak, nonatomic) IBOutlet UITextField *tag3TextFieldObj;
+
+
 @end

@@ -30,10 +30,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.scrollViewObj.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
-    
+
     [self configureStatusBar];
     [self configureTextField];
+    [self configureScrollView];
+}
+
+-(void)configureScrollView
+{
+    self.scrollViewObj.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
 }
 
 -(void)configureStatusBar

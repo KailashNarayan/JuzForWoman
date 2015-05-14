@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -468,14 +468,56 @@
                         <viewControllerLayoutGuide type="bottom" id="yar-V8-k3h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gwG-D5-QpZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="hvq-ZK-Fef">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTP-bq-Asc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-8e-MOB">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqL-fz-QxT">
+                                        <rect key="frame" x="206" y="8" width="42" height="30"/>
+                                        <state key="normal" image="add_videos_icon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvZ-6X-xwR">
+                                        <rect key="frame" x="258" y="8" width="42" height="30"/>
+                                        <state key="normal" image="filter_icon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What to watch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUs-WJ-eSz">
+                                        <rect key="frame" x="13" y="12" width="138" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zxg-nT-ovP">
+                                <rect key="frame" x="0.0" y="47" width="320" height="521"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sjt-A5-oox" id="IbR-VU-SNZ"/>
+                                    <outlet property="delegate" destination="Sjt-A5-oox" id="YWw-0d-Sen"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0RC-Pj-153" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3867" y="-788.25"/>
+            <point key="canvasLocation" x="3867" y="-789"/>
         </scene>
         <!--Right Menu View Controller-->
         <scene sceneID="xND-Ws-BbD">
@@ -1847,13 +1889,13 @@
                                         <exclude reference="2YV-QD-aYy"/>
                                         <exclude reference="5wx-mz-9PP"/>
                                         <exclude reference="fki-dD-QRH"/>
-                                        <exclude reference="0wA-gc-2Jg"/>
-                                        <exclude reference="I0a-8t-jGO"/>
-                                        <exclude reference="cQN-hH-ERb"/>
-                                        <exclude reference="YIH-AU-uUA"/>
-                                        <exclude reference="aMX-V8-3BI"/>
-                                        <exclude reference="tit-ca-cQs"/>
-                                        <exclude reference="xN5-HA-snu"/>
+                                        <exclude reference="6eO-rQ-dme"/>
+                                        <exclude reference="9CI-Uf-A83"/>
+                                        <exclude reference="N71-5B-bZv"/>
+                                        <exclude reference="ZI5-44-FL2"/>
+                                        <exclude reference="e38-dW-yfU"/>
+                                        <exclude reference="h08-eN-4At"/>
+                                        <exclude reference="la6-Jg-loR"/>
                                         <exclude reference="6fn-ox-MaF"/>
                                         <exclude reference="kYT-eK-49n"/>
                                         <exclude reference="psX-wE-U6l"/>
@@ -1861,18 +1903,18 @@
                                         <exclude reference="NY5-NG-5CM"/>
                                         <exclude reference="VoN-RB-x4j"/>
                                         <exclude reference="Wzf-DF-heU"/>
-                                        <exclude reference="ZI5-44-FL2"/>
-                                        <exclude reference="e38-dW-yfU"/>
-                                        <exclude reference="h08-eN-4At"/>
-                                        <exclude reference="la6-Jg-loR"/>
-                                        <exclude reference="6eO-rQ-dme"/>
-                                        <exclude reference="9CI-Uf-A83"/>
-                                        <exclude reference="N71-5B-bZv"/>
                                         <exclude reference="5Wg-ob-Af3"/>
                                         <exclude reference="9vN-qx-bkA"/>
                                         <exclude reference="ZIB-ym-yN9"/>
                                         <exclude reference="oU3-Da-U1Z"/>
                                         <exclude reference="rZQ-wL-cCg"/>
+                                        <exclude reference="0wA-gc-2Jg"/>
+                                        <exclude reference="I0a-8t-jGO"/>
+                                        <exclude reference="cQN-hH-ERb"/>
+                                        <exclude reference="YIH-AU-uUA"/>
+                                        <exclude reference="aMX-V8-3BI"/>
+                                        <exclude reference="tit-ca-cQs"/>
+                                        <exclude reference="xN5-HA-snu"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -1892,13 +1934,13 @@
                                         <include reference="2YV-QD-aYy"/>
                                         <include reference="5wx-mz-9PP"/>
                                         <include reference="fki-dD-QRH"/>
-                                        <include reference="0wA-gc-2Jg"/>
-                                        <include reference="I0a-8t-jGO"/>
-                                        <include reference="cQN-hH-ERb"/>
-                                        <include reference="YIH-AU-uUA"/>
-                                        <include reference="aMX-V8-3BI"/>
-                                        <include reference="tit-ca-cQs"/>
-                                        <include reference="xN5-HA-snu"/>
+                                        <include reference="6eO-rQ-dme"/>
+                                        <include reference="9CI-Uf-A83"/>
+                                        <include reference="N71-5B-bZv"/>
+                                        <include reference="ZI5-44-FL2"/>
+                                        <include reference="e38-dW-yfU"/>
+                                        <include reference="h08-eN-4At"/>
+                                        <include reference="la6-Jg-loR"/>
                                         <include reference="6fn-ox-MaF"/>
                                         <include reference="kYT-eK-49n"/>
                                         <include reference="psX-wE-U6l"/>
@@ -1906,18 +1948,18 @@
                                         <include reference="NY5-NG-5CM"/>
                                         <include reference="VoN-RB-x4j"/>
                                         <include reference="Wzf-DF-heU"/>
-                                        <include reference="ZI5-44-FL2"/>
-                                        <include reference="e38-dW-yfU"/>
-                                        <include reference="h08-eN-4At"/>
-                                        <include reference="la6-Jg-loR"/>
-                                        <include reference="6eO-rQ-dme"/>
-                                        <include reference="9CI-Uf-A83"/>
-                                        <include reference="N71-5B-bZv"/>
                                         <include reference="5Wg-ob-Af3"/>
                                         <include reference="9vN-qx-bkA"/>
                                         <include reference="ZIB-ym-yN9"/>
                                         <include reference="oU3-Da-U1Z"/>
                                         <include reference="rZQ-wL-cCg"/>
+                                        <include reference="0wA-gc-2Jg"/>
+                                        <include reference="I0a-8t-jGO"/>
+                                        <include reference="cQN-hH-ERb"/>
+                                        <include reference="YIH-AU-uUA"/>
+                                        <include reference="aMX-V8-3BI"/>
+                                        <include reference="tit-ca-cQs"/>
+                                        <include reference="xN5-HA-snu"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -1934,10 +1976,10 @@
                                 <exclude reference="ldM-HJ-5H5"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="NSd-MB-wAt"/>
                                 <exclude reference="Mlg-a7-FFM"/>
                                 <exclude reference="VcS-Sb-hM2"/>
                                 <exclude reference="nuh-nb-Idb"/>
-                                <exclude reference="NSd-MB-wAt"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1945,10 +1987,10 @@
                                 <include reference="ldM-HJ-5H5"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="NSd-MB-wAt"/>
                                 <include reference="Mlg-a7-FFM"/>
                                 <include reference="VcS-Sb-hM2"/>
                                 <include reference="nuh-nb-Idb"/>
-                                <include reference="NSd-MB-wAt"/>
                             </mask>
                         </variation>
                     </view>
@@ -1970,6 +2012,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add_videos_icon.png" width="27" height="24"/>
         <image name="app_back.png" width="320" height="568"/>
         <image name="arrow_left_icon.png" width="12" height="15"/>
         <image name="arrow_right_icon.png" width="12" height="15"/>

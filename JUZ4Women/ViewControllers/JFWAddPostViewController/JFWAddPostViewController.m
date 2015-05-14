@@ -28,16 +28,13 @@
 
 -(void)configureView
 {
-    //[self.view bringSubviewToFront:self.textViewObj];
-    [self.view sendSubviewToBack:self.textViewBackgroundImageView];
+    self.textViewObj.text = @"Description";
     
+    [self.view sendSubviewToBack:self.textViewBackgroundImageView];
     [JFWUtilities setPlaceHolderTextColor:self.tag1TextFieldObj color:[UIColor whiteColor]];
     [JFWUtilities setPlaceHolderTextColor:self.tag2TextFieldObj color:[UIColor whiteColor]];
     [JFWUtilities setPlaceHolderTextColor:self.tag3TextFieldObj color:[UIColor whiteColor]];
     [JFWUtilities setPlaceHolderTextColor:self.titleTextFieldObj color:[UIColor whiteColor]];
-
-    
-    
 }
 
 -(void)configureScrollView
@@ -53,27 +50,17 @@
 -(void)configureNavBarTitile
 {
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-    
-    //self.title = @"Write your mind";
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
-    
-    UIImage *image = [UIImage imageNamed:@"writeyourmind.png"];
-    
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"writeyourmind.png"]];
 }
 
 -(void)configureLeftNavBar
 {
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
     leftButton.frame = CGRectMake(0, 0, 30, 30);
-    
     [leftButton setImage:[UIImage imageNamed:@"back_icon"] forState:UIControlStateNormal];
-    
     [leftButton addTarget:self action:@selector(onNavBarBackButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-    
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
-    
     self.navigationItem.leftBarButtonItem = leftBarButtonItem;
     
 }
@@ -88,4 +75,21 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+- (BOOL) textViewShouldBeginEditing:(UITextView *)textView
+{
+    self.textViewObj.text = @"";
+    self.textViewObj.textColor = [UIColor whiteColor];
+    return YES;
+}
+
+-(void) textViewDidChange:(UITextView *)textView
+{
+    if(self.textViewObj.text.length == 0)
+    {
+        self.textViewObj.text = @"Description";
+        [self.textViewObj resignFirstResponder];
+    }
+}
+
 @end

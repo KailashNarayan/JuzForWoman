@@ -25,7 +25,10 @@
 #import "JFWPostViewController.h"
 #import "JFWSignOutViewController.h"
 #import "JFWVideoViewController.h"
-
+#import "JFWContactUsViewController.h"
+#import "JFWLegalAdviseViewController.h"
+#import "JFWSuccessStoriesViewController.h"
+#import "JFWNotificationViewController.h"
 
 @interface IGLeftMenuViewController()
 {
@@ -99,26 +102,41 @@
 	
 	UIViewController *viewControllerObj ;
     
-    if(indexPath.row !=5)
+    if(indexPath.row !=6)
     {
         switch (indexPath.row)
         {
             case 0:
             {
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWNotificationViewController"];
+                break;
+            }
+            case 1:
+            {
                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
                 break;
             }
                 
-            case 1:
+            case 2:
                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWArticleViewController"];
                 break;
-            case 2:
-                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWVideoViewController"];
-                break;
             case 3:
-                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWPollsViewController"];
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWLegalAdviseViewController"];
                 break;
             case 4:
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWSuccessStoriesViewController"];
+                break;
+                
+            case 5:
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWVideoViewController"];
+                break;
+            case 6:
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWPollsViewController"];
+                break;
+            case 7:
+                viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWContactUsViewController"];
+                break;
+            case 8:
                 viewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAboutUsViewController"];
                 break;
         }
@@ -140,20 +158,28 @@
 
 -(NSMutableArray *)createMenuItemArray
 {
-    JFWMenuItemModel *menuItemModelObj1 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Post" withImageName:@"post_icon"];
+    JFWMenuItemModel *menuItemModelObj1 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Notifications" withImageName:@"post_icon"];
     
-    JFWMenuItemModel *menuItemModelObj2 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Article" withImageName:@"article_icon"];
+     JFWMenuItemModel *menuItemModelObj2 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Post" withImageName:@"post_icon"];
     
-    JFWMenuItemModel *menuItemModelObj3 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Videos" withImageName:@"video_icon"];
+    JFWMenuItemModel *menuItemModelObj3 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Article" withImageName:@"article_icon"];
     
-    JFWMenuItemModel *menuItemModelObj4 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Polls" withImageName:@"poll_icon"];
+    JFWMenuItemModel *menuItemModelObj4 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Legal Advice" withImageName:@"video_icon"];
+    
+    JFWMenuItemModel *menuItemModelObj5 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Success Stories" withImageName:@"video_icon"];
+    
+    JFWMenuItemModel *menuItemModelObj6 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Videos" withImageName:@"video_icon"];
+    
+    JFWMenuItemModel *menuItemModelObj7 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Polls" withImageName:@"poll_icon"];
+    
+    JFWMenuItemModel *menuItemModelObj8 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"contact Us" withImageName:@"about_us_icon"];
         
-    JFWMenuItemModel *menuItemModelObj5 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"About Us" withImageName:@"about_us_icon"];
+    JFWMenuItemModel *menuItemModelObj9 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"About Us" withImageName:@"about_us_icon"];
     
     
-    JFWMenuItemModel *menuItemModelObj6 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Sign Out" withImageName:@"sign_out_icon"];
+    JFWMenuItemModel *menuItemModelObj10 = [[JFWMenuItemModel alloc]initWithMenuItemName:@"Sign Out" withImageName:@"sign_out_icon"];
     
-NSMutableArray *menuItemsArray = [[NSMutableArray alloc]initWithObjects:menuItemModelObj1,menuItemModelObj2,menuItemModelObj3,menuItemModelObj4,menuItemModelObj5,menuItemModelObj6, nil];
+NSMutableArray *menuItemsArray = [[NSMutableArray alloc]initWithObjects:menuItemModelObj1,menuItemModelObj2,menuItemModelObj3,menuItemModelObj4,menuItemModelObj5,menuItemModelObj6,menuItemModelObj7,menuItemModelObj8,menuItemModelObj9,menuItemModelObj10, nil];
     
     return menuItemsArray;
 }

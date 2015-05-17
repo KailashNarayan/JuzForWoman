@@ -1,35 +1,49 @@
 //
-//  JFWVideoViewController.m
+//  JFWNotificationViewController.m
 //  JUZ4Women
 //
-//  Created by Kailash on 5/3/15.
+//  Created by Kailash on 5/16/15.
 //  Copyright (c) 2015 TTN Digital. All rights reserved.
 //
 
-#import "JFWVideoViewController.h"
+#import "JFWNotificationViewController.h"
 #import "UIViewController+MMDrawerController.h"
-#import "JFWVideoCell.h"
-#import "JFWAddVideoViewController.h"
-@interface JFWVideoViewController ()
+#import "JFWNotificationCell.h"
+
+@interface JFWNotificationViewController ()
 
 @end
 
-@implementation JFWVideoViewController
+@implementation JFWNotificationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self configureLeftNavBar];
+    
+    [self commanInit];
+    self.title = @"Notifications";
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
+        
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
-    self.title = @"Videos";
-     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-
-
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)commanInit
+{
+    [self configureNavBarTitile];
+    [self configureLeftNavBar];
+}
+-(void)configureNavBarTitile
+{
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 }
 
 -(void)configureLeftNavBar
@@ -48,11 +62,29 @@
     
 }
 
+-(void)configureRightNavBar
+{
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    rightButton.frame = CGRectMake(0, 0, 30, 30);
+    
+    [rightButton setImage:[UIImage imageNamed:@"column_icon"] forState:UIControlStateNormal];
+    
+    [rightButton addTarget:self action:@selector(onNavBarButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemSearch target:self action:@selector(onSearchButtonTapped)];
+    
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    
+}
+
+
+
+
 -(void)onNavBarButtonTapped
 {
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
-
 
 #pragma mark - TableView delegate methods
 
@@ -75,18 +107,19 @@
     //Intilizing the table cell
     static NSString* cellIdentifier = @"cellIdentifier";
     
-    JFWVideoCell *cell = (JFWVideoCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    JFWNotificationCell *cell = (JFWNotificationCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil)
     {
-        cell = [[JFWVideoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[JFWNotificationCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"JFWVideoCell" owner:self options:nil];
-        cell =  (JFWVideoCell *)[topLevelObjects objectAtIndex:0];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"JFWNotificationCell" owner:self options:nil];
+        cell =  (JFWNotificationCell *)[topLevelObjects objectAtIndex:0];
         
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     cell.backgroundColor = [UIColor clearColor];
+    cell.notificationTitleLabel.text =@"fdjhfjdhfd";
     
     return cell;
     
@@ -96,18 +129,4 @@
 {
 }
 
-
-- (IBAction)onAddVideoButtonTapped:(id)sender
-{
-    JFWAddVideoViewController *addPostViewControllerObj = [self.storyboard instantiateViewControllerWithIdentifier:@"JFWAddVideoViewController"];
-    
-    UINavigationController *navControllerObj = [[UINavigationController alloc] initWithRootViewController:addPostViewControllerObj];
-    
-    [self presentViewController:navControllerObj animated:YES completion:nil];
-}
-
-- (IBAction)onFilterButtonTapped:(id)sender
-{
-    
-}
 @end

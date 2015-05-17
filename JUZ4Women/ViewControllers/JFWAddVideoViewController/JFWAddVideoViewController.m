@@ -1,25 +1,22 @@
 //
-//  JFWAddPostViewController.m
+//  JFWAddVideoViewController.m
 //  JUZ4Women
 //
-//  Created by Kailash on 5/3/15.
+//  Created by Kailash on 5/17/15.
 //  Copyright (c) 2015 TTN Digital. All rights reserved.
 //
 
-#import "JFWAddPostViewController.h"
+#import "JFWAddVideoViewController.h"
 #import "JFWUtilities.h"
-
-@interface JFWAddPostViewController ()
+@interface JFWAddVideoViewController ()
 
 @end
 
-@implementation JFWAddPostViewController
+@implementation JFWAddVideoViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     [self configureLeftNavBar];
     [self configureNavBarTitile];
     [self configureScrollView];
@@ -51,7 +48,7 @@
 {
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
-    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"writeyourmind.png"]];
+    self.title = @"Videos";
 }
 
 -(void)configureLeftNavBar

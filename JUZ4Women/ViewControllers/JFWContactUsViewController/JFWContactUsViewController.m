@@ -1,34 +1,38 @@
 //
-//  JFWAddPostViewController.m
+//  JFWContactUsViewController.m
 //  JUZ4Women
 //
-//  Created by Kailash on 5/3/15.
+//  Created by Kailash on 5/16/15.
 //  Copyright (c) 2015 TTN Digital. All rights reserved.
 //
 
-#import "JFWAddPostViewController.h"
+#import "JFWContactUsViewController.h"
 #import "JFWUtilities.h"
+#import "UIViewController+MMDrawerController.h"
 
-@interface JFWAddPostViewController ()
+@interface JFWContactUsViewController ()
 
 @end
 
-@implementation JFWAddPostViewController
+@implementation JFWContactUsViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     [self configureLeftNavBar];
     [self configureNavBarTitile];
     [self configureScrollView];
     [self configureView];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 -(void)configureView
 {
-    self.textViewObj.text = @"Description";
+    //self.textViewObj.text = @"Description";
     
     [self.view sendSubviewToBack:self.textViewBackgroundImageView];
     [JFWUtilities setPlaceHolderTextColor:self.tag1TextFieldObj color:[UIColor whiteColor]];
@@ -42,33 +46,36 @@
     self.scrollViewObj.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"app_back.png"]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 -(void)configureNavBarTitile
 {
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:14/255.0 green:61.0/255.0 blue:82.0/255.0 alpha:1];
-    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"writeyourmind.png"]];
+   self.title = @"Contact Us";
 }
 
 -(void)configureLeftNavBar
 {
-    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftButton.frame = CGRectMake(0, 0, 30, 30);
-    [leftButton setImage:[UIImage imageNamed:@"back_icon"] forState:UIControlStateNormal];
-    [leftButton addTarget:self action:@selector(onNavBarBackButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    rightButton.frame = CGRectMake(0, 0, 30, 30);
+    
+    [rightButton setImage:[UIImage imageNamed:@"column_icon"] forState:UIControlStateNormal];
+    
+    [rightButton addTarget:self action:@selector(onNavBarButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    
     self.navigationItem.leftBarButtonItem = leftBarButtonItem;
     
 }
 
--(void)onNavBarBackButtonTapped
+-(void)onNavBarButtonTapped
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
+
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField
 {
@@ -87,9 +94,10 @@
 {
     if(self.textViewObj.text.length == 0)
     {
-        self.textViewObj.text = @"Description";
+        //self.textViewObj.text = @"Description";
         [self.textViewObj resignFirstResponder];
     }
 }
+
 
 @end

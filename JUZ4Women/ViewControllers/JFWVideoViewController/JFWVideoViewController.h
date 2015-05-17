@@ -10,4 +10,8 @@
 
 @interface JFWVideoViewController : UIViewController
 
+- (IBAction)onAddVideoButtonTapped:(id)sender;
+
+- (IBAction)onFilterButtonTapped:(id)sender;
+
 @end

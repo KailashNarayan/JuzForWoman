@@ -10,4 +10,9 @@
 
 @interface JFWAboutUsViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewObj;
+
+@property (weak, nonatomic) IBOutlet UITextView *textViewObj;
+
+
 @end

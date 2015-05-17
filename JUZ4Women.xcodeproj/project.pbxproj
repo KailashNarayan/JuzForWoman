@@ -99,6 +99,9 @@
 		38424F511AFA9C4000FCECA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38424F501AFA9C4000FCECA3 /* Localizable.strings */; };
 		3873FF131AFF6A9800E5E680 /* ImageContstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3873FF111AFF6A9800E5E680 /* ImageContstants.h */; };
 		3873FF141AFF6A9800E5E680 /* ImageContstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873FF121AFF6A9800E5E680 /* ImageContstants.m */; };
+		38954E7B1B08EFA7003AE215 /* SearchViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 38954E781B08EFA7003AE215 /* SearchViewCell.h */; };
+		38954E7C1B08EFA7003AE215 /* SearchViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38954E791B08EFA7003AE215 /* SearchViewCell.m */; };
+		38954E7D1B08EFA7003AE215 /* SearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38954E7A1B08EFA7003AE215 /* SearchViewCell.xib */; };
 		4A6D14A91AF1390A003A1708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14A81AF1390A003A1708 /* main.m */; };
 		4A6D14B41AF1390A003A1708 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D14B31AF1390A003A1708 /* Images.xcassets */; };
 		4A6D14C31AF1390A003A1708 /* JUZ4WomenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D14C21AF1390A003A1708 /* JUZ4WomenTests.m */; };
@@ -330,6 +333,9 @@
 		38424F501AFA9C4000FCECA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3873FF111AFF6A9800E5E680 /* ImageContstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageContstants.h; sourceTree = "<group>"; };
 		3873FF121AFF6A9800E5E680 /* ImageContstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageContstants.m; sourceTree = "<group>"; };
+		38954E781B08EFA7003AE215 /* SearchViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewCell.h; sourceTree = "<group>"; };
+		38954E791B08EFA7003AE215 /* SearchViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewCell.m; sourceTree = "<group>"; };
+		38954E7A1B08EFA7003AE215 /* SearchViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewCell.xib; sourceTree = "<group>"; };
 		4A6D14A31AF1390A003A1708 /* JUZ4Women.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JUZ4Women.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6D14A71AF1390A003A1708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6D14A81AF1390A003A1708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -701,6 +707,16 @@
 				381C748C1AF55393003290CF /* SignUpViewCell.xib */,
 			);
 			path = SignUpViewCell;
+			sourceTree = "<group>";
+		};
+		38954E771B08EF84003AE215 /* SearchViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				38954E781B08EFA7003AE215 /* SearchViewCell.h */,
+				38954E791B08EFA7003AE215 /* SearchViewCell.m */,
+				38954E7A1B08EFA7003AE215 /* SearchViewCell.xib */,
+			);
+			path = SearchViewCell;
 			sourceTree = "<group>";
 		};
 		4A6D149A1AF1390A003A1708 = {
@@ -1138,6 +1154,7 @@
 		4AE3106E1AF6373C00D1E343 /* JFWSearchViewController */ = {
 			isa = PBXGroup;
 			children = (
+				38954E771B08EF84003AE215 /* SearchViewCell */,
 				4AE3106F1AF6376100D1E343 /* JFWSearchViewController.h */,
 				4AE310701AF6376100D1E343 /* JFWSearchViewController.m */,
 			);
@@ -1188,6 +1205,7 @@
 				381C73D21AF52D07003290CF /* JUZ4Women.pch in Headers */,
 				3873FF131AFF6A9800E5E680 /* ImageContstants.h in Headers */,
 				381C74841AF55331003290CF /* SignUpViewController.h in Headers */,
+				38954E7B1B08EFA7003AE215 /* SearchViewCell.h in Headers */,
 				4AD2B2471AF558F30089DB7F /* JFWArticleViewController.h in Headers */,
 				4AD2B2571AF559380089DB7F /* JFWVideoViewController.h in Headers */,
 				4A76DA0D1AFF0FB200BCFFEE /* JFWLoginViewController.h in Headers */,
@@ -1280,6 +1298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38954E7D1B08EFA7003AE215 /* SearchViewCell.xib in Resources */,
 				4A76DA511AFF9E1F00BCFFEE /* writeyourmind@2x.png in Resources */,
 				381C74771AF53C82003290CF /* suggest_us_icon@2x.png in Resources */,
 				4A6D14DD1AF27B82003A1708 /* LaunchScreen.xib in Resources */,
@@ -1456,6 +1475,7 @@
 				4AD2B2481AF558F30089DB7F /* JFWArticleViewController.m in Sources */,
 				4ACFBA721AF3F94400C82325 /* MMSideDrawerSectionHeaderView.m in Sources */,
 				4ACFBA641AF3F94400C82325 /* MainViewController.m in Sources */,
+				38954E7C1B08EFA7003AE215 /* SearchViewCell.m in Sources */,
 				4ACFBA6A1AF3F94400C82325 /* MMExampleCenterTableViewController.m in Sources */,
 				4ACFBAA81AF3FDE700C82325 /* IGHomeViewDescriptionCellTableViewCell.m in Sources */,
 				4ACFBA691AF3F94400C82325 /* MMDrawerVisualState.m in Sources */,
